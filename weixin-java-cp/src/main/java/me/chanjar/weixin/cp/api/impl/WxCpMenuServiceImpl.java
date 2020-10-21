@@ -1,13 +1,15 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Menu.MENU_CREATE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Menu.MENU_DELETE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Menu.MENU_GET;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.bean.menu.WxMenu;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.cp.api.WxCpMenuService;
 import me.chanjar.weixin.cp.api.WxCpService;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Menu.*;
 
 /**
  * <pre>

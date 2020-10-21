@@ -3,11 +3,12 @@ package me.chanjar.weixin.common.util.http;
 import java.io.File;
 import java.io.IOException;
 
-import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.bean.result.WxMediaUploadResult;
+import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.http.apache.ApacheMediaUploadRequestExecutor;
 import me.chanjar.weixin.common.util.http.jodd.JoddHttpMediaUploadRequestExecutor;
+import me.chanjar.weixin.common.util.http.nutz.NutzHttpMediaUploadRequestExecutor;
 import me.chanjar.weixin.common.util.http.okhttp.OkHttpMediaUploadRequestExecutor;
 
 /**
@@ -36,6 +37,8 @@ public abstract class MediaUploadRequestExecutor<H, P> implements RequestExecuto
         return new JoddHttpMediaUploadRequestExecutor(requestHttp);
       case OK_HTTP:
         return new OkHttpMediaUploadRequestExecutor(requestHttp);
+      case NUTZ_HTTP:
+    	  return new NutzHttpMediaUploadRequestExecutor(requestHttp);
       default:
         return null;
     }

@@ -1,21 +1,24 @@
 package me.chanjar.weixin.mp.api.impl;
 
-import com.google.gson.JsonObject;
-import lombok.RequiredArgsConstructor;
-import me.chanjar.weixin.common.error.WxError;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.mp.api.WxMpQrcodeService;
-import me.chanjar.weixin.mp.api.WxMpService;
-import me.chanjar.weixin.mp.bean.result.WxMpQrCodeTicket;
-import me.chanjar.weixin.mp.util.requestexecuter.qrcode.QrCodeRequestExecutor;
-import org.apache.commons.lang3.StringUtils;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Qrcode.QRCODE_CREATE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Qrcode.SHOW_QRCODE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Qrcode.SHOW_QRCODE_WITH_TICKET;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Qrcode.*;
+import org.apache.commons.lang3.StringUtils;
+
+import com.google.gson.JsonObject;
+
+import lombok.RequiredArgsConstructor;
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.mp.api.WxMpQrcodeService;
+import me.chanjar.weixin.mp.api.WxMpService;
+import me.chanjar.weixin.mp.bean.result.WxMpQrCodeTicket;
+import me.chanjar.weixin.mp.util.requestexecuter.qrcode.QrCodeRequestExecutor;
 
 /**
  * Created by Binary Wang on 2016/7/21.

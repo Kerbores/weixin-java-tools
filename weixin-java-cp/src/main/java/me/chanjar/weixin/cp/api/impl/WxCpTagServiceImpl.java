@@ -1,7 +1,20 @@
 package me.chanjar.weixin.cp.api.impl;
 
-import com.google.gson.*;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tag.TAG_ADD_TAG_USERS;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tag.TAG_CREATE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tag.TAG_DELETE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tag.TAG_DEL_TAG_USERS;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tag.TAG_GET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tag.TAG_LIST;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tag.TAG_UPDATE;
+
+import java.util.List;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
 import com.google.gson.reflect.TypeToken;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.json.GsonParser;
@@ -12,10 +25,6 @@ import me.chanjar.weixin.cp.bean.WxCpTagAddOrRemoveUsersResult;
 import me.chanjar.weixin.cp.bean.WxCpTagGetResult;
 import me.chanjar.weixin.cp.bean.WxCpUser;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.util.List;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tag.*;
 
 /**
  * <pre>

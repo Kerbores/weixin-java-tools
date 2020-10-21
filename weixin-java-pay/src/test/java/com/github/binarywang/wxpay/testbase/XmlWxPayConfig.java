@@ -8,6 +8,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
  */
 @XStreamAlias("xml")
 public class XmlWxPayConfig extends WxPayConfig {
+	
   private String openid;
 
   /**

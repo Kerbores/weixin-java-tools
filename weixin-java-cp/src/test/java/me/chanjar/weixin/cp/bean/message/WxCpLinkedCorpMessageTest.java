@@ -1,15 +1,16 @@
 package me.chanjar.weixin.cp.bean.message;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.testng.annotations.Test;
+
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
-import me.chanjar.weixin.common.api.WxConsts;
+
+import me.chanjar.weixin.common.api.WxConsts.KefuMsgType;
 import me.chanjar.weixin.common.util.json.GsonParser;
 import me.chanjar.weixin.cp.bean.article.MpnewsArticle;
 import me.chanjar.weixin.cp.bean.article.NewArticle;
-import org.testng.annotations.Test;
-
-import static me.chanjar.weixin.common.api.WxConsts.*;
-import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * 测试用例中的json参考 https://work.weixin.qq.com/api/doc/90000/90135/90250

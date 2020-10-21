@@ -1,12 +1,14 @@
 package me.chanjar.weixin.mp.util.requestexecuter.material;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+
 import com.google.common.collect.ImmutableMap;
+
 import jodd.http.HttpConnectionProvider;
 import jodd.http.HttpRequest;
 import jodd.http.HttpResponse;
 import jodd.http.ProxyInfo;
-import jodd.util.StringPool;
-
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxError;
@@ -15,11 +17,6 @@ import me.chanjar.weixin.common.util.http.RequestHttp;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
 import me.chanjar.weixin.mp.bean.material.WxMpMaterialNews;
 import me.chanjar.weixin.mp.util.json.WxMpGsonBuilder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 
 /**
  * Created by ecoolper on 2017/5/5.

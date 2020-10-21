@@ -1,9 +1,21 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.APPLY_EVENT;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.GET_APPROVAL_DETAIL;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.GET_APPROVAL_INFO;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.GET_CHECKIN_DATA;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.GET_CHECKIN_OPTION;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.GET_DIAL_RECORD;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.GET_TEMPLATE_DETAIL;
+
+import java.util.Date;
+import java.util.List;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
+
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
@@ -11,13 +23,15 @@ import me.chanjar.weixin.common.error.WxRuntimeException;
 import me.chanjar.weixin.common.util.json.GsonParser;
 import me.chanjar.weixin.cp.api.WxCpOaService;
 import me.chanjar.weixin.cp.api.WxCpService;
-import me.chanjar.weixin.cp.bean.oa.*;
+import me.chanjar.weixin.cp.bean.oa.WxCpApprovalDetailResult;
+import me.chanjar.weixin.cp.bean.oa.WxCpApprovalInfo;
+import me.chanjar.weixin.cp.bean.oa.WxCpApprovalInfoQueryFilter;
+import me.chanjar.weixin.cp.bean.oa.WxCpCheckinData;
+import me.chanjar.weixin.cp.bean.oa.WxCpCheckinOption;
+import me.chanjar.weixin.cp.bean.oa.WxCpDialRecord;
+import me.chanjar.weixin.cp.bean.oa.WxCpOaApplyEventRequest;
+import me.chanjar.weixin.cp.bean.oa.WxCpTemplateResult;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.util.Date;
-import java.util.List;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.*;
 
 /**
  * 企业微信 OA 接口实现

@@ -1,15 +1,20 @@
 package me.chanjar.weixin.common.util.http.okhttp;
 
-import me.chanjar.weixin.common.enums.WxType;
+import java.io.File;
+import java.io.IOException;
+
 import me.chanjar.weixin.common.bean.result.WxMediaUploadResult;
+import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxError;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.http.MediaUploadRequestExecutor;
 import me.chanjar.weixin.common.util.http.RequestHttp;
-import okhttp3.*;
-
-import java.io.File;
-import java.io.IOException;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 /**
  * .

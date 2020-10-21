@@ -17,6 +17,7 @@ import java.io.InputStream;
 
 @Slf4j
 public class ApiTestModule implements Module {
+	
   private static final String TEST_CONFIG_XML = "test-config.xml";
   protected WxXmlCpInMemoryConfigStorage config;
 

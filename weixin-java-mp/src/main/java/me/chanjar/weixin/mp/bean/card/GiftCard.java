@@ -1,6 +1,7 @@
 package me.chanjar.weixin.mp.bean.card;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import me.chanjar.weixin.mp.util.json.WxMpGsonBuilder;
 
 import java.io.Serializable;
@@ -11,6 +12,7 @@ import java.io.Serializable;
  * @Date 2018/12/29
  */
 @Data
+@EqualsAndHashCode(callSuper = true)
 public final class GiftCard extends Card implements Serializable {
 
   private static final long serialVersionUID = -6168739707511792266L;

@@ -1,7 +1,14 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Agent.AGENT_GET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Agent.AGENT_LIST;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Agent.AGENT_SET;
+
+import java.util.List;
+
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxError;
@@ -11,10 +18,6 @@ import me.chanjar.weixin.cp.api.WxCpAgentService;
 import me.chanjar.weixin.cp.api.WxCpService;
 import me.chanjar.weixin.cp.bean.WxCpAgent;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.util.List;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Agent.*;
 
 
 /**

@@ -1,6 +1,7 @@
 package me.chanjar.weixin.cp.api.impl;
 
 import com.google.common.collect.ImmutableMap;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.cp.api.WxCpMessageService;

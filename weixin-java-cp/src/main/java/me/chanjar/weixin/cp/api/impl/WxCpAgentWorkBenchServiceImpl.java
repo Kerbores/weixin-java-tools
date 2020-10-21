@@ -1,15 +1,16 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.WorkBench.WORKBENCH_DATA_SET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.WorkBench.WORKBENCH_TEMPLATE_GET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.WorkBench.WORKBENCH_TEMPLATE_SET;
+
 import com.google.gson.JsonObject;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.cp.api.WxCpAgentWorkBenchService;
 import me.chanjar.weixin.cp.api.WxCpService;
 import me.chanjar.weixin.cp.bean.WxCpAgentWorkBench;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.WorkBench.WORKBENCH_DATA_SET;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.WorkBench.WORKBENCH_TEMPLATE_GET;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.WorkBench.WORKBENCH_TEMPLATE_SET;
 
 /**
  * @author songshiyu

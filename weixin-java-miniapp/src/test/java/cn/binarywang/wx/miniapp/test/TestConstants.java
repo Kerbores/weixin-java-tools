@@ -7,6 +7,7 @@ package cn.binarywang.wx.miniapp.test;
  * </pre>
  */
 public class TestConstants {
+	
   ///////////////////////
   // 文件类型
   ///////////////////////

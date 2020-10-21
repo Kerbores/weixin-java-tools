@@ -1,14 +1,13 @@
 package com.github.binarywang.wxpay.service.impl;
 
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import com.github.binarywang.wxpay.bean.payscore.WxPayScoreRequest;
 import com.github.binarywang.wxpay.exception.WxPayException;
 import com.github.binarywang.wxpay.service.WxPayService;
 import com.github.binarywang.wxpay.testbase.ApiTestModule;
 import com.google.inject.Inject;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
-
-import java.net.URISyntaxException;
 
 /**
  * 测试代码，待补充完善.

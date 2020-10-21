@@ -1,7 +1,5 @@
 package me.chanjar.weixin.cp.api;
 
-import com.google.gson.JsonObject;
-import me.chanjar.weixin.common.bean.ToJson;
 import me.chanjar.weixin.common.bean.WxJsapiSignature;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.service.WxService;

@@ -18,6 +18,7 @@ import java.io.InputStream;
  * The type Api test module.
  */
 public class ApiTestModule implements Module {
+	
   private final Logger log = LoggerFactory.getLogger(this.getClass());
   private static final String TEST_CONFIG_XML = "test-config.xml";
 

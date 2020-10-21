@@ -1,16 +1,16 @@
 package me.chanjar.weixin.cp.api.impl;
 
-import lombok.RequiredArgsConstructor;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.common.util.json.WxGsonBuilder;
-import me.chanjar.weixin.cp.api.WxCpService;
-import me.chanjar.weixin.cp.api.WxCpTaskCardService;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.TaskCard.UPDATE_TASK_CARD;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.TaskCard.*;
+import lombok.RequiredArgsConstructor;
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.common.util.json.WxGsonBuilder;
+import me.chanjar.weixin.cp.api.WxCpService;
+import me.chanjar.weixin.cp.api.WxCpTaskCardService;
 
 /**
  * <pre>

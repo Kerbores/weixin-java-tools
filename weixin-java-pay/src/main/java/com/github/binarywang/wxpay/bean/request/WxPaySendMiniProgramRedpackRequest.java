@@ -2,6 +2,7 @@ package com.github.binarywang.wxpay.bean.request;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.*;
+import lombok.Builder.Default;
 import lombok.experimental.Accessors;
 
 import java.util.Map;
@@ -89,6 +90,7 @@ public class WxPaySendMiniProgramRedpackRequest extends BaseWxPayRequest {
    * 通过JSAPI方式领取红包,小程序红包固定传MINI_PROGRAM_JSAPI
    */
   @XStreamAlias("notify_way")
+  @Default
   private String notifyWay = "MINI_PROGRAM_JSAPI";
 
   /**

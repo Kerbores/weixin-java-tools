@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Builder.Default;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
@@ -74,7 +75,9 @@ public class WxCpLinkedCorpMessage implements Serializable {
   private Boolean isSafe;
   private String url;
   private String btnTxt;
+  @Default
   private List<NewArticle> articles = new ArrayList<>();
+  @Default
   private List<MpnewsArticle> mpNewsArticles = new ArrayList<>();
   private String appId;
   private String page;

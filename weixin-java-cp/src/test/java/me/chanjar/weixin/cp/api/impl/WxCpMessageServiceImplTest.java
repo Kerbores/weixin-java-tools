@@ -1,28 +1,29 @@
 package me.chanjar.weixin.cp.api.impl;
 
-import com.github.dreamhead.moco.HttpServer;
-import com.github.dreamhead.moco.Runner;
-import com.google.common.collect.ImmutableMap;
-import com.google.inject.Inject;
-import me.chanjar.weixin.common.api.WxConsts;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.cp.api.ApiTestModule;
-import me.chanjar.weixin.cp.api.ApiTestModuleWithMockServer;
-import me.chanjar.weixin.cp.api.WxCpService;
-import me.chanjar.weixin.cp.bean.message.WxCpLinkedCorpMessage;
-import me.chanjar.weixin.cp.bean.message.WxCpMessage;
-import me.chanjar.weixin.cp.bean.message.WxCpMessageSendResult;
-import me.chanjar.weixin.cp.bean.message.WxCpMessageSendStatistics;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
-
 import static com.github.dreamhead.moco.Moco.file;
 import static com.github.dreamhead.moco.MocoJsonRunner.jsonHttpServer;
 import static me.chanjar.weixin.cp.api.ApiTestModuleWithMockServer.mockServerPort;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertNotNull;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
+import com.github.dreamhead.moco.HttpServer;
+import com.github.dreamhead.moco.Runner;
+import com.google.common.collect.ImmutableMap;
+import com.google.inject.Inject;
+
+import me.chanjar.weixin.common.api.WxConsts;
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.cp.api.ApiTestModule;
+import me.chanjar.weixin.cp.api.WxCpService;
+import me.chanjar.weixin.cp.bean.message.WxCpLinkedCorpMessage;
+import me.chanjar.weixin.cp.bean.message.WxCpMessage;
+import me.chanjar.weixin.cp.bean.message.WxCpMessageSendResult;
+import me.chanjar.weixin.cp.bean.message.WxCpMessageSendStatistics;
 
 /**
  * 测试类.

@@ -1,6 +1,19 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.GET_AGENT_CONFIG_TICKET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.GET_JSAPI_TICKET;
+
+import java.io.IOException;
+import java.util.concurrent.locks.Lock;
+
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.CloseableHttpClient;
+
 import com.google.gson.JsonObject;
+
 import me.chanjar.weixin.common.bean.WxAccessToken;
 import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxError;
@@ -9,17 +22,6 @@ import me.chanjar.weixin.common.error.WxRuntimeException;
 import me.chanjar.weixin.common.util.json.GsonParser;
 import me.chanjar.weixin.cp.config.WxCpConfigStorage;
 import me.chanjar.weixin.cp.constant.WxCpApiPathConsts;
-import org.apache.http.client.config.RequestConfig;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.BasicResponseHandler;
-import org.apache.http.impl.client.CloseableHttpClient;
-
-import java.io.IOException;
-import java.util.concurrent.locks.Lock;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.GET_AGENT_CONFIG_TICKET;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.GET_JSAPI_TICKET;
 
 /**
  * <pre>

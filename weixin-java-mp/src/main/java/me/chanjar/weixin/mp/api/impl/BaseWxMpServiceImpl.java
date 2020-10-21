@@ -1,9 +1,25 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Other.CLEAR_QUOTA_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Other.GET_CALLBACK_IP_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Other.GET_CURRENT_AUTOREPLY_INFO_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Other.GET_TICKET_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Other.NETCHECK_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Other.QRCONNECT_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Other.SEMANTIC_SEMPROXY_SEARCH_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Other.SHORTURL_API_URL;
+
+import java.io.IOException;
+import java.util.Map;
+import java.util.concurrent.locks.Lock;
+
+import org.apache.commons.lang3.StringUtils;
+
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -24,23 +40,43 @@ import me.chanjar.weixin.common.session.WxSessionManager;
 import me.chanjar.weixin.common.util.DataUtils;
 import me.chanjar.weixin.common.util.RandomUtils;
 import me.chanjar.weixin.common.util.crypto.SHA1;
-import me.chanjar.weixin.common.util.http.*;
+import me.chanjar.weixin.common.util.http.RequestExecutor;
+import me.chanjar.weixin.common.util.http.RequestHttp;
+import me.chanjar.weixin.common.util.http.SimpleGetRequestExecutor;
+import me.chanjar.weixin.common.util.http.SimplePostRequestExecutor;
+import me.chanjar.weixin.common.util.http.URIUtil;
 import me.chanjar.weixin.common.util.json.GsonParser;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
-import me.chanjar.weixin.mp.api.*;
+import me.chanjar.weixin.mp.api.WxMpAiOpenService;
+import me.chanjar.weixin.mp.api.WxMpCardService;
+import me.chanjar.weixin.mp.api.WxMpCommentService;
+import me.chanjar.weixin.mp.api.WxMpDataCubeService;
+import me.chanjar.weixin.mp.api.WxMpDeviceService;
+import me.chanjar.weixin.mp.api.WxMpGuideService;
+import me.chanjar.weixin.mp.api.WxMpKefuService;
+import me.chanjar.weixin.mp.api.WxMpMarketingService;
+import me.chanjar.weixin.mp.api.WxMpMassMessageService;
+import me.chanjar.weixin.mp.api.WxMpMaterialService;
+import me.chanjar.weixin.mp.api.WxMpMemberCardService;
+import me.chanjar.weixin.mp.api.WxMpMenuService;
+import me.chanjar.weixin.mp.api.WxMpMerchantInvoiceService;
+import me.chanjar.weixin.mp.api.WxMpQrcodeService;
+import me.chanjar.weixin.mp.api.WxMpService;
+import me.chanjar.weixin.mp.api.WxMpShakeService;
+import me.chanjar.weixin.mp.api.WxMpStoreService;
+import me.chanjar.weixin.mp.api.WxMpSubscribeMsgService;
+import me.chanjar.weixin.mp.api.WxMpTemplateMsgService;
+import me.chanjar.weixin.mp.api.WxMpUserBlacklistService;
+import me.chanjar.weixin.mp.api.WxMpUserService;
+import me.chanjar.weixin.mp.api.WxMpUserTagService;
+import me.chanjar.weixin.mp.api.WxMpWifiService;
+import me.chanjar.weixin.mp.api.WxOAuth2Service;
 import me.chanjar.weixin.mp.bean.WxMpSemanticQuery;
 import me.chanjar.weixin.mp.bean.result.WxMpCurrentAutoReplyInfo;
 import me.chanjar.weixin.mp.bean.result.WxMpSemanticQueryResult;
 import me.chanjar.weixin.mp.config.WxMpConfigStorage;
 import me.chanjar.weixin.mp.enums.WxMpApiUrl;
 import me.chanjar.weixin.mp.util.WxMpConfigStorageHolder;
-import org.apache.commons.lang3.StringUtils;
-
-import java.io.IOException;
-import java.util.Map;
-import java.util.concurrent.locks.Lock;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Other.*;
 
 /**
  * 基础实现类.
@@ -84,7 +120,6 @@ public abstract class BaseWxMpServiceImpl<H, P> implements WxMpService, RequestH
   @Setter
   private WxMpTemplateMsgService templateMsgService = new WxMpTemplateMsgServiceImpl(this);
   @Getter
-  @Setter
   private final WxMpSubscribeMsgService subscribeMsgService = new WxMpSubscribeMsgServiceImpl(this);
   @Getter
   @Setter
@@ -102,7 +137,6 @@ public abstract class BaseWxMpServiceImpl<H, P> implements WxMpService, RequestH
   @Setter
   private WxMpAiOpenService aiOpenService = new WxMpAiOpenServiceImpl(this);
   @Getter
-  @Setter
   private final WxMpWifiService wifiService = new WxMpWifiServiceImpl(this);
   @Getter
   @Setter
@@ -495,13 +529,4 @@ public abstract class BaseWxMpServiceImpl<H, P> implements WxMpService, RequestH
     return this;
   }
 
-  @Override
-  public WxMpGuideService getGuideService() {
-    return this.guideService;
-  }
-
-  @Override
-  public void setGuideService(WxMpGuideService guideService) {
-    this.guideService = guideService;
-  }
 }

@@ -1,6 +1,14 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.common.api.WxConsts.OAuth2Scope.SNSAPI_BASE;
+import static me.chanjar.weixin.common.api.WxConsts.OAuth2Scope.SNSAPI_PRIVATEINFO;
+import static me.chanjar.weixin.common.api.WxConsts.OAuth2Scope.SNSAPI_USERINFO;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.OAuth2.GET_USER_DETAIL;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.OAuth2.GET_USER_INFO;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.OAuth2.URL_OAUTH2_AUTHORIZE;
+
 import com.google.gson.JsonObject;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.http.URIUtil;
@@ -11,9 +19,6 @@ import me.chanjar.weixin.cp.api.WxCpService;
 import me.chanjar.weixin.cp.bean.WxCpOauth2UserInfo;
 import me.chanjar.weixin.cp.bean.WxCpUserDetail;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import static me.chanjar.weixin.common.api.WxConsts.OAuth2Scope.*;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.OAuth2.*;
 
 /**
  * <pre>

@@ -7,6 +7,7 @@ import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.http.apache.ApacheMediaDownloadRequestExecutor;
 import me.chanjar.weixin.common.util.http.jodd.JoddHttpMediaDownloadRequestExecutor;
+import me.chanjar.weixin.common.util.http.nutz.NutzHttpMediaDownloadRequestExecutor;
 import me.chanjar.weixin.common.util.http.okhttp.OkHttpMediaDownloadRequestExecutor;
 
 /**
@@ -38,6 +39,8 @@ public abstract class BaseMediaDownloadRequestExecutor<H, P> implements RequestE
         return new JoddHttpMediaDownloadRequestExecutor(requestHttp, tmpDirFile);
       case OK_HTTP:
         return new OkHttpMediaDownloadRequestExecutor(requestHttp, tmpDirFile);
+      case NUTZ_HTTP:
+    	  return new NutzHttpMediaDownloadRequestExecutor(requestHttp, tmpDirFile);
       default:
         return null;
     }

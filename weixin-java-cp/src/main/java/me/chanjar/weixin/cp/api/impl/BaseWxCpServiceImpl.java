@@ -1,8 +1,22 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.BATCH_GET_RESULT;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.BATCH_REPLACE_PARTY;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.BATCH_REPLACE_USER;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.GET_AGENT_CONFIG_TICKET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.GET_CALLBACK_IP;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.GET_JSAPI_TICKET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.JSCODE_TO_SESSION;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 import com.google.common.base.Joiner;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.common.bean.ToJson;
@@ -22,17 +36,26 @@ import me.chanjar.weixin.common.util.http.RequestHttp;
 import me.chanjar.weixin.common.util.http.SimpleGetRequestExecutor;
 import me.chanjar.weixin.common.util.http.SimplePostRequestExecutor;
 import me.chanjar.weixin.common.util.json.GsonParser;
-import me.chanjar.weixin.cp.api.*;
+import me.chanjar.weixin.cp.api.WxCpAgentService;
+import me.chanjar.weixin.cp.api.WxCpAgentWorkBenchService;
+import me.chanjar.weixin.cp.api.WxCpChatService;
+import me.chanjar.weixin.cp.api.WxCpDepartmentService;
+import me.chanjar.weixin.cp.api.WxCpExternalContactService;
+import me.chanjar.weixin.cp.api.WxCpGroupRobotService;
+import me.chanjar.weixin.cp.api.WxCpMediaService;
+import me.chanjar.weixin.cp.api.WxCpMenuService;
+import me.chanjar.weixin.cp.api.WxCpMessageService;
+import me.chanjar.weixin.cp.api.WxCpOAuth2Service;
+import me.chanjar.weixin.cp.api.WxCpOaCalendarService;
+import me.chanjar.weixin.cp.api.WxCpOaService;
+import me.chanjar.weixin.cp.api.WxCpService;
+import me.chanjar.weixin.cp.api.WxCpTagService;
+import me.chanjar.weixin.cp.api.WxCpTaskCardService;
+import me.chanjar.weixin.cp.api.WxCpUserService;
 import me.chanjar.weixin.cp.bean.WxCpMaJsCode2SessionResult;
 import me.chanjar.weixin.cp.bean.WxCpProviderToken;
 import me.chanjar.weixin.cp.config.WxCpConfigStorage;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.*;
+import me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tp;
 
 /**
  * .

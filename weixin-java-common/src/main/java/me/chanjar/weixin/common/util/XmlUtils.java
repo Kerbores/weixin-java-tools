@@ -1,20 +1,25 @@
 package me.chanjar.weixin.common.util;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.common.error.WxRuntimeException;
-import org.dom4j.*;
-import org.dom4j.io.SAXReader;
-import org.dom4j.tree.DefaultText;
-import org.xml.sax.SAXException;
-
 import java.io.StringReader;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import org.dom4j.CDATA;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
+import org.dom4j.tree.DefaultText;
+import org.xml.sax.SAXException;
+
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Sets;
+
+import me.chanjar.weixin.common.error.WxRuntimeException;
 
 /**
  * <pre>

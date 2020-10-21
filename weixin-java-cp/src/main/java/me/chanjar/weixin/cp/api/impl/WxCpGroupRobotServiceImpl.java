@@ -1,7 +1,13 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpConsts.GroupRobotMsgType.MARKDOWN;
+import static me.chanjar.weixin.cp.constant.WxCpConsts.GroupRobotMsgType.TEXT;
+
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+
 import lombok.RequiredArgsConstructor;
-import me.chanjar.weixin.common.error.WxError;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.cp.api.WxCpGroupRobotService;
 import me.chanjar.weixin.cp.api.WxCpService;
@@ -9,13 +15,7 @@ import me.chanjar.weixin.cp.bean.article.NewArticle;
 import me.chanjar.weixin.cp.bean.message.WxCpGroupRobotMessage;
 import me.chanjar.weixin.cp.config.WxCpConfigStorage;
 import me.chanjar.weixin.cp.constant.WxCpApiPathConsts;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.List;
-
-import static me.chanjar.weixin.cp.constant.WxCpConsts.GroupRobotMsgType;
-import static me.chanjar.weixin.cp.constant.WxCpConsts.GroupRobotMsgType.MARKDOWN;
-import static me.chanjar.weixin.cp.constant.WxCpConsts.GroupRobotMsgType.TEXT;
+import me.chanjar.weixin.cp.constant.WxCpConsts.GroupRobotMsgType;
 
 /**
  * 企业微信群机器人消息发送api 实现

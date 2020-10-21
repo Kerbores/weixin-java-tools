@@ -1,6 +1,14 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.CALENDAR_ADD;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.CALENDAR_DEL;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.CALENDAR_GET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.CALENDAR_UPDATE;
+
+import java.util.List;
+
 import com.google.gson.reflect.TypeToken;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.json.GsonHelper;
@@ -9,10 +17,6 @@ import me.chanjar.weixin.cp.api.WxCpOaCalendarService;
 import me.chanjar.weixin.cp.api.WxCpService;
 import me.chanjar.weixin.cp.bean.oa.calendar.WxCpOaCalendar;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.util.List;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Oa.*;
 
 /**
  * .

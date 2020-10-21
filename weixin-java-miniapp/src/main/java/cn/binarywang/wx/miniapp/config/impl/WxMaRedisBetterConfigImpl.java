@@ -1,11 +1,9 @@
 package cn.binarywang.wx.miniapp.config.impl;
 
-import me.chanjar.weixin.common.enums.TicketType;
-import me.chanjar.weixin.common.redis.JedisWxRedisOps;
-import me.chanjar.weixin.common.redis.WxRedisOps;
-import redis.clients.jedis.JedisPool;
-
 import java.util.concurrent.TimeUnit;
+
+import me.chanjar.weixin.common.enums.TicketType;
+import me.chanjar.weixin.common.redis.WxRedisOps;
 
 /**
  * 基于redis存储的微信小程序配置类

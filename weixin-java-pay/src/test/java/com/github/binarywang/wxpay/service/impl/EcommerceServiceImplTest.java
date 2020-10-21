@@ -1,17 +1,18 @@
 package com.github.binarywang.wxpay.service.impl;
 
+import java.nio.charset.StandardCharsets;
+
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import com.github.binarywang.wxpay.bean.ecommerce.PartnerTransactionsQueryRequest;
-import com.github.binarywang.wxpay.bean.ecommerce.PartnerTransactionsResult;
 import com.github.binarywang.wxpay.bean.ecommerce.SignatureHeader;
 import com.github.binarywang.wxpay.exception.WxPayException;
 import com.github.binarywang.wxpay.service.WxPayService;
 import com.github.binarywang.wxpay.testbase.ApiTestModule;
 import com.google.inject.Inject;
-import lombok.extern.slf4j.Slf4j;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
 
-import java.nio.charset.StandardCharsets;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Test

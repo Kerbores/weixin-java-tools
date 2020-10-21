@@ -1,5 +1,15 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Media.IMG_UPLOAD;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Media.JSSDK_MEDIA_GET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Media.MEDIA_GET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Media.MEDIA_UPLOAD;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.UUID;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.bean.result.WxMediaUploadResult;
 import me.chanjar.weixin.common.error.WxErrorException;
@@ -8,13 +18,6 @@ import me.chanjar.weixin.common.util.http.BaseMediaDownloadRequestExecutor;
 import me.chanjar.weixin.common.util.http.MediaUploadRequestExecutor;
 import me.chanjar.weixin.cp.api.WxCpMediaService;
 import me.chanjar.weixin.cp.api.WxCpService;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.UUID;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Media.*;
 
 /**
  * <pre>

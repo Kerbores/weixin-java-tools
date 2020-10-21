@@ -1,7 +1,15 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Department.DEPARTMENT_CREATE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Department.DEPARTMENT_DELETE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Department.DEPARTMENT_LIST;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Department.DEPARTMENT_UPDATE;
+
+import java.util.List;
+
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.json.GsonHelper;
@@ -10,10 +18,6 @@ import me.chanjar.weixin.cp.api.WxCpDepartmentService;
 import me.chanjar.weixin.cp.api.WxCpService;
 import me.chanjar.weixin.cp.bean.WxCpDepart;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.util.List;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Department.*;
 
 /**
  * <pre>

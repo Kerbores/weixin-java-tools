@@ -1,14 +1,14 @@
 package me.chanjar.weixin.cp.bean.message;
 
-import me.chanjar.weixin.cp.bean.article.MpnewsArticle;
-import me.chanjar.weixin.cp.bean.article.NewArticle;
-import me.chanjar.weixin.cp.bean.message.WxCpMessage;
-import me.chanjar.weixin.cp.bean.taskcard.TaskCardButton;
-import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.testng.annotations.Test;
+
+import me.chanjar.weixin.cp.bean.article.MpnewsArticle;
+import me.chanjar.weixin.cp.bean.article.NewArticle;
+import me.chanjar.weixin.cp.bean.taskcard.TaskCardButton;
 
 @Test
 public class WxCpMessageTest {

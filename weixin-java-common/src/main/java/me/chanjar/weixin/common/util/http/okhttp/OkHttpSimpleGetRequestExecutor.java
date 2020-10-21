@@ -1,5 +1,7 @@
 package me.chanjar.weixin.common.util.http.okhttp;
 
+import java.io.IOException;
+
 import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.http.RequestHttp;
@@ -7,8 +9,6 @@ import me.chanjar.weixin.common.util.http.SimpleGetRequestExecutor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-
-import java.io.IOException;
 
 /**
  * .

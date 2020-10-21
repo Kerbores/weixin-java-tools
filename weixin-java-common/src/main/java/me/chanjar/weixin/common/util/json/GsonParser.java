@@ -1,11 +1,10 @@
 package me.chanjar.weixin.common.util.json;
 
+import java.io.Reader;
+
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
-import lombok.NoArgsConstructor;
-
-import java.io.Reader;
 
 /**
  * @author niefy

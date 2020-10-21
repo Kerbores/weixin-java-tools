@@ -17,6 +17,7 @@ import com.google.inject.Module;
  * @author <a href="https://github.com/binarywang">Binary Wang</a>
  */
 public class ApiTestModule implements Module {
+	
   private final Logger log = LoggerFactory.getLogger(this.getClass());
   private static final String TEST_CONFIG_XML = "test-config.xml";
 

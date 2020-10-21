@@ -14,7 +14,6 @@ import java.util.concurrent.locks.Lock;
  */
 @XStreamAlias("xml")
 public class TestConfig extends WxMaDefaultConfigImpl {
-
   private String openid;
   private String kfAccount;
   private String templateId;

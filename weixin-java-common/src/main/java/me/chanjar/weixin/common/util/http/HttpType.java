@@ -15,5 +15,9 @@ public enum HttpType {
   /**
    * okhttp.
    */
-  OK_HTTP
+  OK_HTTP,
+  /**
+   * nutz
+   */
+  NUTZ_HTTP
 }

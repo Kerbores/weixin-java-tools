@@ -1,14 +1,17 @@
 package me.chanjar.weixin.common.util.http.okhttp;
 
-import lombok.extern.slf4j.Slf4j;
+import java.io.IOException;
+import java.util.Objects;
+
 import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.http.RequestHttp;
 import me.chanjar.weixin.common.util.http.SimplePostRequestExecutor;
-import okhttp3.*;
-
-import java.io.IOException;
-import java.util.Objects;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 /**
  * .
@@ -16,7 +19,6 @@ import java.util.Objects;
  * @author ecoolper
  * @date 2017/5/4
  */
-@Slf4j
 public class OkHttpSimplePostRequestExecutor extends SimplePostRequestExecutor<OkHttpClient, OkHttpProxyInfo> {
   public OkHttpSimplePostRequestExecutor(RequestHttp requestHttp) {
     super(requestHttp);

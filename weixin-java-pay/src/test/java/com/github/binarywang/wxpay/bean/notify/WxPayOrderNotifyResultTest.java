@@ -13,6 +13,7 @@ import org.testng.annotations.*;
  * @author <a href="https://github.com/binarywang">Binary Wang</a>
  */
 public class WxPayOrderNotifyResultTest {
+	
   /**
    * Test from xml.
    */

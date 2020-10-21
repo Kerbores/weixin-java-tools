@@ -1,9 +1,9 @@
 package me.chanjar.weixin.common.util.http;
 
+import java.io.IOException;
+
 import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxErrorException;
-
-import java.io.IOException;
 
 /**
  * http请求执行器.

@@ -1,8 +1,28 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.BATCH_INVITE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.GET_EXTERNAL_CONTACT;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.GET_USER_ID;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.USER_AUTHENTICATE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.USER_BATCH_DELETE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.USER_CONVERT_TO_OPENID;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.USER_CONVERT_TO_USERID;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.USER_CREATE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.USER_DELETE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.USER_GET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.USER_LIST;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.USER_SIMPLE_LIST;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.USER_UPDATE;
+
+import java.util.List;
+import java.util.Map;
+
 import com.google.common.collect.Maps;
-import com.google.gson.*;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
 import com.google.gson.reflect.TypeToken;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.json.GsonParser;
@@ -12,11 +32,6 @@ import me.chanjar.weixin.cp.bean.WxCpInviteResult;
 import me.chanjar.weixin.cp.bean.WxCpUser;
 import me.chanjar.weixin.cp.bean.external.WxCpUserExternalContactInfo;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.util.List;
-import java.util.Map;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.User.*;
 
 /**
  * <pre>

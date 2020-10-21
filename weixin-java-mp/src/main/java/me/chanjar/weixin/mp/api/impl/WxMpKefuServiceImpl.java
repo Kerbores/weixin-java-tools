@@ -1,10 +1,29 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.CUSTOM_TYPING;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.GET_KF_LIST;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.GET_ONLINE_KF_LIST;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.KFACCOUNT_ADD;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.KFACCOUNT_DEL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.KFACCOUNT_INVITE_WORKER;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.KFACCOUNT_UPDATE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.KFACCOUNT_UPLOAD_HEAD_IMG;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.KFSESSION_CLOSE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.KFSESSION_CREATE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.KFSESSION_GET_SESSION;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.KFSESSION_GET_SESSION_LIST;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.KFSESSION_GET_WAIT_CASE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.MESSAGE_CUSTOM_SEND;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.MSG_RECORD_LIST;
+
+import java.io.File;
+import java.util.Date;
+
 import com.google.gson.JsonObject;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.bean.result.WxMediaUploadResult;
-import me.chanjar.weixin.common.error.WxError;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.http.MediaUploadRequestExecutor;
 import me.chanjar.weixin.mp.api.WxMpKefuService;
@@ -12,12 +31,12 @@ import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.bean.kefu.WxMpKefuMessage;
 import me.chanjar.weixin.mp.bean.kefu.request.WxMpKfAccountRequest;
 import me.chanjar.weixin.mp.bean.kefu.request.WxMpKfSessionRequest;
-import me.chanjar.weixin.mp.bean.kefu.result.*;
-
-import java.io.File;
-import java.util.Date;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Kefu.*;
+import me.chanjar.weixin.mp.bean.kefu.result.WxMpKfList;
+import me.chanjar.weixin.mp.bean.kefu.result.WxMpKfMsgList;
+import me.chanjar.weixin.mp.bean.kefu.result.WxMpKfOnlineList;
+import me.chanjar.weixin.mp.bean.kefu.result.WxMpKfSessionGetResult;
+import me.chanjar.weixin.mp.bean.kefu.result.WxMpKfSessionList;
+import me.chanjar.weixin.mp.bean.kefu.result.WxMpKfSessionWaitCaseList;
 
 /**
  * @author Binary Wang

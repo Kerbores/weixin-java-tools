@@ -1,21 +1,25 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Chat.APPCHAT_CREATE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Chat.APPCHAT_GET_CHATID;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Chat.APPCHAT_SEND;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Chat.APPCHAT_UPDATE;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.lang3.StringUtils;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.json.GsonParser;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
 import me.chanjar.weixin.cp.api.WxCpChatService;
 import me.chanjar.weixin.cp.api.WxCpService;
-import me.chanjar.weixin.cp.bean.message.WxCpAppChatMessage;
 import me.chanjar.weixin.cp.bean.WxCpChat;
+import me.chanjar.weixin.cp.bean.message.WxCpAppChatMessage;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Chat.*;
 
 /**
  * 群聊服务实现.

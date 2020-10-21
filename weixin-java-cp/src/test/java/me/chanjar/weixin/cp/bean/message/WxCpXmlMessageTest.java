@@ -1,15 +1,15 @@
 package me.chanjar.weixin.cp.bean.message;
 
-import me.chanjar.weixin.common.api.WxConsts;
-import me.chanjar.weixin.cp.bean.message.WxCpXmlMessage;
-import me.chanjar.weixin.cp.constant.WxCpConsts;
-import me.chanjar.weixin.cp.util.xml.XStreamTransformer;
-import org.testng.annotations.Test;
-
 import static me.chanjar.weixin.cp.constant.WxCpConsts.EventType.TASKCARD_CLICK;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
+
+import org.testng.annotations.Test;
+
+import me.chanjar.weixin.common.api.WxConsts;
+import me.chanjar.weixin.cp.constant.WxCpConsts;
+import me.chanjar.weixin.cp.util.xml.XStreamTransformer;
 
 @Test
 public class WxCpXmlMessageTest {

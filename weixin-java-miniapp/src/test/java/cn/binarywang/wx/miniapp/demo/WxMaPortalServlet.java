@@ -22,6 +22,7 @@ import java.util.Objects;
  */
 @AllArgsConstructor
 public class WxMaPortalServlet extends HttpServlet {
+	
   private static final long serialVersionUID = 1L;
 
   private WxMaConfig config;
