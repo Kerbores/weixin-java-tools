@@ -154,7 +154,6 @@ public abstract class BaseWxMpServiceImpl<H, P> implements WxMpService, RequestH
     @Setter
     private WxMpMerchantInvoiceService merchantInvoiceService = new WxMpMerchantInvoiceServiceImpl(this, this.cardService);
 
-    @Setter
     private WxMpGuideService guideService = new WxMpGuideServiceImpl(this);
 
     @Getter

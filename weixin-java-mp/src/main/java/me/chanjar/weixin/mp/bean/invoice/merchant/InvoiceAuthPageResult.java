@@ -1,8 +1,8 @@
 package me.chanjar.weixin.mp.bean.invoice.merchant;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 
 /**
  * 获取授权链接返回结果DTO
@@ -10,13 +10,18 @@ import java.io.Serializable;
 @Data
 public class InvoiceAuthPageResult implements Serializable {
 
-  /**
-   * 授权页地址
-   */
-  private String authUrl;
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
 
-  /**
-   * 当发起端为小程序时, 返回
-   */
-  private String appid;
+    /**
+     * 授权页地址
+     */
+    private String authUrl;
+
+    /**
+     * 当发起端为小程序时, 返回
+     */
+    private String appid;
 }

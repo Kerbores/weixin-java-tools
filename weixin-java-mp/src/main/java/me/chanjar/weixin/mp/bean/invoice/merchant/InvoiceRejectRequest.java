@@ -7,24 +7,29 @@ import java.io.Serializable;
  */
 public class InvoiceRejectRequest implements Serializable {
 
-  /**
-   * 开票平台标示
-   */
-  private String sPappid;
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
 
-  /**
-   * 订单id
-   */
-  private String orderId;
+    /**
+     * 开票平台标示
+     */
+    private String sPappid;
 
-  /**
-   * 拒绝原因
-   */
-  private String reason;
+    /**
+     * 订单id
+     */
+    private String orderId;
 
-  /**
-   * 引导用户跳转url
-   */
-  private String url;
+    /**
+     * 拒绝原因
+     */
+    private String reason;
+
+    /**
+     * 引导用户跳转url
+     */
+    private String url;
 
 }
