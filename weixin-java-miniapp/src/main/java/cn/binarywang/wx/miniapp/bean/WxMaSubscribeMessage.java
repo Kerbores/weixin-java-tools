@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.binarywang.wx.miniapp.constant.WxMaConstants;
-import cn.binarywang.wx.miniapp.util.json.WxMaGsonBuilder;
+import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Builder.Default;
