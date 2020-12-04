@@ -22,80 +22,86 @@ import me.chanjar.weixin.cp.constant.WxCpApiPathConsts;
 
 public class WxCpServiceNutzHttpClientImpl extends BaseWxCpServiceImpl<Sender, ProxySwitcher> {
 
-	private ProxySwitcher proxySwitcher;
+    private ProxySwitcher proxySwitcher;
 
-	@Override
-	public String getAccessToken(boolean forceRefresh) throws WxErrorException {
-		if (!this.configStorage.isAccessTokenExpired() && !forceRefresh) {
-			return this.configStorage.getAccessToken();
-		}
+    @Override
+    public String getAccessToken(boolean forceRefresh) throws WxErrorException {
+        if (!this.configStorage.isAccessTokenExpired() && !forceRefresh) {
+            return this.configStorage.getAccessToken();
+        }
 
-		synchronized (this.globalAccessTokenRefreshLock) {
-			String url = String.format(this.configStorage.getApiUrl(WxCpApiPathConsts.GET_TOKEN),
-					this.configStorage.getCorpId(), this.configStorage.getCorpSecret());
+        synchronized (this.globalAccessTokenRefreshLock) {
+            String url = String.format(this.configStorage.getApiUrl(WxCpApiPathConsts.GET_TOKEN),
+                                       this.configStorage.getCorpId(),
+                                       this.configStorage.getCorpSecret());
 
-			if (this.proxySwitcher != null) {
-				Http.setProxySwitcher(proxySwitcher);
-			}
-			String resultContent;
-			try {
-				resultContent = Http.get(url).getContent();
+            if (this.proxySwitcher != null) {
+                Http.setProxySwitcher(proxySwitcher);
+            }
+            String resultContent;
+            try {
+                resultContent = Http.get(url).getContent();
 
-			} catch (Exception e) {
-				throw Lang.wrapThrow(e);
-			}
-			WxError error = WxError.fromJson(resultContent, WxType.CP);
-			if (error.getErrorCode() != 0) {
-				throw new WxErrorException(error);
-			}
+            }
+            catch (Exception e) {
+                throw Lang.wrapThrow(e);
+            }
+            WxError error = WxError.fromJson(resultContent, WxType.CP);
+            if (error.getErrorCode() != 0) {
+                throw new WxErrorException(error);
+            }
 
-			WxAccessToken accessToken = WxAccessToken.fromJson(resultContent);
-			this.configStorage.updateAccessToken(accessToken.getAccessToken(), accessToken.getExpiresIn());
-		}
-		return this.configStorage.getAccessToken();
-	}
+            WxAccessToken accessToken = WxAccessToken.fromJson(resultContent);
+            this.configStorage.updateAccessToken(accessToken.getAccessToken(), accessToken.getExpiresIn());
+        }
+        return this.configStorage.getAccessToken();
+    }
 
-	@Override
-	public void initHttp() {
-		if (this.configStorage.getHttpProxyHost() != null && this.configStorage.getHttpProxyPort() > 0) {
-			String host = this.configStorage.getHttpProxyHost();
-			int port = this.configStorage.getHttpProxyPort();
-			this.proxySwitcher = new ProxySwitcher() {
+    public void setProxySwitcher(ProxySwitcher proxySwitcher) {
+        this.proxySwitcher = proxySwitcher;
+    }
 
-				@Override
-				public Proxy getProxy(Request req) {
-					return getProxy(req.getUrl());
-				}
+    @Override
+    public void initHttp() {
+        if (this.configStorage.getHttpProxyHost() != null && this.configStorage.getHttpProxyPort() > 0) {
+            String host = this.configStorage.getHttpProxyHost();
+            int port = this.configStorage.getHttpProxyPort();
+            this.proxySwitcher = new ProxySwitcher() {
 
-				@Override
-				public Proxy getProxy(URL url) {
-					if (Strings.equalsIgnoreCase(url.getHost(), "qyapi.weixin.qq.com")) {
-						return new Proxy(Type.HTTP, new InetSocketAddress(host, port));
-					}
-					return null;
-				}
-			};
-		}
-	}
+                @Override
+                public Proxy getProxy(Request req) {
+                    return getProxy(req.getUrl());
+                }
 
-	@Override
-	public WxCpConfigStorage getWxCpConfigStorage() {
-		return this.configStorage;
-	}
+                @Override
+                public Proxy getProxy(URL url) {
+                    if (Strings.equalsIgnoreCase(url.getHost(), "qyapi.weixin.qq.com")) {
+                        return new Proxy(Type.HTTP, new InetSocketAddress(host, port));
+                    }
+                    return null;
+                }
+            };
+        }
+    }
 
-	@Override
-	public Sender getRequestHttpClient() {
-		return null;
-	}
+    @Override
+    public WxCpConfigStorage getWxCpConfigStorage() {
+        return this.configStorage;
+    }
 
-	@Override
-	public ProxySwitcher getRequestHttpProxy() {
-		return this.proxySwitcher;
-	}
+    @Override
+    public Sender getRequestHttpClient() {
+        return null;
+    }
 
-	@Override
-	public HttpType getRequestType() {
-		return HttpType.NUTZ_HTTP;
-	}
+    @Override
+    public ProxySwitcher getRequestHttpProxy() {
+        return this.proxySwitcher;
+    }
+
+    @Override
+    public HttpType getRequestType() {
+        return HttpType.NUTZ_HTTP;
+    }
 
 }
