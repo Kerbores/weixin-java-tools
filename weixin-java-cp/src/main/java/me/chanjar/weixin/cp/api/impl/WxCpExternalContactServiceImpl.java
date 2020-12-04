@@ -1,39 +1,7 @@
 package me.chanjar.weixin.cp.api.impl;
 
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.ADD_CONTACT_WAY;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.ADD_CORP_TAG;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.ADD_MSG_TEMPLATE;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.CLOSE_TEMP_CHAT;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.DEL_CONTACT_WAY;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.DEL_CORP_TAG;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.EDIT_CORP_TAG;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.GET_CONTACT_DETAIL;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.GET_CONTACT_WAY;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.GET_CORP_TAG_LIST;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.GET_EXTERNAL_CONTACT;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.GET_FOLLOW_USER_LIST;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.GROUP_CHAT_INFO;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.GROUP_CHAT_LIST;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.LIST_EXTERNAL_CONTACT;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.LIST_GROUP_CHAT_DATA;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.LIST_UNASSIGNED_CONTACT;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.LIST_USER_BEHAVIOR_DATA;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.MARK_TAG;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.SEND_WELCOME_MSG;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.TRANSFER_UNASSIGNED_CONTACT;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.UPDATE_CONTACT_WAY;
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.UPDATE_REMARK;
-
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
-
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
-
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxCpErrorMsgEnum;
@@ -42,22 +10,17 @@ import me.chanjar.weixin.common.error.WxRuntimeException;
 import me.chanjar.weixin.cp.api.WxCpExternalContactService;
 import me.chanjar.weixin.cp.api.WxCpService;
 import me.chanjar.weixin.cp.bean.WxCpBaseResp;
-import me.chanjar.weixin.cp.bean.external.WxCpContactWayInfo;
-import me.chanjar.weixin.cp.bean.external.WxCpContactWayResult;
-import me.chanjar.weixin.cp.bean.external.WxCpMsgTemplate;
-import me.chanjar.weixin.cp.bean.external.WxCpMsgTemplateAddResult;
-import me.chanjar.weixin.cp.bean.external.WxCpUpdateRemarkRequest;
-import me.chanjar.weixin.cp.bean.external.WxCpUserExternalContactInfo;
-import me.chanjar.weixin.cp.bean.external.WxCpUserExternalContactList;
-import me.chanjar.weixin.cp.bean.external.WxCpUserExternalGroupChatInfo;
-import me.chanjar.weixin.cp.bean.external.WxCpUserExternalGroupChatList;
-import me.chanjar.weixin.cp.bean.external.WxCpUserExternalGroupChatStatistic;
-import me.chanjar.weixin.cp.bean.external.WxCpUserExternalTagGroupInfo;
-import me.chanjar.weixin.cp.bean.external.WxCpUserExternalTagGroupList;
-import me.chanjar.weixin.cp.bean.external.WxCpUserExternalUnassignList;
-import me.chanjar.weixin.cp.bean.external.WxCpUserExternalUserBehaviorStatistic;
-import me.chanjar.weixin.cp.bean.external.WxCpUserWithExternalPermission;
-import me.chanjar.weixin.cp.bean.external.WxCpWelcomeMsg;
+import me.chanjar.weixin.cp.bean.external.*;
+import me.chanjar.weixin.cp.bean.external.contact.WxCpExternalContactBatchInfo;
+import me.chanjar.weixin.cp.bean.external.contact.WxCpExternalContactInfo;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.ExternalContact.*;
 
 /**
  * @author 曹祖鹏 & yuanqixun
@@ -130,17 +93,38 @@ public class WxCpExternalContactServiceImpl implements WxCpExternalContactServic
   }
 
   @Override
-  public WxCpUserExternalContactInfo getExternalContact(String userId) throws WxErrorException {
+  public WxCpExternalContactInfo getExternalContact(String userId) throws WxErrorException {
     final String url = this.mainService.getWxCpConfigStorage().getApiUrl(GET_EXTERNAL_CONTACT + userId);
     String responseContent = this.mainService.get(url, null);
-    return WxCpUserExternalContactInfo.fromJson(responseContent);
+    return WxCpExternalContactInfo.fromJson(responseContent);
   }
 
   @Override
-  public WxCpUserExternalContactInfo getContactDetail(String userId) throws WxErrorException {
+  public WxCpExternalContactInfo getContactDetail(String userId) throws WxErrorException {
     final String url = this.mainService.getWxCpConfigStorage().getApiUrl(GET_CONTACT_DETAIL + userId);
     String responseContent = this.mainService.get(url, null);
-    return WxCpUserExternalContactInfo.fromJson(responseContent);
+    return WxCpExternalContactInfo.fromJson(responseContent);
+  }
+
+  @Override
+  public WxCpExternalContactBatchInfo getContactDetailBatch(String userId,
+                                                            String cursor,
+                                                            Integer limit)
+    throws WxErrorException {
+    final String url =
+      this.mainService
+        .getWxCpConfigStorage()
+        .getApiUrl(GET_CONTACT_DETAIL_BATCH);
+    JsonObject json = new JsonObject();
+    json.addProperty("userid", userId);
+    if (StringUtils.isNotBlank(cursor)) {
+      json.addProperty("cursor", cursor);
+    }
+    if (limit != null) {
+      json.addProperty("limit", limit);
+    }
+    String responseContent = this.mainService.post(url, json.toString());
+    return WxCpExternalContactBatchInfo.fromJson(responseContent);
   }
 
   @Override
@@ -201,10 +185,10 @@ public class WxCpExternalContactServiceImpl implements WxCpExternalContactServic
     if (ArrayUtils.isNotEmpty(userIds) || ArrayUtils.isNotEmpty(partyIds)) {
       JsonObject ownerFilter = new JsonObject();
       if (ArrayUtils.isNotEmpty(userIds)) {
-        json.add("userid_list", new Gson().toJsonTree(userIds).getAsJsonArray());
+        ownerFilter.add("userid_list", new Gson().toJsonTree(userIds).getAsJsonArray());
       }
       if (ArrayUtils.isNotEmpty(partyIds)) {
-        json.add("partyid_list", new Gson().toJsonTree(partyIds).getAsJsonArray());
+        ownerFilter.add("partyid_list", new Gson().toJsonTree(partyIds).getAsJsonArray());
       }
       json.add("owner_filter", ownerFilter);
     }
@@ -251,10 +235,10 @@ public class WxCpExternalContactServiceImpl implements WxCpExternalContactServic
     if (ArrayUtils.isNotEmpty(userIds) || ArrayUtils.isNotEmpty(partyIds)) {
       JsonObject ownerFilter = new JsonObject();
       if (ArrayUtils.isNotEmpty(userIds)) {
-        json.add("userid_list", new Gson().toJsonTree(userIds).getAsJsonArray());
+        ownerFilter.add("userid_list", new Gson().toJsonTree(userIds).getAsJsonArray());
       }
       if (ArrayUtils.isNotEmpty(partyIds)) {
-        json.add("partyid_list", new Gson().toJsonTree(partyIds).getAsJsonArray());
+        ownerFilter.add("partyid_list", new Gson().toJsonTree(partyIds).getAsJsonArray());
       }
       json.add("owner_filter", ownerFilter);
     }

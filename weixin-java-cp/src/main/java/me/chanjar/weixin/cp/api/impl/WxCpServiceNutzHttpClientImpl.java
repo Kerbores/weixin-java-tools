@@ -57,10 +57,6 @@ public class WxCpServiceNutzHttpClientImpl extends BaseWxCpServiceImpl<Sender, P
         return this.configStorage.getAccessToken();
     }
 
-    public void setProxySwitcher(ProxySwitcher proxySwitcher) {
-        this.proxySwitcher = proxySwitcher;
-    }
-
     @Override
     public void initHttp() {
         if (this.configStorage.getHttpProxyHost() != null && this.configStorage.getHttpProxyPort() > 0) {

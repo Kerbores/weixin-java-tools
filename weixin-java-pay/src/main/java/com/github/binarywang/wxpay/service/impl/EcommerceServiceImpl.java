@@ -1,7 +1,7 @@
 package com.github.binarywang.wxpay.service.impl;
 
 import com.github.binarywang.wxpay.bean.ecommerce.*;
-import com.github.binarywang.wxpay.bean.ecommerce.enums.BillTypeEnum;
+import com.github.binarywang.wxpay.bean.ecommerce.enums.FundBillTypeEnum;
 import com.github.binarywang.wxpay.bean.ecommerce.enums.SpAccountTypeEnum;
 import com.github.binarywang.wxpay.bean.ecommerce.enums.TradeTypeEnum;
 import com.github.binarywang.wxpay.exception.WxPayException;
@@ -226,7 +226,7 @@ public class EcommerceServiceImpl implements EcommerceService {
 
   @Override
   public RefundQueryResult queryRefundByOutRefundNo(String subMchid, String outRefundNo) throws WxPayException {
-    String url = String.format("%s/v3/ecommerce/applyments/out-request-no/%s?sub_mchid=%s", this.payService.getPayBaseUrl(), outRefundNo, subMchid);
+    String url = String.format("%s/v3/ecommerce/refunds/out-refund-no/%s?sub_mchid=%s", this.payService.getPayBaseUrl(), outRefundNo, subMchid);
     String response = this.payService.getV3(URI.create(url));
     return GSON.fromJson(response, RefundQueryResult.class);
   }
@@ -267,6 +267,20 @@ public class EcommerceServiceImpl implements EcommerceService {
   }
 
   @Override
+  public SubWithdrawStatusResult querySubWithdrawByOutRequestNo(String subMchid, String outRequestNo) throws WxPayException {
+    String url = String.format("%s/v3/ecommerce/fund/withdraw/out-request-no/%s?sub_mchid=%s", this.payService.getPayBaseUrl(), outRequestNo, subMchid);
+    String response = this.payService.getV3(URI.create(url));
+    return GSON.fromJson(response, SubWithdrawStatusResult.class);
+  }
+
+  @Override
+  public SpWithdrawStatusResult querySpWithdrawByOutRequestNo(String outRequestNo) throws WxPayException {
+    String url = String.format("%s/v3/merchant/fund/withdraw/out-request-no/%s", this.payService.getPayBaseUrl(), outRequestNo);
+    String response = this.payService.getV3(URI.create(url));
+    return GSON.fromJson(response, SpWithdrawStatusResult.class);
+  }
+
+  @Override
   public void modifySettlement(String subMchid, SettlementRequest request) throws WxPayException {
     String url = String.format("%s/v3/apply4sub/sub_merchants/%s/modify-settlement", this.payService.getPayBaseUrl(), subMchid);
     RsaCryptoUtil.encryptFields(request, this.payService.getConfig().getVerifier().getValidCertificate());
@@ -281,10 +295,17 @@ public class EcommerceServiceImpl implements EcommerceService {
   }
 
   @Override
-  public BillResult applyBill(BillTypeEnum billType, BillRequest request) throws WxPayException {
+  public TradeBillResult applyBill(TradeBillRequest request) throws WxPayException {
+    String url = String.format("%s/v3/bill/tradebill?%s", this.payService.getPayBaseUrl(), this.parseURLPair(request));
+    String response = this.payService.getV3(URI.create(url));
+    return GSON.fromJson(response, TradeBillResult.class);
+  }
+
+  @Override
+  public FundBillResult applyFundBill(FundBillTypeEnum billType, FundBillRequest request) throws WxPayException {
     String url = String.format(billType.getUrl(), this.payService.getPayBaseUrl(), this.parseURLPair(request));
     String response = this.payService.getV3(URI.create(url));
-    return GSON.fromJson(response, BillResult.class);
+    return GSON.fromJson(response, FundBillResult.class);
   }
 
   @Override

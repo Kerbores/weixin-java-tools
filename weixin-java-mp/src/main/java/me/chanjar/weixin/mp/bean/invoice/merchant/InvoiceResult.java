@@ -1,8 +1,8 @@
 package me.chanjar.weixin.mp.bean.invoice.merchant;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 
 /**
  * 电子发票信息查询结果
@@ -10,43 +10,52 @@ import java.io.Serializable;
 @Data
 public class InvoiceResult implements Serializable {
 
-  /**
-   * 发票相关信息
-   */
-  private InvoiceDetail invoicedetail;
-
-  @Data
-  public static class InvoiceDetail implements Serializable {
     /**
-     * 发票流水号
+     * 
      */
-    private String fpqqlsh;
-
+    private static final long serialVersionUID = 1L;
     /**
-     * 检验码
+     * 发票相关信息
      */
-    private String jym;
+    private InvoiceDetail invoicedetail;
 
-    /**
-     * 校验码
-     */
-    private String kprq;
+    @Data
+    public static class InvoiceDetail implements Serializable {
+        /**
+         * 
+         */
+        private static final long serialVersionUID = 1L;
 
-    /**
-     * 发票代码
-     */
-    private String fpdm;
+        /**
+         * 发票流水号
+         */
+        private String fpqqlsh;
 
-    /**
-     * 发票号码
-     */
-    private String fphm;
+        /**
+         * 检验码
+         */
+        private String jym;
 
-    /**
-     * 发票url
-     */
-    private String pdfurl;
+        /**
+         * 校验码
+         */
+        private String kprq;
 
-  }
+        /**
+         * 发票代码
+         */
+        private String fpdm;
+
+        /**
+         * 发票号码
+         */
+        private String fphm;
+
+        /**
+         * 发票url
+         */
+        private String pdfurl;
+
+    }
 
 }

@@ -27,37 +27,36 @@ import me.chanjar.weixin.open.bean.ma.WxMaQrcodeParam;
  * @date 2018-09-13
  */
 public class MaQrCodeJoddHttpRequestExecutor extends MaQrCodeRequestExecutor<HttpConnectionProvider, ProxyInfo> {
-  public MaQrCodeJoddHttpRequestExecutor(RequestHttp requestHttp) {
-    super(requestHttp);
-  }
-
-  @Override
-  public File execute(String uri, WxMaQrcodeParam qrcodeParam, WxType wxType) throws WxErrorException, IOException {
-    if (qrcodeParam != null && StringUtils.isNotBlank(qrcodeParam.getPagePath())) {
-      if (uri.indexOf('?') == -1) {
-        uri += '?';
-      }
-      uri += uri.endsWith("?")
-        ? "path=" + URLEncoder.encode(qrcodeParam.getRequestPath(), "UTF-8")
-        : "&path=" + URLEncoder.encode(qrcodeParam.getRequestPath(), "UTF-8");
+    public MaQrCodeJoddHttpRequestExecutor(RequestHttp requestHttp) {
+        super(requestHttp);
     }
 
+    @Override
+    public File execute(String uri, WxMaQrcodeParam qrcodeParam, WxType wxType) throws WxErrorException, IOException {
+        if (qrcodeParam != null && StringUtils.isNotBlank(qrcodeParam.getPagePath())) {
+            if (uri.indexOf('?') == -1) {
+                uri += '?';
+            }
+            uri += uri.endsWith("?")
+                                     ? "path=" + URLEncoder.encode(qrcodeParam.getRequestPath(), "UTF-8")
+                                     : "&path=" + URLEncoder.encode(qrcodeParam.getRequestPath(), "UTF-8");
+        }
 
-    HttpRequest request = HttpRequest.get(uri);
-    if (requestHttp.getRequestHttpProxy() != null) {
-      requestHttp.getRequestHttpClient().useProxy(requestHttp.getRequestHttpProxy());
-    }
-    request.withConnectionProvider(requestHttp.getRequestHttpClient());
+        HttpRequest request = HttpRequest.get(uri);
+        if (requestHttp.getRequestHttpProxy() != null) {
+            requestHttp.getRequestHttpClient().useProxy(requestHttp.getRequestHttpProxy());
+        }
+        request.withConnectionProvider(requestHttp.getRequestHttpClient());
 
-    HttpResponse response = request.send();
-    response.charset(StandardCharsets.UTF_8.name());
-    String contentTypeHeader = response.header("Content-Type");
-    if (MimeTypes.MIME_TEXT_PLAIN.equals(contentTypeHeader)) {
-      String responseContent = response.bodyText();
-      throw new WxErrorException(WxError.fromJson(responseContent, WxType.MiniApp));
+        HttpResponse response = request.send();
+        response.charset(StandardCharsets.UTF_8.name());
+        String contentTypeHeader = response.header("Content-Type");
+        if (MimeTypes.MIME_TEXT_PLAIN.equals(contentTypeHeader)) {
+            String responseContent = response.bodyText();
+            throw new WxErrorException(WxError.fromJson(responseContent, WxType.MiniApp));
+        }
+        try (InputStream inputStream = new ByteArrayInputStream(response.bodyBytes())) {
+            return FileUtils.createTmpFile(inputStream, UUID.randomUUID().toString(), "jpg");
+        }
     }
-    try (InputStream inputStream = new ByteArrayInputStream(response.bodyBytes())) {
-      return FileUtils.createTmpFile(inputStream, UUID.randomUUID().toString(), "jpg");
-    }
-  }
 }
