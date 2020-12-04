@@ -80,6 +80,11 @@ public class WxCpServiceNutzHttpClientImpl extends BaseWxCpServiceImpl<Sender, P
         }
     }
 
+    public WxCpServiceNutzHttpClientImpl setProxySwitcher(ProxySwitcher proxySwitcher) {
+        this.proxySwitcher = proxySwitcher;
+        return this;
+    }
+
     @Override
     public WxCpConfigStorage getWxCpConfigStorage() {
         return this.configStorage;
