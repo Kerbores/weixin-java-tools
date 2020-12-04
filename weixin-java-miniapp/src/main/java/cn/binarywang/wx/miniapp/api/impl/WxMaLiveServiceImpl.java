@@ -1,22 +1,27 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
-import cn.binarywang.wx.miniapp.api.WxMaLiveService;
-import cn.binarywang.wx.miniapp.api.WxMaService;
-import cn.binarywang.wx.miniapp.bean.live.*;
-import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.google.common.base.Joiner;
 import com.google.gson.JsonObject;
+
+import cn.binarywang.wx.miniapp.api.WxMaLiveService;
+import cn.binarywang.wx.miniapp.api.WxMaService;
+import cn.binarywang.wx.miniapp.bean.live.WxMaAssistantResult;
+import cn.binarywang.wx.miniapp.bean.live.WxMaCreateRoomResult;
+import cn.binarywang.wx.miniapp.bean.live.WxMaLiveAssistantInfo;
+import cn.binarywang.wx.miniapp.bean.live.WxMaLiveResult;
+import cn.binarywang.wx.miniapp.bean.live.WxMaLiveRoomInfo;
+import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxError;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.json.GsonParser;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * <pre>

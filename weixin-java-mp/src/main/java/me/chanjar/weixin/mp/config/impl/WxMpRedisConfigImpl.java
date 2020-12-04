@@ -1,11 +1,11 @@
 package me.chanjar.weixin.mp.config.impl;
 
+import java.util.concurrent.TimeUnit;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import me.chanjar.weixin.common.enums.TicketType;
 import me.chanjar.weixin.common.redis.WxRedisOps;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * 基于Redis的微信配置provider.

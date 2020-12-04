@@ -1,12 +1,13 @@
 package me.chanjar.weixin.open.bean.message;
 
+import java.io.Serializable;
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.open.bean.ma.WxOpenMaPreviewInfo;
 import me.chanjar.weixin.open.bean.ma.WxOpenMaSubmitAudit;
-
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * 微信小程序代码包提交审核(仅供第三方开发者代小程序调用)

@@ -1,10 +1,11 @@
 package com.github.binarywang.wxpay.bean.ecommerce;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * 请求分账 对象

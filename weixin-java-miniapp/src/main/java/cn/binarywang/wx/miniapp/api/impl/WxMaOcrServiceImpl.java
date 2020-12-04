@@ -1,16 +1,21 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
-import cn.binarywang.wx.miniapp.api.WxMaService;
-import lombok.RequiredArgsConstructor;
-import me.chanjar.weixin.common.service.WxOcrService;
-import me.chanjar.weixin.common.bean.ocr.*;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.common.requestexecuter.ocr.OcrDiscernRequestExecutor;
-
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+
+import cn.binarywang.wx.miniapp.api.WxMaService;
+import lombok.RequiredArgsConstructor;
+import me.chanjar.weixin.common.bean.ocr.WxOcrBankCardResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrBizLicenseResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrCommResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrDrivingLicenseResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrDrivingResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrIdCardResult;
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.common.requestexecuter.ocr.OcrDiscernRequestExecutor;
+import me.chanjar.weixin.common.service.WxOcrService;
 
 /**
  * ocr 接口实现.

@@ -1,11 +1,21 @@
 package me.chanjar.weixin.open.api.impl;
 
-import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
+
+import org.apache.commons.lang3.StringUtils;
+
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+
+import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.api.WxConsts;
+import me.chanjar.weixin.common.bean.oauth2.WxOAuth2AccessToken;
 import me.chanjar.weixin.common.error.WxError;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.error.WxRuntimeException;
@@ -14,20 +24,25 @@ import me.chanjar.weixin.common.util.http.URIUtil;
 import me.chanjar.weixin.common.util.json.GsonParser;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
 import me.chanjar.weixin.mp.api.WxMpService;
-import me.chanjar.weixin.common.bean.oauth2.WxOAuth2AccessToken;
-import me.chanjar.weixin.open.api.*;
-import me.chanjar.weixin.open.bean.*;
+import me.chanjar.weixin.open.api.WxOpenComponentService;
+import me.chanjar.weixin.open.api.WxOpenConfigStorage;
+import me.chanjar.weixin.open.api.WxOpenFastMaService;
+import me.chanjar.weixin.open.api.WxOpenMaService;
+import me.chanjar.weixin.open.api.WxOpenMpService;
+import me.chanjar.weixin.open.api.WxOpenService;
+import me.chanjar.weixin.open.bean.WxOpenAuthorizerAccessToken;
+import me.chanjar.weixin.open.bean.WxOpenComponentAccessToken;
+import me.chanjar.weixin.open.bean.WxOpenCreateResult;
+import me.chanjar.weixin.open.bean.WxOpenGetResult;
+import me.chanjar.weixin.open.bean.WxOpenMaCodeTemplate;
 import me.chanjar.weixin.open.bean.auth.WxOpenAuthorizationInfo;
 import me.chanjar.weixin.open.bean.message.WxOpenXmlMessage;
-import me.chanjar.weixin.open.bean.result.*;
+import me.chanjar.weixin.open.bean.result.WxOpenAuthorizerInfoResult;
+import me.chanjar.weixin.open.bean.result.WxOpenAuthorizerListResult;
+import me.chanjar.weixin.open.bean.result.WxOpenAuthorizerOptionResult;
+import me.chanjar.weixin.open.bean.result.WxOpenQueryAuthResult;
+import me.chanjar.weixin.open.bean.result.WxOpenResult;
 import me.chanjar.weixin.open.util.json.WxOpenGsonBuilder;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
 
 /**
  * @author <a href="https://github.com/007gzs">007</a>

@@ -1,10 +1,11 @@
 package cn.binarywang.wx.miniapp.bean;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
-
-import java.io.Serializable;
 
 /**
  * 小程序 提审素材上传接口

@@ -1,9 +1,9 @@
 package cn.binarywang.wx.miniapp.util.crypt;
 
 
-import org.testng.annotations.*;
-
 import static org.assertj.core.api.Assertions.assertThat;
+
+import org.testng.annotations.Test;
 
 /**
  * <pre>

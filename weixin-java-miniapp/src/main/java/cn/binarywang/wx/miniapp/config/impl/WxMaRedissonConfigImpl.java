@@ -1,14 +1,15 @@
 package cn.binarywang.wx.miniapp.config.impl;
 
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
+
+import org.apache.commons.lang3.StringUtils;
+import org.redisson.api.RedissonClient;
+
 import lombok.NonNull;
 import me.chanjar.weixin.common.bean.WxAccessToken;
 import me.chanjar.weixin.common.redis.RedissonWxRedisOps;
 import me.chanjar.weixin.common.redis.WxRedisOps;
-import org.apache.commons.lang3.StringUtils;
-import org.redisson.api.RedissonClient;
-
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
 
 /**
  * 基于Redisson的实现

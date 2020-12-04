@@ -1,13 +1,21 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Comment.CLOSE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Comment.DELETE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Comment.LIST;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Comment.MARK_ELECT;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Comment.OPEN;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Comment.REPLY_ADD;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Comment.REPLY_DELETE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Comment.UNMARK_ELECT;
+
 import com.google.gson.JsonObject;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.mp.api.WxMpCommentService;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.bean.comment.WxMpCommentListVo;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Comment.*;
 
 /**
  * @author <a href="https://github.com/binarywang">Binary Wang</a>

@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.common.util.json.WxBooleanTypeAdapter;
 import me.chanjar.weixin.common.util.json.WxDateTypeAdapter;

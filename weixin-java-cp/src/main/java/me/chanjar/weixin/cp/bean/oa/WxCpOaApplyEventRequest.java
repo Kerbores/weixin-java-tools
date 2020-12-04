@@ -1,13 +1,14 @@
 package me.chanjar.weixin.cp.bean.oa;
 
+import java.io.Serializable;
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import lombok.experimental.Accessors;
 import me.chanjar.weixin.cp.bean.oa.applydata.ApplyDataContent;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * 提交审批申请 请求对象类.

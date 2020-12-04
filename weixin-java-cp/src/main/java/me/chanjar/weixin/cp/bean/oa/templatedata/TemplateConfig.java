@@ -1,10 +1,16 @@
 package me.chanjar.weixin.cp.bean.oa.templatedata;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-import me.chanjar.weixin.cp.bean.oa.templatedata.control.*;
-
 import java.io.Serializable;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
+import me.chanjar.weixin.cp.bean.oa.templatedata.control.TemplateAttendance;
+import me.chanjar.weixin.cp.bean.oa.templatedata.control.TemplateContact;
+import me.chanjar.weixin.cp.bean.oa.templatedata.control.TemplateDate;
+import me.chanjar.weixin.cp.bean.oa.templatedata.control.TemplateSelector;
+import me.chanjar.weixin.cp.bean.oa.templatedata.control.TemplateTable;
+import me.chanjar.weixin.cp.bean.oa.templatedata.control.TemplateVacation;
 
 /**
  * 模板控件配置，包含了部分控件类型的附加类型、属性，详见附录说明。

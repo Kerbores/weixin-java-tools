@@ -2,6 +2,7 @@ package me.chanjar.weixin.cp.util.crypto;
 
 import com.google.common.base.CharMatcher;
 import com.google.common.io.BaseEncoding;
+
 import me.chanjar.weixin.common.util.crypto.WxCryptUtil;
 import me.chanjar.weixin.cp.config.WxCpTpConfigStorage;
 

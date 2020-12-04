@@ -1,9 +1,9 @@
 package me.chanjar.weixin.cp.api;
 
+import java.util.List;
+
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.cp.bean.article.NewArticle;
-
-import java.util.List;
 
 /**
  * 微信群机器人消息发送api

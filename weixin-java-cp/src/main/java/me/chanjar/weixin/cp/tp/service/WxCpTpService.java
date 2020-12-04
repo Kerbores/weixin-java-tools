@@ -6,7 +6,12 @@ import me.chanjar.weixin.common.session.WxSessionManager;
 import me.chanjar.weixin.common.util.http.MediaUploadRequestExecutor;
 import me.chanjar.weixin.common.util.http.RequestExecutor;
 import me.chanjar.weixin.common.util.http.RequestHttp;
-import me.chanjar.weixin.cp.bean.*;
+import me.chanjar.weixin.cp.bean.WxCpMaJsCode2SessionResult;
+import me.chanjar.weixin.cp.bean.WxCpTpAuthInfo;
+import me.chanjar.weixin.cp.bean.WxCpTpCorp;
+import me.chanjar.weixin.cp.bean.WxCpTpPermanentCodeInfo;
+import me.chanjar.weixin.cp.bean.WxCpTpUserDetail;
+import me.chanjar.weixin.cp.bean.WxCpTpUserInfo;
 import me.chanjar.weixin.cp.config.WxCpTpConfigStorage;
 
 /**

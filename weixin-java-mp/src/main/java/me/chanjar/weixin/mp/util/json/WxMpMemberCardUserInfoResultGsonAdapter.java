@@ -1,5 +1,7 @@
 package me.chanjar.weixin.mp.util.json;
 
+import static me.chanjar.weixin.common.util.json.GsonHelper.getString;
+
 import java.lang.reflect.Type;
 
 import com.google.gson.JsonArray;
@@ -8,12 +10,11 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
+
 import me.chanjar.weixin.common.util.json.GsonHelper;
 import me.chanjar.weixin.mp.bean.card.membercard.MemberCardUserInfo;
 import me.chanjar.weixin.mp.bean.card.membercard.NameValues;
 import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardUserInfoResult;
-
-import static me.chanjar.weixin.common.util.json.GsonHelper.getString;
 
 /**
  * Json to WxMpMemberCardUserInfoResult 的转换适配器

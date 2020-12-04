@@ -1,12 +1,13 @@
 package me.chanjar.weixin.open.bean;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
 import me.chanjar.weixin.open.bean.result.WxOpenResult;
-
-import java.io.Serializable;
 
 /**
  * 文档地址：https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/api/account/get.html

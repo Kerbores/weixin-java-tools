@@ -5,9 +5,6 @@ import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Map;
 
-import lombok.RequiredArgsConstructor;
-import me.chanjar.weixin.mp.bean.card.membercard.*;
-import me.chanjar.weixin.mp.enums.WxMpApiUrl;
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.gson.Gson;
@@ -15,6 +12,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
+
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
@@ -24,15 +23,24 @@ import me.chanjar.weixin.mp.bean.card.AdvancedInfo;
 import me.chanjar.weixin.mp.bean.card.BaseInfo;
 import me.chanjar.weixin.mp.bean.card.CardUpdateResult;
 import me.chanjar.weixin.mp.bean.card.DateInfo;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCreateResult;
+import me.chanjar.weixin.mp.bean.card.enums.BusinessServiceType;
+import me.chanjar.weixin.mp.bean.card.enums.CardColor;
+import me.chanjar.weixin.mp.bean.card.enums.DateInfoType;
+import me.chanjar.weixin.mp.bean.card.membercard.ActivatePluginParam;
+import me.chanjar.weixin.mp.bean.card.membercard.ActivatePluginParamResult;
 import me.chanjar.weixin.mp.bean.card.membercard.MemberCard;
 import me.chanjar.weixin.mp.bean.card.membercard.MemberCardActivateUserFormRequest;
 import me.chanjar.weixin.mp.bean.card.membercard.MemberCardActivateUserFormResult;
 import me.chanjar.weixin.mp.bean.card.membercard.MemberCardCreateRequest;
 import me.chanjar.weixin.mp.bean.card.membercard.MemberCardUpdateRequest;
-import me.chanjar.weixin.mp.bean.card.WxMpCardCreateResult;
-import me.chanjar.weixin.mp.bean.card.enums.BusinessServiceType;
-import me.chanjar.weixin.mp.bean.card.enums.CardColor;
-import me.chanjar.weixin.mp.bean.card.enums.DateInfoType;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardActivateTempInfoResult;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardActivatedMessage;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardCreateMessage;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardUpdateMessage;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardUpdateResult;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardUserInfoResult;
+import me.chanjar.weixin.mp.enums.WxMpApiUrl;
 import me.chanjar.weixin.mp.util.json.WxMpGsonBuilder;
 
 /**

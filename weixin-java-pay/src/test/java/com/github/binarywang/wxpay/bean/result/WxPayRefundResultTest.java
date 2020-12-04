@@ -1,9 +1,10 @@
 package com.github.binarywang.wxpay.bean.result;
 
-import com.github.binarywang.wxpay.util.XmlConfig;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.testng.annotations.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import com.github.binarywang.wxpay.util.XmlConfig;
 
 /**
  * <pre>

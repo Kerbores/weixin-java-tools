@@ -1,10 +1,12 @@
 package com.github.binarywang.wxpay.bean.entpay;
 
+import org.w3c.dom.Document;
+
 import com.github.binarywang.wxpay.bean.result.BaseWxPayResult;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.w3c.dom.Document;
 
 /**
  * <pre>

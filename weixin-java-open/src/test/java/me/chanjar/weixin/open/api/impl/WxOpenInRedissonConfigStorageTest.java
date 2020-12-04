@@ -1,8 +1,5 @@
 package me.chanjar.weixin.open.api.impl;
 
-import me.chanjar.weixin.open.api.WxOpenConfigStorage;
-import me.chanjar.weixin.open.bean.WxOpenAuthorizerAccessToken;
-import me.chanjar.weixin.open.bean.WxOpenComponentAccessToken;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
@@ -10,6 +7,10 @@ import org.redisson.config.TransportMode;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import me.chanjar.weixin.open.api.WxOpenConfigStorage;
+import me.chanjar.weixin.open.bean.WxOpenAuthorizerAccessToken;
+import me.chanjar.weixin.open.bean.WxOpenComponentAccessToken;
 
 public class WxOpenInRedissonConfigStorageTest {
 

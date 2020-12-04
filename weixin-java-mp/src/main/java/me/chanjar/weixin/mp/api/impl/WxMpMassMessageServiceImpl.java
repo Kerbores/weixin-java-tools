@@ -1,18 +1,22 @@
 package me.chanjar.weixin.mp.api.impl;
 
 import com.google.gson.JsonObject;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.mp.api.WxMpMassMessageService;
 import me.chanjar.weixin.mp.api.WxMpService;
-import me.chanjar.weixin.mp.bean.*;
+import me.chanjar.weixin.mp.bean.WxMpMassNews;
+import me.chanjar.weixin.mp.bean.WxMpMassOpenIdsMessage;
+import me.chanjar.weixin.mp.bean.WxMpMassPreviewMessage;
+import me.chanjar.weixin.mp.bean.WxMpMassTagMessage;
+import me.chanjar.weixin.mp.bean.WxMpMassVideo;
 import me.chanjar.weixin.mp.bean.result.WxMpMassGetResult;
 import me.chanjar.weixin.mp.bean.result.WxMpMassSendResult;
 import me.chanjar.weixin.mp.bean.result.WxMpMassSpeedGetResult;
 import me.chanjar.weixin.mp.bean.result.WxMpMassUploadResult;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.*;
+import me.chanjar.weixin.mp.enums.WxMpApiUrl.MassMessage;
 
 /**
  * <pre>

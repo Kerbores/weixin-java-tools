@@ -1,17 +1,33 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static org.testng.AssertJUnit.assertNotNull;
+
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import com.google.inject.Inject;
+
 import me.chanjar.weixin.mp.api.WxMpCardService;
 import me.chanjar.weixin.mp.api.WxMpMemberCardService;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.api.test.ApiTestModule;
-import me.chanjar.weixin.mp.bean.card.*;
+import me.chanjar.weixin.mp.bean.card.BaseInfo;
+import me.chanjar.weixin.mp.bean.card.DateInfo;
+import me.chanjar.weixin.mp.bean.card.Sku;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCreateResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardLandingPageCreateRequest;
+import me.chanjar.weixin.mp.bean.card.WxMpCardLandingPageCreateResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardQrcodeCreateResult;
 import me.chanjar.weixin.mp.bean.card.enums.CardSceneType;
-import me.chanjar.weixin.mp.bean.card.membercard.*;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
-
-import static org.testng.AssertJUnit.assertNotNull;
+import me.chanjar.weixin.mp.bean.card.membercard.ActivatePluginParam;
+import me.chanjar.weixin.mp.bean.card.membercard.MemberCard;
+import me.chanjar.weixin.mp.bean.card.membercard.MemberCardCreateRequest;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardActivateTempInfoResult;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardActivatedMessage;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardCreateMessage;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardUpdateMessage;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardUpdateResult;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardUserInfoResult;
 
 /**
  * 会员卡相关接口的测试类。

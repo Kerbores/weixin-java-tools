@@ -1,14 +1,15 @@
 package me.chanjar.weixin.mp.config.impl;
 
+import java.util.concurrent.TimeUnit;
+
+import org.redisson.api.RedissonClient;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NonNull;
 import me.chanjar.weixin.common.enums.TicketType;
 import me.chanjar.weixin.common.redis.RedissonWxRedisOps;
 import me.chanjar.weixin.common.redis.WxRedisOps;
-import org.redisson.api.RedissonClient;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author wuxingye

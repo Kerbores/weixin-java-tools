@@ -1,11 +1,12 @@
 package com.github.binarywang.wxpay.bean.payscore;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * 服务时间范围.

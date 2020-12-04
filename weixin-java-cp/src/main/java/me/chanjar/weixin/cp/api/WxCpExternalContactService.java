@@ -1,14 +1,26 @@
 package me.chanjar.weixin.cp.api;
 
+import java.util.Date;
+import java.util.List;
+
 import lombok.NonNull;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.cp.bean.WxCpBaseResp;
-import me.chanjar.weixin.cp.bean.external.*;
+import me.chanjar.weixin.cp.bean.external.WxCpContactWayInfo;
+import me.chanjar.weixin.cp.bean.external.WxCpContactWayResult;
+import me.chanjar.weixin.cp.bean.external.WxCpMsgTemplate;
+import me.chanjar.weixin.cp.bean.external.WxCpMsgTemplateAddResult;
+import me.chanjar.weixin.cp.bean.external.WxCpUpdateRemarkRequest;
+import me.chanjar.weixin.cp.bean.external.WxCpUserExternalGroupChatInfo;
+import me.chanjar.weixin.cp.bean.external.WxCpUserExternalGroupChatList;
+import me.chanjar.weixin.cp.bean.external.WxCpUserExternalGroupChatStatistic;
+import me.chanjar.weixin.cp.bean.external.WxCpUserExternalTagGroupInfo;
+import me.chanjar.weixin.cp.bean.external.WxCpUserExternalTagGroupList;
+import me.chanjar.weixin.cp.bean.external.WxCpUserExternalUnassignList;
+import me.chanjar.weixin.cp.bean.external.WxCpUserExternalUserBehaviorStatistic;
+import me.chanjar.weixin.cp.bean.external.WxCpWelcomeMsg;
 import me.chanjar.weixin.cp.bean.external.contact.WxCpExternalContactBatchInfo;
 import me.chanjar.weixin.cp.bean.external.contact.WxCpExternalContactInfo;
-
-import java.util.Date;
-import java.util.List;
 
 /**
  * <pre>

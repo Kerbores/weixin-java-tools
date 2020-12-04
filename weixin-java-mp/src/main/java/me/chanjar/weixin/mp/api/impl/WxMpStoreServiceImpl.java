@@ -1,7 +1,10 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import java.util.List;
+
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxError;
@@ -15,8 +18,6 @@ import me.chanjar.weixin.mp.bean.store.WxMpStoreInfo;
 import me.chanjar.weixin.mp.bean.store.WxMpStoreListResult;
 import me.chanjar.weixin.mp.enums.WxMpApiUrl;
 import me.chanjar.weixin.mp.util.json.WxMpGsonBuilder;
-
-import java.util.List;
 
 /**
  * Created by Binary Wang on 2016/9/26.

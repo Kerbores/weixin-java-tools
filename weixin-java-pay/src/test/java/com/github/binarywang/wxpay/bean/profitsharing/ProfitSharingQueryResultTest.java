@@ -1,10 +1,10 @@
 package com.github.binarywang.wxpay.bean.profitsharing;
 
-import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.testng.annotations.Test;
 
 /**
  * 测试.

@@ -1,11 +1,12 @@
 package me.chanjar.weixin.cp.bean.external;
 
+import java.util.List;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.util.List;
 
 /**
  * @author 曹祖鹏

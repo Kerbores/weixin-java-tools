@@ -1,14 +1,18 @@
 package me.chanjar.weixin.cp.bean.external;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
-import lombok.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import me.chanjar.weixin.cp.bean.external.msg.Image;
 import me.chanjar.weixin.cp.bean.external.msg.Link;
 import me.chanjar.weixin.cp.bean.external.msg.MiniProgram;
 import me.chanjar.weixin.cp.bean.external.msg.Text;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.io.Serializable;
 
 /**
  * 新客户欢迎语.

@@ -1,12 +1,12 @@
 package me.chanjar.weixin.cp.api;
 
+import java.util.List;
+import java.util.Map;
+
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.cp.bean.WxCpInviteResult;
 import me.chanjar.weixin.cp.bean.WxCpUser;
 import me.chanjar.weixin.cp.bean.external.contact.WxCpExternalContactInfo;
-
-import java.util.List;
-import java.util.Map;
 
 /**
  * <pre>

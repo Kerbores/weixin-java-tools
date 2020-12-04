@@ -1,12 +1,13 @@
 package me.chanjar.weixin.open.api.impl;
 
-import me.chanjar.weixin.open.api.WxOpenConfigStorage;
-import me.chanjar.weixin.open.bean.WxOpenAuthorizerAccessToken;
-import me.chanjar.weixin.open.bean.WxOpenComponentAccessToken;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import me.chanjar.weixin.open.api.WxOpenConfigStorage;
+import me.chanjar.weixin.open.bean.WxOpenAuthorizerAccessToken;
+import me.chanjar.weixin.open.bean.WxOpenComponentAccessToken;
 import redis.clients.jedis.JedisPool;
 
 public class WxOpenInRedisConfigStorageTest {

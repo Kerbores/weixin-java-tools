@@ -1,19 +1,21 @@
 package com.github.binarywang.wxpay.bean.result;
 
+import java.io.Serializable;
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+import org.w3c.dom.Document;
+
 import com.google.common.collect.Lists;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import me.chanjar.weixin.common.util.json.GsonParser;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
-import org.apache.commons.lang3.StringUtils;
-import org.w3c.dom.Document;
-
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * <pre>

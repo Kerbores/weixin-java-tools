@@ -1,17 +1,19 @@
 package com.github.binarywang.wxpay.service.impl;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import com.github.binarywang.wxpay.bean.media.ImageUploadResult;
 import com.github.binarywang.wxpay.exception.WxPayException;
 import com.github.binarywang.wxpay.service.MerchantMediaService;
 import com.github.binarywang.wxpay.service.WxPayService;
 import com.github.binarywang.wxpay.testbase.ApiTestModule;
 import com.google.inject.Inject;
-import lombok.extern.slf4j.Slf4j;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
 
-import java.io.File;
-import java.io.IOException;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * <pre>

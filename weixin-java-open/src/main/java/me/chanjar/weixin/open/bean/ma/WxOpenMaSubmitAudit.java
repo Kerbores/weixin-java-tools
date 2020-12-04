@@ -1,9 +1,10 @@
 package me.chanjar.weixin.open.bean.ma;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-
 import java.io.Serializable;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
 
 /**
  * 三方平台提交小程序代码审核

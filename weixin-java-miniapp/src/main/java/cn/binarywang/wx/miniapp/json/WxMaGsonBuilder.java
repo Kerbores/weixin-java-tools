@@ -1,5 +1,8 @@
 package cn.binarywang.wx.miniapp.json;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import cn.binarywang.wx.miniapp.bean.WxMaSubscribeMessage;
 import cn.binarywang.wx.miniapp.bean.WxMaUniformMessage;
 import cn.binarywang.wx.miniapp.bean.analysis.WxMaRetainInfo;
@@ -7,9 +10,13 @@ import cn.binarywang.wx.miniapp.bean.analysis.WxMaUserPortrait;
 import cn.binarywang.wx.miniapp.bean.analysis.WxMaVisitDistribution;
 import cn.binarywang.wx.miniapp.bean.code.WxMaCodeCommitRequest;
 import cn.binarywang.wx.miniapp.bean.code.WxMaCodeVersionDistribution;
-import cn.binarywang.wx.miniapp.json.adaptor.*;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import cn.binarywang.wx.miniapp.json.adaptor.WxMaCodeCommitRequestGsonAdapter;
+import cn.binarywang.wx.miniapp.json.adaptor.WxMaCodeVersionDistributionGsonAdapter;
+import cn.binarywang.wx.miniapp.json.adaptor.WxMaRetainInfoGsonAdapter;
+import cn.binarywang.wx.miniapp.json.adaptor.WxMaSubscribeMessageGsonAdapter;
+import cn.binarywang.wx.miniapp.json.adaptor.WxMaUniformMessageGsonAdapter;
+import cn.binarywang.wx.miniapp.json.adaptor.WxMaUserPortraitGsonAdapter;
+import cn.binarywang.wx.miniapp.json.adaptor.WxMaVisitDistributionGsonAdapter;
 
 /**
  * @author <a href="https://github.com/binarywang">Binary Wang</a>

@@ -1,8 +1,22 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserTag.TAGS_CREATE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserTag.TAGS_DELETE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserTag.TAGS_GET;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserTag.TAGS_GETIDLIST;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserTag.TAGS_MEMBERS_BATCHTAGGING;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserTag.TAGS_MEMBERS_BATCHUNTAGGING;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserTag.TAGS_UPDATE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserTag.TAG_GET;
+
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxError;
@@ -13,11 +27,6 @@ import me.chanjar.weixin.mp.api.WxMpUserTagService;
 import me.chanjar.weixin.mp.bean.tag.WxTagListUser;
 import me.chanjar.weixin.mp.bean.tag.WxUserTag;
 import me.chanjar.weixin.mp.util.json.WxMpGsonBuilder;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.List;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserTag.*;
 
 /**
  * Created by Binary Wang on 2016/9/2.

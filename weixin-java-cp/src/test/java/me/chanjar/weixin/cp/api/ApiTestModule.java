@@ -1,9 +1,13 @@
 package me.chanjar.weixin.cp.api;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 import com.google.inject.Binder;
 import com.google.inject.Module;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.extern.slf4j.Slf4j;
@@ -11,9 +15,6 @@ import me.chanjar.weixin.common.error.WxRuntimeException;
 import me.chanjar.weixin.common.util.xml.XStreamInitializer;
 import me.chanjar.weixin.cp.api.impl.WxCpServiceImpl;
 import me.chanjar.weixin.cp.config.impl.WxCpDefaultConfigImpl;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 @Slf4j
 public class ApiTestModule implements Module {

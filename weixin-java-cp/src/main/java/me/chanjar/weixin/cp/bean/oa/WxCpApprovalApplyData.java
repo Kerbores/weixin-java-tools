@@ -1,10 +1,10 @@
 package me.chanjar.weixin.cp.bean.oa;
 
-import lombok.Data;
-import me.chanjar.weixin.cp.bean.oa.applydata.ApplyDataContent;
-
 import java.io.Serializable;
 import java.util.List;
+
+import lombok.Data;
+import me.chanjar.weixin.cp.bean.oa.applydata.ApplyDataContent;
 
 /**
  * 审批申请数据

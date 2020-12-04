@@ -1,6 +1,15 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserBlacklist.BATCHBLACKLIST;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserBlacklist.BATCHUNBLACKLIST;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserBlacklist.GETBLACKLIST;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.google.gson.JsonObject;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.http.SimplePostRequestExecutor;
@@ -8,12 +17,6 @@ import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.api.WxMpUserBlacklistService;
 import me.chanjar.weixin.mp.bean.result.WxMpUserBlacklistGetResult;
 import me.chanjar.weixin.mp.util.json.WxMpGsonBuilder;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.UserBlacklist.*;
 
 /**
  * @author miller

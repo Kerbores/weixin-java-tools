@@ -1,19 +1,21 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
+import java.io.Serializable;
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+
+import com.google.common.base.Joiner;
+import com.google.common.collect.ImmutableMap;
+import com.google.gson.reflect.TypeToken;
+
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.api.WxMaSubscribeService;
 import cn.binarywang.wx.miniapp.bean.template.WxMaPubTemplateTitleListResult;
 import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
-import com.google.common.base.Joiner;
-import com.google.common.collect.ImmutableMap;
-import com.google.gson.reflect.TypeToken;
 import lombok.AllArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.json.GsonParser;
-import org.apache.commons.lang3.StringUtils;
-
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * @author <a href="https://github.com/binarywang">Binary Wang</a>

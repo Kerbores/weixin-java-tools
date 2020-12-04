@@ -1,9 +1,9 @@
 package com.github.binarywang.wxpay.bean.profitsharing;
 
-import com.google.gson.Gson;
-
 import java.io.Serializable;
 import java.util.ArrayList;
+
+import com.google.gson.Gson;
 
 /**
  * @author Wang GuangXin 2019/10/22 11:01

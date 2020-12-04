@@ -1,15 +1,16 @@
 package com.github.binarywang.wxpay.constant;
 
+import java.text.Format;
+import java.util.List;
+
+import org.apache.commons.lang3.time.FastDateFormat;
+
 import com.github.binarywang.wxpay.bean.order.WxPayAppOrderResult;
 import com.github.binarywang.wxpay.bean.order.WxPayMpOrderResult;
 import com.github.binarywang.wxpay.bean.order.WxPayMwebOrderResult;
 import com.github.binarywang.wxpay.bean.order.WxPayNativeOrderResult;
 import com.github.binarywang.wxpay.bean.result.WxPayMicropayResult;
 import com.google.common.collect.Lists;
-import org.apache.commons.lang3.time.FastDateFormat;
-
-import java.text.Format;
-import java.util.List;
 
 /**
  * <pre>

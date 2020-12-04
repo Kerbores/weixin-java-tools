@@ -1,18 +1,24 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
-import cn.binarywang.wx.miniapp.bean.*;
-import cn.binarywang.wx.miniapp.constant.WxMaConstants;
-import org.testng.annotations.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import cn.binarywang.wx.miniapp.api.WxMaService;
-import cn.binarywang.wx.miniapp.test.ApiTestModule;
-import cn.binarywang.wx.miniapp.test.TestConfig;
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import com.google.common.collect.Lists;
 import com.google.gson.JsonObject;
 import com.google.inject.Inject;
-import me.chanjar.weixin.common.error.WxErrorException;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import cn.binarywang.wx.miniapp.api.WxMaService;
+import cn.binarywang.wx.miniapp.bean.WxMaKefuMessage;
+import cn.binarywang.wx.miniapp.bean.WxMaSubscribeMessage;
+import cn.binarywang.wx.miniapp.bean.WxMaTemplateData;
+import cn.binarywang.wx.miniapp.bean.WxMaUniformMessage;
+import cn.binarywang.wx.miniapp.bean.WxMaUpdatableMsg;
+import cn.binarywang.wx.miniapp.constant.WxMaConstants;
+import cn.binarywang.wx.miniapp.test.ApiTestModule;
+import cn.binarywang.wx.miniapp.test.TestConfig;
+import me.chanjar.weixin.common.error.WxErrorException;
 
 /**
  * 测试消息相关接口

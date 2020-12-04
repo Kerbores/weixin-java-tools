@@ -1,11 +1,11 @@
 package com.github.binarywang.wxpay.service;
 
-import com.github.binarywang.wxpay.bean.media.ImageUploadResult;
-import com.github.binarywang.wxpay.exception.WxPayException;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+
+import com.github.binarywang.wxpay.bean.media.ImageUploadResult;
+import com.github.binarywang.wxpay.exception.WxPayException;
 
 /**
  * <pre>

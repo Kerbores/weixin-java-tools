@@ -1,11 +1,11 @@
 package me.chanjar.weixin.common.service;
 
-import me.chanjar.weixin.common.error.WxErrorException;
+import java.io.File;
+
 import me.chanjar.weixin.common.bean.imgproc.WxImgProcAiCropResult;
 import me.chanjar.weixin.common.bean.imgproc.WxImgProcQrCodeResult;
 import me.chanjar.weixin.common.bean.imgproc.WxImgProcSuperResolutionResult;
-
-import java.io.File;
+import me.chanjar.weixin.common.error.WxErrorException;
 
 /**
  * 多项图像处理能力相关的API.

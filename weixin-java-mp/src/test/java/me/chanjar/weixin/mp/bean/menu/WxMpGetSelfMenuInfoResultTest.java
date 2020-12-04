@@ -1,10 +1,10 @@
 package me.chanjar.weixin.mp.bean.menu;
 
-import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.testng.annotations.Test;
 
 /**
  * @author <a href="https://github.com/binarywang">Binary Wang</a>

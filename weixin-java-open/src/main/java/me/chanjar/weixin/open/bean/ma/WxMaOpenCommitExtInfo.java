@@ -1,15 +1,17 @@
 package me.chanjar.weixin.open.bean.ma;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-import me.chanjar.weixin.open.util.json.WxOpenGsonBuilder;
-import org.apache.commons.lang3.StringUtils;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.commons.lang3.StringUtils;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
+import me.chanjar.weixin.open.util.json.WxOpenGsonBuilder;
 
 /**
  * 微信小程序三方平台代上传代码提交额外信息对象

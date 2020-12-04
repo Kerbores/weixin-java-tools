@@ -1,16 +1,17 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+import javax.inject.Inject;
+
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
 import me.chanjar.weixin.common.bean.oauth2.WxOAuth2AccessToken;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.api.test.ApiTestModule;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
-
-import javax.inject.Inject;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * 测试类.

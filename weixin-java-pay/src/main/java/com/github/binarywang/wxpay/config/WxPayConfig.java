@@ -1,27 +1,38 @@
 package com.github.binarywang.wxpay.config;
 
-import com.github.binarywang.wxpay.exception.WxPayException;
-import com.github.binarywang.wxpay.v3.WxPayV3HttpClientBuilder;
-import com.github.binarywang.wxpay.v3.auth.*;
-import com.github.binarywang.wxpay.v3.util.PemUtils;
-import jodd.util.ResourcesUtil;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.SneakyThrows;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.RegExUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.ssl.SSLContexts;
-
-import javax.net.ssl.SSLContext;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.security.KeyStore;
 import java.security.PrivateKey;
 import java.security.cert.X509Certificate;
 import java.util.Collections;
+
+import javax.net.ssl.SSLContext;
+
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.RegExUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.ssl.SSLContexts;
+
+import com.github.binarywang.wxpay.exception.WxPayException;
+import com.github.binarywang.wxpay.v3.WxPayV3HttpClientBuilder;
+import com.github.binarywang.wxpay.v3.auth.AutoUpdateCertificatesVerifier;
+import com.github.binarywang.wxpay.v3.auth.PrivateKeySigner;
+import com.github.binarywang.wxpay.v3.auth.Verifier;
+import com.github.binarywang.wxpay.v3.auth.WxPayCredentials;
+import com.github.binarywang.wxpay.v3.auth.WxPayValidator;
+import com.github.binarywang.wxpay.v3.util.PemUtils;
+
+import jodd.util.ResourcesUtil;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.SneakyThrows;
 
 /**
  * 微信支付配置

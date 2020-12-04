@@ -1,10 +1,10 @@
 package me.chanjar.weixin.cp.bean.messagebuilder;
 
+import java.util.List;
+
 import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.cp.bean.message.WxCpMessage;
 import me.chanjar.weixin.cp.bean.taskcard.TaskCardButton;
-
-import java.util.List;
 
 /**
  * <pre>

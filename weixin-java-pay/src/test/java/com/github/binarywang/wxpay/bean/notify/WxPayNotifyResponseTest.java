@@ -1,8 +1,8 @@
 package com.github.binarywang.wxpay.bean.notify;
 
-import org.testng.annotations.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
+
+import org.testng.annotations.Test;
 
 /**
  * WxPayNotifyResponse 测试.

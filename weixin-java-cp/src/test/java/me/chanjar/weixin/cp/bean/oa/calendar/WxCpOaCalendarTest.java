@@ -1,11 +1,12 @@
 package me.chanjar.weixin.cp.bean.oa.calendar;
 
-import me.chanjar.weixin.common.util.json.GsonParser;
-import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.testng.annotations.Test;
+
+import me.chanjar.weixin.common.util.json.GsonParser;
 
 /**
  * 单元测试.

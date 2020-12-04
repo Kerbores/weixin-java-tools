@@ -1,16 +1,17 @@
 package com.github.binarywang.wxpay.bean.entpay;
 
+import java.util.Map;
+
 import com.github.binarywang.wxpay.bean.request.BaseWxPayRequest;
 import com.github.binarywang.wxpay.exception.WxPayException;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import me.chanjar.weixin.common.annotation.Required;
-
-import java.util.Map;
 
 /**
  * <pre>

@@ -1,18 +1,20 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.List;
+
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
+import com.google.common.collect.Lists;
+import com.google.inject.Inject;
+
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.api.WxMaSubscribeService;
 import cn.binarywang.wx.miniapp.bean.template.WxMaPubTemplateTitleListResult;
 import cn.binarywang.wx.miniapp.test.ApiTestModule;
-import com.google.common.collect.Lists;
-import com.google.inject.Inject;
 import me.chanjar.weixin.common.error.WxErrorException;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
-
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * 测试类.

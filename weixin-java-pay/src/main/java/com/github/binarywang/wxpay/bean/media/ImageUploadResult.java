@@ -1,6 +1,7 @@
 package com.github.binarywang.wxpay.bean.media;
 
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;

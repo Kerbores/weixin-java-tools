@@ -1,15 +1,17 @@
 package com.github.binarywang.wxpay.v3.auth;
 
 
-import com.github.binarywang.wxpay.v3.Validator;
-import lombok.extern.slf4j.Slf4j;
+import java.io.IOException;
+
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.entity.ContentType;
 import org.apache.http.util.EntityUtils;
 
-import java.io.IOException;
+import com.github.binarywang.wxpay.v3.Validator;
+
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class WxPayValidator implements Validator {

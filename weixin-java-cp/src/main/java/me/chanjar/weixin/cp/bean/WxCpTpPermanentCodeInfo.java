@@ -1,11 +1,12 @@
 package me.chanjar.weixin.cp.bean;
 
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Getter;
 import lombok.Setter;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.util.List;
 
 /**
  * 服务商模式获取永久授权码信息

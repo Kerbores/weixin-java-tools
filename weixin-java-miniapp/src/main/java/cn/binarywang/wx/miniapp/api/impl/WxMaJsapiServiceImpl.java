@@ -1,16 +1,17 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
+import java.util.concurrent.locks.Lock;
+
+import com.google.gson.JsonObject;
+
 import cn.binarywang.wx.miniapp.api.WxMaJsapiService;
 import cn.binarywang.wx.miniapp.api.WxMaService;
-import com.google.gson.JsonObject;
 import lombok.AllArgsConstructor;
 import me.chanjar.weixin.common.bean.WxJsapiSignature;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.RandomUtils;
 import me.chanjar.weixin.common.util.crypto.SHA1;
 import me.chanjar.weixin.common.util.json.GsonParser;
-
-import java.util.concurrent.locks.Lock;
 
 /**
  * <pre>

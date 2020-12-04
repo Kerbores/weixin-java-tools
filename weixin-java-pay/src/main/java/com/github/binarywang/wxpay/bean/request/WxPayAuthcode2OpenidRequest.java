@@ -1,9 +1,14 @@
 package com.github.binarywang.wxpay.bean.request;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import lombok.*;
-
 import java.util.Map;
+
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 /**
  * <pre>
@@ -21,26 +26,30 @@ import java.util.Map;
 @XStreamAlias("xml")
 public class WxPayAuthcode2OpenidRequest extends BaseWxPayRequest {
 
-  /**
-   * <pre>
-   *     授权码
-   *     auth_code
-   *     是
-   *     String(128)
-   *     扫码支付授权码，设备读取用户微信中的条码或者二维码信息
-   * </pre>
-   */
-  @XStreamAlias("auth_code")
-  private String authCode;
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+    /**
+     * <pre>
+     *     授权码
+     *     auth_code
+     *     是
+     *     String(128)
+     *     扫码支付授权码，设备读取用户微信中的条码或者二维码信息
+     * </pre>
+     */
+    @XStreamAlias("auth_code")
+    private String authCode;
 
-  @Override
-  protected void checkConstraints() {
-    // nothing to do
-  }
+    @Override
+    protected void checkConstraints() {
+        // nothing to do
+    }
 
-  @Override
-  protected void storeMap(Map<String, String> map) {
-    map.put("auth_code", authCode);
-  }
+    @Override
+    protected void storeMap(Map<String, String> map) {
+        map.put("auth_code", authCode);
+    }
 
 }

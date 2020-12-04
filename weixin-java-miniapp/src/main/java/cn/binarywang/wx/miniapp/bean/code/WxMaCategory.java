@@ -1,12 +1,13 @@
 package cn.binarywang.wx.miniapp.bean.code;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * 小程序帐号的可选类目，其中 address / tag / title 是提交审核会用到的

@@ -1,5 +1,8 @@
 package com.github.binarywang.wxpay.service.impl;
 
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import com.github.binarywang.wxpay.bean.applyment.ModifySettlementRequest;
 import com.github.binarywang.wxpay.bean.applyment.WxPayApplyment4SubCreateRequest;
 import com.github.binarywang.wxpay.bean.applyment.WxPayApplymentCreateResult;
@@ -10,9 +13,8 @@ import com.github.binarywang.wxpay.testbase.ApiTestModule;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.inject.Inject;
+
 import lombok.extern.slf4j.Slf4j;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
 
 @Slf4j
 @Test

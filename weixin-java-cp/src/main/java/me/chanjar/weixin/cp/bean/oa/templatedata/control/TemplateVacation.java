@@ -1,10 +1,10 @@
 package me.chanjar.weixin.cp.bean.oa.templatedata.control;
 
-import lombok.Data;
-import me.chanjar.weixin.cp.bean.oa.templatedata.TemplateVacationItem;
-
 import java.io.Serializable;
 import java.util.List;
+
+import lombok.Data;
+import me.chanjar.weixin.cp.bean.oa.templatedata.TemplateVacationItem;
 
 /**
  * @author gyv12345@163.com

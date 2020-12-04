@@ -1,20 +1,22 @@
 package me.chanjar.weixin.mp.api.impl;
 
-import com.google.inject.Inject;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.mp.api.WxMpService;
-import me.chanjar.weixin.mp.api.test.ApiTestModule;
-import me.chanjar.weixin.mp.bean.wifi.WxMpWifiShopDataResult;
-import me.chanjar.weixin.mp.bean.wifi.WxMpWifiShopListResult;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
-
 import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Wifi.BIZWIFI_SHOP_GET;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
+import com.google.inject.Inject;
+
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.mp.api.WxMpService;
+import me.chanjar.weixin.mp.api.test.ApiTestModule;
+import me.chanjar.weixin.mp.bean.wifi.WxMpWifiShopDataResult;
+import me.chanjar.weixin.mp.bean.wifi.WxMpWifiShopListResult;
 
 /**
  * <pre>

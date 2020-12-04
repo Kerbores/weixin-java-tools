@@ -1,16 +1,17 @@
 package com.github.binarywang.wxpay.bean.ecommerce;
 
+import java.io.Serializable;
+import java.util.Date;
+
 /**
  * @author: f00lish
  * @date: 2020/09/17
  */
 
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 退款结果

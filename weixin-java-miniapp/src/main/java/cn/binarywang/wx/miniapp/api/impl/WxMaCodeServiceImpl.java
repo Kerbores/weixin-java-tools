@@ -8,9 +8,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-import lombok.AllArgsConstructor;
-import me.chanjar.weixin.common.util.json.GsonParser;
 import org.apache.commons.lang3.StringUtils;
+
+import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
 
 import cn.binarywang.wx.miniapp.api.WxMaCodeService;
 import cn.binarywang.wx.miniapp.api.WxMaService;
@@ -20,13 +21,13 @@ import cn.binarywang.wx.miniapp.bean.code.WxMaCodeCommitRequest;
 import cn.binarywang.wx.miniapp.bean.code.WxMaCodeSubmitAuditRequest;
 import cn.binarywang.wx.miniapp.bean.code.WxMaCodeVersionDistribution;
 import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
-import com.google.gson.JsonObject;
-import com.google.gson.reflect.TypeToken;
+import lombok.AllArgsConstructor;
 import me.chanjar.weixin.common.error.WxError;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.http.BaseMediaDownloadRequestExecutor;
 import me.chanjar.weixin.common.util.http.RequestExecutor;
 import me.chanjar.weixin.common.util.json.GsonHelper;
+import me.chanjar.weixin.common.util.json.GsonParser;
 
 /**
  * @author <a href="https://github.com/charmingoh">Charming</a>

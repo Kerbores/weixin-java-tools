@@ -1,10 +1,10 @@
 package cn.binarywang.wx.miniapp.bean.template;
 
-import lombok.Data;
-import me.chanjar.weixin.common.util.json.WxGsonBuilder;
-
 import java.io.Serializable;
 import java.util.List;
+
+import lombok.Data;
+import me.chanjar.weixin.common.util.json.WxGsonBuilder;
 
 /**
  * @author ArBing

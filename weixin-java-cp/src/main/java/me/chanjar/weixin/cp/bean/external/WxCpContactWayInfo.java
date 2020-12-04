@@ -1,15 +1,16 @@
 package me.chanjar.weixin.cp.bean.external;
 
+import java.util.List;
+
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import me.chanjar.weixin.cp.util.json.WxCpConclusionAdapter;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.util.List;
 
 /**
  * 「联系我」方式 对象

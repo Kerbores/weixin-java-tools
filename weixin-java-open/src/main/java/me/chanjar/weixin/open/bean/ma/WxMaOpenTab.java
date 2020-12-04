@@ -1,9 +1,9 @@
 package me.chanjar.weixin.open.bean.ma;
 
+import java.io.Serializable;
+
 import lombok.Data;
 import lombok.NonNull;
-
-import java.io.Serializable;
 
 /**
  * @author yqx

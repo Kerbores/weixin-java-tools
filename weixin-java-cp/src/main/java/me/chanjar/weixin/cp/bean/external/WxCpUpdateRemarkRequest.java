@@ -1,14 +1,15 @@
 package me.chanjar.weixin.cp.bean.external;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.io.Serializable;
 
 /**
  * 修改客户备注信息请求.

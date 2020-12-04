@@ -1,9 +1,9 @@
 package me.chanjar.weixin.open.bean.result;
 
-import lombok.Data;
-
 import java.util.List;
 import java.util.Map;
+
+import lombok.Data;
 
 /**
  * @author robgao

@@ -1,11 +1,16 @@
 package me.chanjar.weixin.open.api;
 
+import java.util.List;
+
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.open.bean.ma.WxFastMaCategory;
-import me.chanjar.weixin.open.bean.result.*;
-
-import java.util.List;
+import me.chanjar.weixin.open.bean.result.WxFastMaAccountBasicInfoResult;
+import me.chanjar.weixin.open.bean.result.WxFastMaBeenSetCategoryResult;
+import me.chanjar.weixin.open.bean.result.WxFastMaCheckNickameResult;
+import me.chanjar.weixin.open.bean.result.WxFastMaQueryNicknameStatusResult;
+import me.chanjar.weixin.open.bean.result.WxFastMaSetNickameResult;
+import me.chanjar.weixin.open.bean.result.WxOpenResult;
 
 /**
  * <pre>

@@ -1,13 +1,14 @@
 package me.chanjar.weixin.cp.bean.external;
 
-import me.chanjar.weixin.cp.bean.external.contact.ExternalContact;
-import me.chanjar.weixin.cp.bean.external.contact.FollowedUser;
-import me.chanjar.weixin.cp.bean.external.contact.WxCpExternalContactInfo;
-import org.testng.annotations.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.testng.annotations.Test;
+
+import me.chanjar.weixin.cp.bean.external.contact.ExternalContact;
+import me.chanjar.weixin.cp.bean.external.contact.FollowedUser;
+import me.chanjar.weixin.cp.bean.external.contact.WxCpExternalContactInfo;
 
 /**
  * <pre>

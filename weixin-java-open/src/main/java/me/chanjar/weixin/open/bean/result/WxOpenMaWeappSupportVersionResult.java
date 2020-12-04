@@ -1,11 +1,12 @@
 package me.chanjar.weixin.open.bean.result;
 
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import me.chanjar.weixin.open.util.json.WxOpenGsonBuilder;
-
-import java.util.List;
 
 /**
  * 查询当前设置的最低基础库版本及各版本用户占比

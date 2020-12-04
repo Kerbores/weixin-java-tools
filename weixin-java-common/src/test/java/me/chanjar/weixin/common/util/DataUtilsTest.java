@@ -1,8 +1,8 @@
 package me.chanjar.weixin.common.util;
 
-import org.testng.annotations.*;
+import static org.testng.Assert.assertTrue;
 
-import static org.testng.Assert.*;
+import org.testng.annotations.Test;
 
 /**
  * <pre>

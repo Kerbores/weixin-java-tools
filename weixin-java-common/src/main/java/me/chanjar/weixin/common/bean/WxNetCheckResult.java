@@ -1,11 +1,11 @@
 package me.chanjar.weixin.common.bean;
 
-import lombok.Data;
-import me.chanjar.weixin.common.util.json.WxGsonBuilder;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import lombok.Data;
+import me.chanjar.weixin.common.util.json.WxGsonBuilder;
 
 /**
  * 网络检测.

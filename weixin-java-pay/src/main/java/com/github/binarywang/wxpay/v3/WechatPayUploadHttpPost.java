@@ -1,13 +1,13 @@
 package com.github.binarywang.wxpay.v3;
 
+import java.io.InputStream;
+import java.net.URI;
+import java.net.URLConnection;
+
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
-
-import java.io.InputStream;
-import java.net.URI;
-import java.net.URLConnection;
 
 public class WechatPayUploadHttpPost extends HttpPost {
 

@@ -1,10 +1,11 @@
 package me.chanjar.weixin.cp.bean.message;
 
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.util.List;
 
 /**
  * 应用消息发送统计信息.

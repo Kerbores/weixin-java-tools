@@ -1,16 +1,20 @@
 package me.chanjar.weixin.cp.bean.message;
 
+import static me.chanjar.weixin.cp.constant.WxCpConsts.GroupRobotMsgType.IMAGE;
+import static me.chanjar.weixin.cp.constant.WxCpConsts.GroupRobotMsgType.MARKDOWN;
+import static me.chanjar.weixin.cp.constant.WxCpConsts.GroupRobotMsgType.NEWS;
+import static me.chanjar.weixin.cp.constant.WxCpConsts.GroupRobotMsgType.TEXT;
+
+import java.util.List;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 import me.chanjar.weixin.cp.bean.article.NewArticle;
-
-import java.util.List;
-
-import static me.chanjar.weixin.cp.constant.WxCpConsts.GroupRobotMsgType.*;
 
 /**
  * 微信群机器人消息

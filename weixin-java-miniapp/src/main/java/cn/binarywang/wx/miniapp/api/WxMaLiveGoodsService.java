@@ -1,10 +1,10 @@
 package cn.binarywang.wx.miniapp.api;
 
+import java.util.List;
+
 import cn.binarywang.wx.miniapp.bean.live.WxMaLiveGoodInfo;
 import cn.binarywang.wx.miniapp.bean.live.WxMaLiveResult;
 import me.chanjar.weixin.common.error.WxErrorException;
-
-import java.util.List;
 
 /**
  * <pre>

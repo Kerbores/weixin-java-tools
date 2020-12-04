@@ -7,7 +7,6 @@ package me.chanjar.weixin.mp.api.test;
  * </pre>
  */
 public class TestConstants {
-
     ///////////////////////
     // 文件类型
     ///////////////////////

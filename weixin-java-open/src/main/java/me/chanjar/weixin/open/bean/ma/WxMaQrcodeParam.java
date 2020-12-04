@@ -1,11 +1,12 @@
 package me.chanjar.weixin.open.bean.ma;
 
-import lombok.Data;
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+
+import org.apache.commons.lang3.StringUtils;
+
+import lombok.Data;
 
 /**
  * 微信小程序体验二维码参数

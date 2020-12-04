@@ -1,7 +1,11 @@
 package cn.binarywang.wx.miniapp.api;
 
-import cn.binarywang.wx.miniapp.bean.*;
 import com.google.gson.JsonObject;
+
+import cn.binarywang.wx.miniapp.bean.WxMaKefuMessage;
+import cn.binarywang.wx.miniapp.bean.WxMaSubscribeMessage;
+import cn.binarywang.wx.miniapp.bean.WxMaUniformMessage;
+import cn.binarywang.wx.miniapp.bean.WxMaUpdatableMsg;
 import me.chanjar.weixin.common.error.WxErrorException;
 
 /**

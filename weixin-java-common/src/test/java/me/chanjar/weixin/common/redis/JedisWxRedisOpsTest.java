@@ -2,6 +2,7 @@ package me.chanjar.weixin.common.redis;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+
 import redis.clients.jedis.JedisPool;
 
 public class JedisWxRedisOpsTest extends CommonWxRedisOpsTest {

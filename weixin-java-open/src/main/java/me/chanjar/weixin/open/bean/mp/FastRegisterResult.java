@@ -1,10 +1,11 @@
 package me.chanjar.weixin.open.bean.mp;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
-
-import java.io.Serializable;
 
 /**
  * 复用公众号资料快速注册小程序结果

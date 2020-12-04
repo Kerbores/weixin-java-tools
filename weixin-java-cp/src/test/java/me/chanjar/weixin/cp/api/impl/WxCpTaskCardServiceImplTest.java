@@ -1,18 +1,20 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import static org.testng.Assert.assertNotNull;
+
+import java.util.Arrays;
+
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import com.google.inject.Inject;
+
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.cp.api.ApiTestModule;
 import me.chanjar.weixin.cp.api.WxCpService;
 import me.chanjar.weixin.cp.bean.message.WxCpMessage;
 import me.chanjar.weixin.cp.bean.message.WxCpMessageSendResult;
 import me.chanjar.weixin.cp.bean.taskcard.TaskCardButton;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
-
-import java.util.Arrays;
-
-import static org.testng.Assert.assertNotNull;
 
 /**
  * 测试任务卡片服务

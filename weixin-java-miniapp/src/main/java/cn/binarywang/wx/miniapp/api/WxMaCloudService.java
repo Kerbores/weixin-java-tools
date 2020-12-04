@@ -1,11 +1,20 @@
 package cn.binarywang.wx.miniapp.api;
 
-import cn.binarywang.wx.miniapp.bean.cloud.*;
-import com.google.gson.JsonArray;
-import me.chanjar.weixin.common.error.WxErrorException;
-
 import java.util.List;
 import java.util.Map;
+
+import com.google.gson.JsonArray;
+
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudBatchDeleteFileResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudBatchDownloadFileResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudCloudDatabaseMigrateQueryInfoResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudDatabaseCollectionGetResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudDatabaseCreateIndexRequest;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudDatabaseQueryResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudDatabaseUpdateResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudGetQcloudTokenResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudUploadFileResult;
+import me.chanjar.weixin.common.error.WxErrorException;
 
 /**
  * 云开发相关接口.

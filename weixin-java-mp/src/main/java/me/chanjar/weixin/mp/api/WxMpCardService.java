@@ -1,10 +1,21 @@
 package me.chanjar.weixin.mp.api;
 
+import java.util.List;
+
 import me.chanjar.weixin.common.bean.WxCardApiSignature;
 import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.mp.bean.card.*;
-
-import java.util.List;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCodeCheckcodeResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCodeDepositCountResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCodeDepositResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCreateRequest;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCreateResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardDeleteResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardLandingPageCreateRequest;
+import me.chanjar.weixin.mp.bean.card.WxMpCardLandingPageCreateResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardMpnewsGethtmlResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardQrcodeCreateResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardResult;
+import me.chanjar.weixin.mp.bean.card.WxUserCardListResult;
 
 /**
  * 卡券相关接口.

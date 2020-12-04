@@ -1,8 +1,8 @@
 package me.chanjar.weixin.mp.bean.template;
 
-import org.testng.annotations.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
+
+import org.testng.annotations.Test;
 
 /**
  * 测试类.

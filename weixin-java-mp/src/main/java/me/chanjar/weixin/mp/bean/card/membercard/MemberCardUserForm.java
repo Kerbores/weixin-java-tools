@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.mp.bean.card.enums.CardWechatFieldType;
 import me.chanjar.weixin.mp.util.json.WxMpGsonBuilder;

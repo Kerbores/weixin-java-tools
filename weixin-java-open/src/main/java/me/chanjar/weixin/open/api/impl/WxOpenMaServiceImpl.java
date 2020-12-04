@@ -1,24 +1,41 @@
 package me.chanjar.weixin.open.api.impl;
 
+import java.io.File;
+import java.util.List;
+import java.util.Map;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.api.impl.WxMaServiceImpl;
 import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
 import cn.binarywang.wx.miniapp.config.WxMaConfig;
 import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.open.api.WxOpenComponentService;
 import me.chanjar.weixin.open.api.WxOpenMaService;
 import me.chanjar.weixin.open.bean.ma.WxMaOpenCommitExtInfo;
 import me.chanjar.weixin.open.bean.ma.WxMaQrcodeParam;
 import me.chanjar.weixin.open.bean.message.WxOpenMaSubmitAuditMessage;
-import me.chanjar.weixin.open.bean.result.*;
+import me.chanjar.weixin.open.bean.result.WxDownlooadQrcodeJumpResult;
+import me.chanjar.weixin.open.bean.result.WxGetQrcodeJumpResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaBindTesterResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaCategoryListResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaDomainResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaGrayReleasePlanResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaPageListResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaQueryAuditResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaQueryQuotaResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaSearchStatusResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaShowItemResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaSubmitAuditResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaTesterListResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaWeappSupportVersionResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaWebDomainResult;
+import me.chanjar.weixin.open.bean.result.WxOpenResult;
+import me.chanjar.weixin.open.bean.result.WxQrcodeJumpRule;
 import me.chanjar.weixin.open.executor.MaQrCodeRequestExecutor;
-
-import java.io.File;
-import java.util.List;
-import java.util.Map;
 
 /**
  * <pre>

@@ -1,9 +1,9 @@
 package me.chanjar.weixin.cp.bean.oa.templatedata;
 
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.List;
+
+import lombok.Data;
 
 /**
  * @author gyv12345@163.com

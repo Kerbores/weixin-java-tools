@@ -1,14 +1,15 @@
 package me.chanjar.weixin.cp.bean.oa;
 
-import me.chanjar.weixin.common.util.json.GsonParser;
-import me.chanjar.weixin.cp.bean.oa.applydata.ApplyDataContent;
-import me.chanjar.weixin.cp.bean.oa.applydata.ContentValue;
-import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 import java.util.Collections;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.testng.annotations.Test;
+
+import me.chanjar.weixin.common.util.json.GsonParser;
+import me.chanjar.weixin.cp.bean.oa.applydata.ApplyDataContent;
+import me.chanjar.weixin.cp.bean.oa.applydata.ContentValue;
 
 /**
  * 测试.

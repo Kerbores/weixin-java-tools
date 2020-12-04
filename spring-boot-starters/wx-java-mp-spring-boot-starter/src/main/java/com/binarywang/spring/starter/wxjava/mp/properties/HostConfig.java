@@ -1,8 +1,8 @@
 package com.binarywang.spring.starter.wxjava.mp.properties;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 
 @Data
 public class HostConfig implements Serializable {

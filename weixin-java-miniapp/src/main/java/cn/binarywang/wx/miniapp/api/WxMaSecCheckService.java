@@ -1,8 +1,8 @@
 package cn.binarywang.wx.miniapp.api;
 
-import cn.binarywang.wx.miniapp.bean.WxMaMediaAsyncCheckResult;
 import java.io.File;
 
+import cn.binarywang.wx.miniapp.bean.WxMaMediaAsyncCheckResult;
 import me.chanjar.weixin.common.error.WxErrorException;
 
 /**

@@ -1,6 +1,7 @@
 package me.chanjar.weixin.mp.bean.card.membercard;
 
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 
 /**

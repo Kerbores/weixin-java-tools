@@ -1,5 +1,14 @@
 package me.chanjar.weixin.cp.tp.message;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Pattern;
+
+import org.apache.commons.lang3.StringUtils;
+
 import lombok.Data;
 import me.chanjar.weixin.common.api.WxErrorExceptionHandler;
 import me.chanjar.weixin.common.error.WxErrorException;
@@ -7,10 +16,6 @@ import me.chanjar.weixin.common.session.WxSessionManager;
 import me.chanjar.weixin.cp.bean.message.WxCpTpXmlMessage;
 import me.chanjar.weixin.cp.bean.message.WxCpXmlOutMessage;
 import me.chanjar.weixin.cp.tp.service.WxCpTpService;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.*;
-import java.util.regex.Pattern;
 
 /**
  * The type Wx cp message router rule.

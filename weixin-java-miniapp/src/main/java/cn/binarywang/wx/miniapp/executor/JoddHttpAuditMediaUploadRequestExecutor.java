@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
+import cn.binarywang.wx.miniapp.bean.WxMaAuditMediaUploadResult;
 import jodd.http.HttpConnectionProvider;
 import jodd.http.HttpRequest;
 import jodd.http.HttpResponse;
@@ -12,7 +13,6 @@ import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxError;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.http.RequestHttp;
-import cn.binarywang.wx.miniapp.bean.WxMaAuditMediaUploadResult;
 
 /**
  * @author yangyh22

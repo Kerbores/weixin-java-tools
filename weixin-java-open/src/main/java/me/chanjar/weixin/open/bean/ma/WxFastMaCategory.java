@@ -1,9 +1,9 @@
 package me.chanjar.weixin.open.bean.ma;
 
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.List;
+
+import lombok.Data;
 
 /**
  * 修改更新类目所需实体.

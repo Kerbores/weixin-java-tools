@@ -1,10 +1,10 @@
 package cn.binarywang.wx.miniapp.api;
 
+import java.util.List;
+
 import cn.binarywang.wx.miniapp.bean.template.WxMaPubTemplateTitleListResult;
 import lombok.Data;
 import me.chanjar.weixin.common.error.WxErrorException;
-
-import java.util.List;
 
 /**
  * 订阅消息类

@@ -1,13 +1,14 @@
 package me.chanjar.weixin.open.bean.ma;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 /**
  * tabBar对象

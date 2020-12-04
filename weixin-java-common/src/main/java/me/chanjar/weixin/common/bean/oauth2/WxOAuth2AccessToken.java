@@ -1,10 +1,11 @@
 package me.chanjar.weixin.common.bean.oauth2;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
-
-import java.io.Serializable;
 
 /**
  * https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421140842

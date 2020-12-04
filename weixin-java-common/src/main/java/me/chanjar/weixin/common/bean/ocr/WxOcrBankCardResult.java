@@ -1,10 +1,11 @@
 package me.chanjar.weixin.common.bean.ocr;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
-
-import java.io.Serializable;
 
 /**
  * 银行卡OCR识别结果

@@ -1,6 +1,16 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.TemplateMsg.MESSAGE_TEMPLATE_SEND;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.TemplateMsg.TEMPLATE_API_ADD_TEMPLATE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.TemplateMsg.TEMPLATE_API_SET_INDUSTRY;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.TemplateMsg.TEMPLATE_DEL_PRIVATE_TEMPLATE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.TemplateMsg.TEMPLATE_GET_ALL_PRIVATE_TEMPLATE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.TemplateMsg.TEMPLATE_GET_INDUSTRY;
+
+import java.util.List;
+
 import com.google.gson.JsonObject;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxError;
@@ -11,10 +21,6 @@ import me.chanjar.weixin.mp.api.WxMpTemplateMsgService;
 import me.chanjar.weixin.mp.bean.template.WxMpTemplate;
 import me.chanjar.weixin.mp.bean.template.WxMpTemplateIndustry;
 import me.chanjar.weixin.mp.bean.template.WxMpTemplateMessage;
-
-import java.util.List;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.TemplateMsg.*;
 
 /**
  * <pre>

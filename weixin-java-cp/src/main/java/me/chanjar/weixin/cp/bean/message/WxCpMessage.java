@@ -1,21 +1,43 @@
 package me.chanjar.weixin.cp.bean.message;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import lombok.Data;
-import me.chanjar.weixin.common.api.WxConsts.KefuMsgType;
-import me.chanjar.weixin.cp.bean.article.MpnewsArticle;
-import me.chanjar.weixin.cp.bean.article.NewArticle;
-import me.chanjar.weixin.cp.bean.messagebuilder.*;
-import me.chanjar.weixin.cp.bean.taskcard.TaskCardButton;
-import org.apache.commons.lang3.StringUtils;
+import static me.chanjar.weixin.common.api.WxConsts.KefuMsgType.FILE;
+import static me.chanjar.weixin.common.api.WxConsts.KefuMsgType.IMAGE;
+import static me.chanjar.weixin.common.api.WxConsts.KefuMsgType.MARKDOWN;
+import static me.chanjar.weixin.common.api.WxConsts.KefuMsgType.MINIPROGRAM_NOTICE;
+import static me.chanjar.weixin.common.api.WxConsts.KefuMsgType.MPNEWS;
+import static me.chanjar.weixin.common.api.WxConsts.KefuMsgType.NEWS;
+import static me.chanjar.weixin.common.api.WxConsts.KefuMsgType.TASKCARD;
+import static me.chanjar.weixin.common.api.WxConsts.KefuMsgType.TEXT;
+import static me.chanjar.weixin.common.api.WxConsts.KefuMsgType.TEXTCARD;
+import static me.chanjar.weixin.common.api.WxConsts.KefuMsgType.VIDEO;
+import static me.chanjar.weixin.common.api.WxConsts.KefuMsgType.VOICE;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static me.chanjar.weixin.common.api.WxConsts.KefuMsgType.*;
+import org.apache.commons.lang3.StringUtils;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
+import lombok.Data;
+import me.chanjar.weixin.common.api.WxConsts.KefuMsgType;
+import me.chanjar.weixin.cp.bean.article.MpnewsArticle;
+import me.chanjar.weixin.cp.bean.article.NewArticle;
+import me.chanjar.weixin.cp.bean.messagebuilder.FileBuilder;
+import me.chanjar.weixin.cp.bean.messagebuilder.ImageBuilder;
+import me.chanjar.weixin.cp.bean.messagebuilder.MarkdownMsgBuilder;
+import me.chanjar.weixin.cp.bean.messagebuilder.MiniProgramNoticeMsgBuilder;
+import me.chanjar.weixin.cp.bean.messagebuilder.MpnewsBuilder;
+import me.chanjar.weixin.cp.bean.messagebuilder.NewsBuilder;
+import me.chanjar.weixin.cp.bean.messagebuilder.TaskCardBuilder;
+import me.chanjar.weixin.cp.bean.messagebuilder.TextBuilder;
+import me.chanjar.weixin.cp.bean.messagebuilder.TextCardBuilder;
+import me.chanjar.weixin.cp.bean.messagebuilder.VideoBuilder;
+import me.chanjar.weixin.cp.bean.messagebuilder.VoiceBuilder;
+import me.chanjar.weixin.cp.bean.taskcard.TaskCardButton;
 
 /**
  * 消息.

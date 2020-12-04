@@ -1,5 +1,11 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.AiOpen.TRANSLATE_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.AiOpen.VOICE_QUERY_RESULT_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.AiOpen.VOICE_UPLOAD_URL;
+
+import java.io.File;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxError;
@@ -9,10 +15,6 @@ import me.chanjar.weixin.mp.api.WxMpAiOpenService;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.enums.AiLangType;
 import me.chanjar.weixin.mp.util.requestexecuter.voice.VoiceUploadRequestExecutor;
-
-import java.io.File;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.AiOpen.*;
 
 /**
  * <pre>

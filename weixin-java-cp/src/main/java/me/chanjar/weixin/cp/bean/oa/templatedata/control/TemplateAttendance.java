@@ -1,10 +1,11 @@
 package me.chanjar.weixin.cp.bean.oa.templatedata.control;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.cp.bean.oa.templatedata.TemplateDateRange;
-
-import java.io.Serializable;
 
 /**
  * @author gyv12345@163.com

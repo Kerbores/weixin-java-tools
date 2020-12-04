@@ -1,19 +1,25 @@
 package me.chanjar.weixin.open.api.impl;
 
-import cn.binarywang.wx.miniapp.api.impl.WxMaServiceImpl;
-import cn.binarywang.wx.miniapp.config.WxMaConfig;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+
+import cn.binarywang.wx.miniapp.api.impl.WxMaServiceImpl;
+import cn.binarywang.wx.miniapp.config.WxMaConfig;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.open.api.WxOpenComponentService;
 import me.chanjar.weixin.open.api.WxOpenFastMaService;
 import me.chanjar.weixin.open.bean.ma.WxFastMaCategory;
-import me.chanjar.weixin.open.bean.result.*;
+import me.chanjar.weixin.open.bean.result.WxFastMaAccountBasicInfoResult;
+import me.chanjar.weixin.open.bean.result.WxFastMaBeenSetCategoryResult;
+import me.chanjar.weixin.open.bean.result.WxFastMaCheckNickameResult;
+import me.chanjar.weixin.open.bean.result.WxFastMaQueryNicknameStatusResult;
+import me.chanjar.weixin.open.bean.result.WxFastMaSetNickameResult;
+import me.chanjar.weixin.open.bean.result.WxOpenResult;
 import me.chanjar.weixin.open.util.json.WxOpenGsonBuilder;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * .

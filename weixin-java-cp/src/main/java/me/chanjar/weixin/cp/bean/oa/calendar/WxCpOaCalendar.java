@@ -1,7 +1,11 @@
 package me.chanjar.weixin.cp.bean.oa.calendar;
 
+import java.io.Serializable;
+import java.util.List;
+
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.annotations.SerializedName;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,9 +13,6 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 import me.chanjar.weixin.common.bean.ToJson;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * 日历.

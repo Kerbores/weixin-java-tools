@@ -1,11 +1,11 @@
 package com.github.binarywang.wxpay.bean.notify;
 
-import com.github.binarywang.wxpay.util.XmlConfig;
-import org.testng.annotations.*;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.testng.annotations.Test;
 
 import com.github.binarywang.wxpay.bean.result.BaseWxPayResult;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import com.github.binarywang.wxpay.util.XmlConfig;
 
 /**
  * <pre>

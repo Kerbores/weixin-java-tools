@@ -1,16 +1,18 @@
 package com.binarywang.spring.starter.wxjava.mp.config;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 import com.binarywang.spring.starter.wxjava.mp.enums.HttpClientType;
 import com.binarywang.spring.starter.wxjava.mp.properties.WxMpProperties;
+
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.api.impl.WxMpServiceHttpClientImpl;
 import me.chanjar.weixin.mp.api.impl.WxMpServiceImpl;
 import me.chanjar.weixin.mp.api.impl.WxMpServiceJoddHttpImpl;
 import me.chanjar.weixin.mp.api.impl.WxMpServiceOkHttpImpl;
 import me.chanjar.weixin.mp.config.WxMpConfigStorage;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * 微信公众号相关服务自动注册.

@@ -1,5 +1,7 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
+import java.io.IOException;
+
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.config.WxMaConfig;
 import jodd.http.HttpConnectionProvider;
@@ -7,8 +9,6 @@ import jodd.http.HttpRequest;
 import jodd.http.ProxyInfo;
 import jodd.http.net.SocketHttpConnectionProvider;
 import me.chanjar.weixin.common.util.http.HttpType;
-
-import java.io.IOException;
 
 /**
  * jodd-http方式实现.

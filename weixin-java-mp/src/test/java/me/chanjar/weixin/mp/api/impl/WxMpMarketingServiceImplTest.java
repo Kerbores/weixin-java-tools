@@ -1,13 +1,15 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
+
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.api.test.ApiTestModule;
 import me.chanjar.weixin.mp.bean.marketing.WxMpUserAction;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
 
 /**
  * 测试类.

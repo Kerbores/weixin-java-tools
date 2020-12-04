@@ -1,12 +1,12 @@
 package me.chanjar.weixin.common.redis;
 
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.util.locks.JedisDistributedLock;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.util.Pool;
-
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
 
 @RequiredArgsConstructor
 public class JedisWxRedisOps implements WxRedisOps {

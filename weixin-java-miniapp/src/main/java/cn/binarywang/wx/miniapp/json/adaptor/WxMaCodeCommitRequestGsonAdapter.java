@@ -1,13 +1,14 @@
 package cn.binarywang.wx.miniapp.json.adaptor;
 
-import cn.binarywang.wx.miniapp.bean.code.WxMaCodeCommitRequest;
-import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
+import java.lang.reflect.Type;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 
-import java.lang.reflect.Type;
+import cn.binarywang.wx.miniapp.bean.code.WxMaCodeCommitRequest;
+import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
 
 /**
  * @author <a href="https://github.com/charmingoh">Charming</a>

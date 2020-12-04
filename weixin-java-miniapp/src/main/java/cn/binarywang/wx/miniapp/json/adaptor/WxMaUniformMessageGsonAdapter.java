@@ -2,12 +2,13 @@ package cn.binarywang.wx.miniapp.json.adaptor;
 
 import java.lang.reflect.Type;
 
-import cn.binarywang.wx.miniapp.bean.WxMaTemplateData;
-import cn.binarywang.wx.miniapp.bean.WxMaUniformMessage;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
+
+import cn.binarywang.wx.miniapp.bean.WxMaTemplateData;
+import cn.binarywang.wx.miniapp.bean.WxMaUniformMessage;
 
 /**
  * @author <a href="https://github.com/binarywang">Binary Wang</a>

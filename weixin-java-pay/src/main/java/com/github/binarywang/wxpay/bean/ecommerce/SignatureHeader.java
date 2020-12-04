@@ -1,9 +1,9 @@
 package com.github.binarywang.wxpay.bean.ecommerce;
 
+import java.io.Serializable;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * 微信通知接口头部信息，需要做签名验证

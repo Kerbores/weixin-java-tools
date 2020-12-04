@@ -1,14 +1,16 @@
 package com.binarywang.spring.starter.wxjava.mp.properties;
 
-import com.binarywang.spring.starter.wxjava.mp.enums.HttpClientType;
-import com.binarywang.spring.starter.wxjava.mp.enums.StorageType;
-import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import static com.binarywang.spring.starter.wxjava.mp.enums.StorageType.Memory;
+import static com.binarywang.spring.starter.wxjava.mp.properties.WxMpProperties.PREFIX;
 
 import java.io.Serializable;
 
-import static com.binarywang.spring.starter.wxjava.mp.enums.StorageType.Memory;
-import static com.binarywang.spring.starter.wxjava.mp.properties.WxMpProperties.PREFIX;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+import com.binarywang.spring.starter.wxjava.mp.enums.HttpClientType;
+import com.binarywang.spring.starter.wxjava.mp.enums.StorageType;
+
+import lombok.Data;
 
 
 /**

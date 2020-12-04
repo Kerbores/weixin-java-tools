@@ -1,9 +1,10 @@
 package me.chanjar.weixin.cp.bean.external.contact;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-
 import java.io.Serializable;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
 
 /**
  * 添加了外部联系人的企业成员.

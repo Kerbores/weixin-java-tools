@@ -1,14 +1,14 @@
 package me.chanjar.weixin.common.service;
 
-import me.chanjar.weixin.common.error.WxErrorException;
+import java.io.File;
+
 import me.chanjar.weixin.common.bean.ocr.WxOcrBankCardResult;
 import me.chanjar.weixin.common.bean.ocr.WxOcrBizLicenseResult;
 import me.chanjar.weixin.common.bean.ocr.WxOcrCommResult;
 import me.chanjar.weixin.common.bean.ocr.WxOcrDrivingLicenseResult;
 import me.chanjar.weixin.common.bean.ocr.WxOcrDrivingResult;
 import me.chanjar.weixin.common.bean.ocr.WxOcrIdCardResult;
-
-import java.io.File;
+import me.chanjar.weixin.common.error.WxErrorException;
 
 /**
  * 基于小程序或 H5 的身份证、银行卡、行驶证 OCR 识别.

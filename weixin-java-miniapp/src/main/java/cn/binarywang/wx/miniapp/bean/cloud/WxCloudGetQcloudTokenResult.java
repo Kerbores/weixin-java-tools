@@ -1,9 +1,10 @@
 package cn.binarywang.wx.miniapp.bean.cloud;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-
 import java.io.Serializable;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
 
 /**
  * 获取腾讯云API调用凭证结果.

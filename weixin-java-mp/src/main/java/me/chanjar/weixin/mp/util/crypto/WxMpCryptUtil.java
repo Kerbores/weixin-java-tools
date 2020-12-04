@@ -19,6 +19,7 @@ package me.chanjar.weixin.mp.util.crypto;
 
 import com.google.common.base.CharMatcher;
 import com.google.common.io.BaseEncoding;
+
 import me.chanjar.weixin.mp.config.WxMpConfigStorage;
 
 public class WxMpCryptUtil extends me.chanjar.weixin.common.util.crypto.WxCryptUtil {

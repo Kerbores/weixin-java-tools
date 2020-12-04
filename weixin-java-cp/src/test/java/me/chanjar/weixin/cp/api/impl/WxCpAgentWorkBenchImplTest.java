@@ -1,6 +1,14 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import com.google.inject.Inject;
+
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.cp.api.ApiTestModule;
 import me.chanjar.weixin.cp.api.WxCpService;
@@ -8,12 +16,6 @@ import me.chanjar.weixin.cp.bean.WxCpAgentWorkBench;
 import me.chanjar.weixin.cp.bean.workbench.WorkBenchKeyData;
 import me.chanjar.weixin.cp.bean.workbench.WorkBenchList;
 import me.chanjar.weixin.cp.constant.WxCpConsts;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author songshiyu

@@ -1,6 +1,7 @@
 package me.chanjar.weixin.open.bean.result;
 
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

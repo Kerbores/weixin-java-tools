@@ -1,15 +1,16 @@
 package com.github.binarywang.wxpay.bean.applyment;
 
+import java.io.Serializable;
+
 import com.github.binarywang.wxpay.bean.applyment.enums.AccountTypeEnum;
 import com.github.binarywang.wxpay.v3.SpecEncrypt;
 import com.google.gson.annotations.SerializedName;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
-
-import java.io.Serializable;
 
 /**
  * 修改结算账户请求对象

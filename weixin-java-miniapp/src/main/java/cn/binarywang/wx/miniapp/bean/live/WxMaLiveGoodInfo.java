@@ -1,8 +1,8 @@
 package cn.binarywang.wx.miniapp.bean.live;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 
 /**
  * 直播商品信息

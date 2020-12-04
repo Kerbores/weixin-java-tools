@@ -1,25 +1,28 @@
 package me.chanjar.weixin.mp.api.impl;
 
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.common.util.fs.FileUtils;
-import me.chanjar.weixin.common.service.WxImgProcService;
-import me.chanjar.weixin.mp.api.WxMpService;
-import me.chanjar.weixin.mp.api.test.ApiTestModule;
-import me.chanjar.weixin.mp.api.test.TestConstants;
-import me.chanjar.weixin.common.bean.imgproc.WxImgProcAiCropResult;
-import me.chanjar.weixin.common.bean.imgproc.WxImgProcQrCodeResult;
-import me.chanjar.weixin.common.bean.imgproc.WxImgProcSuperResolutionResult;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
-
-import javax.inject.Inject;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import java.io.File;
 import java.io.InputStream;
 import java.util.UUID;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.*;
+import javax.inject.Inject;
+
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
+import me.chanjar.weixin.common.bean.imgproc.WxImgProcAiCropResult;
+import me.chanjar.weixin.common.bean.imgproc.WxImgProcQrCodeResult;
+import me.chanjar.weixin.common.bean.imgproc.WxImgProcSuperResolutionResult;
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.common.service.WxImgProcService;
+import me.chanjar.weixin.common.util.fs.FileUtils;
+import me.chanjar.weixin.mp.api.WxMpService;
+import me.chanjar.weixin.mp.api.test.ApiTestModule;
+import me.chanjar.weixin.mp.api.test.TestConstants;
 
 @Test
 @Guice(modules = ApiTestModule.class)

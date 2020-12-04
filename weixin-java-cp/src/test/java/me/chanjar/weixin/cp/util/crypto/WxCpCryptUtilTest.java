@@ -1,11 +1,12 @@
 package me.chanjar.weixin.cp.util.crypto;
 
-import com.google.common.base.CharMatcher;
-import com.google.common.io.BaseEncoding;
+import static org.testng.Assert.assertEquals;
+
 import org.apache.commons.codec.binary.Base64;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
+import com.google.common.base.CharMatcher;
+import com.google.common.io.BaseEncoding;
 
 /**
  * @author <a href="https://github.com/binarywang">Binary Wang</a>

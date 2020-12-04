@@ -1,18 +1,34 @@
 package me.chanjar.weixin.mp.api.impl;
 
-import lombok.RequiredArgsConstructor;
-import me.chanjar.weixin.common.service.WxOcrService;
-import me.chanjar.weixin.common.bean.ocr.*;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.common.requestexecuter.ocr.OcrDiscernRequestExecutor;
-import me.chanjar.weixin.mp.api.WxMpService;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.BANK_CARD;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.BIZ_LICENSE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.COMM;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.DRIVING;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.DRIVING_LICENSE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.FILEIDCARD;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.FILE_BANK_CARD;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.FILE_BIZ_LICENSE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.FILE_COMM;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.FILE_DRIVING;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.FILE_DRIVING_LICENSE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.IDCARD;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Ocr.*;
+import lombok.RequiredArgsConstructor;
+import me.chanjar.weixin.common.bean.ocr.WxOcrBankCardResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrBizLicenseResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrCommResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrDrivingLicenseResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrDrivingResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrIdCardResult;
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.common.requestexecuter.ocr.OcrDiscernRequestExecutor;
+import me.chanjar.weixin.common.service.WxOcrService;
+import me.chanjar.weixin.mp.api.WxMpService;
 
 /**
  * ocr 接口实现.

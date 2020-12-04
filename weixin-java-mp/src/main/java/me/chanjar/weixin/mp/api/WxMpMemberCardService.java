@@ -2,11 +2,17 @@ package me.chanjar.weixin.mp.api;
 
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.mp.bean.card.CardUpdateResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCreateResult;
+import me.chanjar.weixin.mp.bean.card.membercard.ActivatePluginParam;
 import me.chanjar.weixin.mp.bean.card.membercard.MemberCardActivateUserFormRequest;
 import me.chanjar.weixin.mp.bean.card.membercard.MemberCardActivateUserFormResult;
 import me.chanjar.weixin.mp.bean.card.membercard.MemberCardUpdateRequest;
-import me.chanjar.weixin.mp.bean.card.WxMpCardCreateResult;
-import me.chanjar.weixin.mp.bean.card.membercard.*;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardActivateTempInfoResult;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardActivatedMessage;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardCreateMessage;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardUpdateMessage;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardUpdateResult;
+import me.chanjar.weixin.mp.bean.card.membercard.WxMpMemberCardUserInfoResult;
 
 /**
  * 会员卡相关接口.

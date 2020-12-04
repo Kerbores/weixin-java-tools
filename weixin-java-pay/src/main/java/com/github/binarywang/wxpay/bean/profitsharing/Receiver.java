@@ -1,10 +1,10 @@
 package com.github.binarywang.wxpay.bean.profitsharing;
 
+import java.io.Serializable;
+
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import java.io.Serializable;
 
 /**
  * @author Wang GuangXin 2019/10/22 11:07

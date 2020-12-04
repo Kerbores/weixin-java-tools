@@ -1,10 +1,24 @@
 package me.chanjar.weixin.mp.api.impl;
 
-import com.google.gson.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.locks.Lock;
+
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonPrimitive;
 import com.google.gson.reflect.TypeToken;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.bean.WxCardApiSignature;
+import me.chanjar.weixin.common.enums.TicketType;
 import me.chanjar.weixin.common.error.WxError;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.RandomUtils;
@@ -13,16 +27,20 @@ import me.chanjar.weixin.common.util.json.GsonParser;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
 import me.chanjar.weixin.mp.api.WxMpCardService;
 import me.chanjar.weixin.mp.api.WxMpService;
-import me.chanjar.weixin.mp.bean.card.*;
-import me.chanjar.weixin.common.enums.TicketType;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCodeCheckcodeResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCodeDepositCountResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCodeDepositResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCreateRequest;
+import me.chanjar.weixin.mp.bean.card.WxMpCardCreateResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardDeleteResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardLandingPageCreateRequest;
+import me.chanjar.weixin.mp.bean.card.WxMpCardLandingPageCreateResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardMpnewsGethtmlResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardQrcodeCreateResult;
+import me.chanjar.weixin.mp.bean.card.WxMpCardResult;
+import me.chanjar.weixin.mp.bean.card.WxUserCardListResult;
 import me.chanjar.weixin.mp.enums.WxMpApiUrl;
 import me.chanjar.weixin.mp.util.json.WxMpGsonBuilder;
-import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.locks.Lock;
 
 /**
  * Created by Binary Wang on 2016/7/27.

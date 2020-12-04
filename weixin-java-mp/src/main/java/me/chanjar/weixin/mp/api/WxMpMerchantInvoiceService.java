@@ -2,7 +2,17 @@ package me.chanjar.weixin.mp.api;
 
 
 import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.mp.bean.invoice.merchant.*;
+import me.chanjar.weixin.mp.bean.invoice.merchant.ClearOutInvoiceRequest;
+import me.chanjar.weixin.mp.bean.invoice.merchant.InvoiceAuthDataRequest;
+import me.chanjar.weixin.mp.bean.invoice.merchant.InvoiceAuthDataResult;
+import me.chanjar.weixin.mp.bean.invoice.merchant.InvoiceAuthPageRequest;
+import me.chanjar.weixin.mp.bean.invoice.merchant.InvoiceAuthPageResult;
+import me.chanjar.weixin.mp.bean.invoice.merchant.InvoiceAuthPageSetting;
+import me.chanjar.weixin.mp.bean.invoice.merchant.InvoiceRejectRequest;
+import me.chanjar.weixin.mp.bean.invoice.merchant.InvoiceResult;
+import me.chanjar.weixin.mp.bean.invoice.merchant.MakeOutInvoiceRequest;
+import me.chanjar.weixin.mp.bean.invoice.merchant.MerchantContactInfo;
+import me.chanjar.weixin.mp.bean.invoice.merchant.MerchantInvoicePlatformInfo;
 
 /**
  * 商户电子发票相关的接口

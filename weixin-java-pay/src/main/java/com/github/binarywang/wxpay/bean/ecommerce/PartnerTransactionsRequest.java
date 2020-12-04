@@ -1,12 +1,13 @@
 package com.github.binarywang.wxpay.bean.ecommerce;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 普通支付（电商收付通）API

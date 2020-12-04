@@ -1,26 +1,39 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
-import cn.binarywang.wx.miniapp.api.WxMaCloudService;
-import cn.binarywang.wx.miniapp.api.WxMaService;
-import cn.binarywang.wx.miniapp.bean.cloud.*;
-import cn.binarywang.wx.miniapp.constant.WxMaConstants;
-import cn.binarywang.wx.miniapp.util.JoinerUtils;
-import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.lang3.StringUtils;
+
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+
+import cn.binarywang.wx.miniapp.api.WxMaCloudService;
+import cn.binarywang.wx.miniapp.api.WxMaService;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudBatchDeleteFileResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudBatchDownloadFileResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudCloudDatabaseMigrateQueryInfoResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudDatabaseCollectionGetResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudDatabaseCreateIndexRequest;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudDatabaseQueryResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudDatabaseUpdateResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudGetQcloudTokenResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudUploadFileResult;
+import cn.binarywang.wx.miniapp.constant.WxMaConstants;
+import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
+import cn.binarywang.wx.miniapp.util.JoinerUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.error.WxError;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.json.GsonParser;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
-import org.apache.commons.lang3.StringUtils;
-
-import java.io.Serializable;
-import java.util.*;
 
 /**
  * 云开发相关接口实现类.

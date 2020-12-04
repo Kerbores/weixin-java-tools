@@ -1,9 +1,10 @@
 package com.github.binarywang.wxpay.bean.result;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
+import java.io.Serializable;
+
 import org.w3c.dom.Document;
 
-import java.io.Serializable;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**
  * <pre>

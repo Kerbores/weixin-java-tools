@@ -1,13 +1,14 @@
 package me.chanjar.weixin.cp.bean.external.contact;
 
+import java.io.Serializable;
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Getter;
 import lombok.Setter;
 import me.chanjar.weixin.cp.bean.WxCpBaseResp;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * <pre>

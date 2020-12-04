@@ -1,13 +1,14 @@
 package me.chanjar.weixin.common.util.json;
 
+import java.util.List;
+
 import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+
 import jodd.util.MathUtil;
 import me.chanjar.weixin.common.error.WxRuntimeException;
-
-import java.util.List;
 
 public class GsonHelper {
 

@@ -1,17 +1,19 @@
 package me.chanjar.weixin.cp.api.impl;
 
-import com.google.inject.Inject;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.cp.api.ApiTestModule;
-import me.chanjar.weixin.cp.api.WxCpService;
-import me.chanjar.weixin.cp.bean.oa.calendar.WxCpOaCalendar;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
+import com.google.inject.Inject;
+
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.cp.api.ApiTestModule;
+import me.chanjar.weixin.cp.api.WxCpService;
+import me.chanjar.weixin.cp.bean.oa.calendar.WxCpOaCalendar;
 
 /**
  * 单元测试.

@@ -1,15 +1,24 @@
 package com.github.binarywang.wxpay.service.impl;
 
-import com.github.binarywang.wxpay.bean.profitsharing.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingFinishRequest;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingQueryRequest;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingQueryResult;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingReceiverRequest;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingRequest;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingReturnQueryRequest;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingReturnRequest;
+import com.github.binarywang.wxpay.bean.profitsharing.Receiver;
+import com.github.binarywang.wxpay.bean.profitsharing.ReceiverList;
 import com.github.binarywang.wxpay.constant.WxPayConstants;
 import com.github.binarywang.wxpay.exception.WxPayException;
 import com.github.binarywang.wxpay.service.WxPayService;
 import com.github.binarywang.wxpay.testbase.ApiTestModule;
 import com.google.inject.Inject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
 
 @Test
 @Guice(modules = ApiTestModule.class)

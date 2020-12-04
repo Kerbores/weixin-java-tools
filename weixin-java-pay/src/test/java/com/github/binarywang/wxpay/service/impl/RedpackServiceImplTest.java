@@ -1,5 +1,8 @@
 package com.github.binarywang.wxpay.service.impl;
 
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import com.github.binarywang.wxpay.bean.request.WxPaySendMiniProgramRedpackRequest;
 import com.github.binarywang.wxpay.bean.request.WxPaySendRedpackRequest;
 import com.github.binarywang.wxpay.bean.result.WxPayRedpackQueryResult;
@@ -10,9 +13,8 @@ import com.github.binarywang.wxpay.service.WxPayService;
 import com.github.binarywang.wxpay.testbase.ApiTestModule;
 import com.github.binarywang.wxpay.testbase.XmlWxPayConfig;
 import com.google.inject.Inject;
+
 import lombok.extern.slf4j.Slf4j;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
 
 /**
  * 测试类.

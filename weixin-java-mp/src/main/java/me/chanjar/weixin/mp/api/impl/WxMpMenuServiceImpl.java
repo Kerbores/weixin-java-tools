@@ -1,6 +1,15 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Menu.GET_CURRENT_SELFMENU_INFO;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Menu.MENU_ADDCONDITIONAL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Menu.MENU_CREATE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Menu.MENU_DELCONDITIONAL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Menu.MENU_DELETE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Menu.MENU_GET;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Menu.MENU_TRYMATCH;
+
 import com.google.gson.JsonObject;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.bean.menu.WxMenu;
@@ -11,8 +20,6 @@ import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.bean.menu.WxMpGetSelfMenuInfoResult;
 import me.chanjar.weixin.mp.bean.menu.WxMpMenu;
 import me.chanjar.weixin.mp.enums.WxMpApiUrl;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Menu.*;
 
 /**
  * Created by Binary Wang on 2016/7/21.

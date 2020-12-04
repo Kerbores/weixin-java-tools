@@ -1,16 +1,21 @@
 package com.github.binarywang.wxpay.bean.applyment;
 
-import com.github.binarywang.wxpay.bean.applyment.enums.*;
+import java.io.Serializable;
+import java.util.List;
+
+import com.github.binarywang.wxpay.bean.applyment.enums.BankAccountTypeEnum;
+import com.github.binarywang.wxpay.bean.applyment.enums.CertTypeEnum;
+import com.github.binarywang.wxpay.bean.applyment.enums.IdTypeEnum;
+import com.github.binarywang.wxpay.bean.applyment.enums.SalesScenesTypeEnum;
+import com.github.binarywang.wxpay.bean.applyment.enums.SubjectTypeEnum;
 import com.github.binarywang.wxpay.v3.SpecEncrypt;
 import com.google.gson.annotations.SerializedName;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
-
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * 特约商户进件 提交申请对象

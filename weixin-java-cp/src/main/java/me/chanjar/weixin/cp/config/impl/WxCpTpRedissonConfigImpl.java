@@ -1,6 +1,10 @@
 package me.chanjar.weixin.cp.config.impl;
 
 
+import java.io.File;
+import java.io.Serializable;
+import java.util.concurrent.TimeUnit;
+
 import lombok.Builder;
 import lombok.NonNull;
 import me.chanjar.weixin.common.bean.WxAccessToken;
@@ -8,10 +12,6 @@ import me.chanjar.weixin.common.redis.WxRedisOps;
 import me.chanjar.weixin.common.util.http.apache.ApacheHttpClientBuilder;
 import me.chanjar.weixin.cp.config.WxCpTpConfigStorage;
 import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;
-
-import java.io.File;
-import java.io.Serializable;
-import java.util.concurrent.TimeUnit;
 
 /**
  * 企业微信各种固定、授权配置的Redisson存储实现

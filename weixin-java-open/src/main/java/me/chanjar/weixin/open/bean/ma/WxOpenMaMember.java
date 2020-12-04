@@ -1,8 +1,8 @@
 package me.chanjar.weixin.open.bean.ma;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 
 /**
  * 微信开放平台小程序成员对象

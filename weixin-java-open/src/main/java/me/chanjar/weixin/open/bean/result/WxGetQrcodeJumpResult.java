@@ -1,11 +1,12 @@
 package me.chanjar.weixin.open.bean.result;
 
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import me.chanjar.weixin.open.util.json.WxOpenGsonBuilder;
-
-import java.util.List;
 
 /**
  * 已设置的二维码规则信息

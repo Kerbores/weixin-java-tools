@@ -1,17 +1,19 @@
 package com.github.binarywang.wxpay.v3.auth;
 
 
-import com.github.binarywang.wxpay.v3.Credentials;
-import com.github.binarywang.wxpay.v3.WechatPayUploadHttpPost;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.client.methods.HttpRequestWrapper;
-import org.apache.http.util.EntityUtils;
-
 import java.io.IOException;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
+
+import org.apache.http.HttpEntityEnclosingRequest;
+import org.apache.http.client.methods.HttpRequestWrapper;
+import org.apache.http.util.EntityUtils;
+
+import com.github.binarywang.wxpay.v3.Credentials;
+import com.github.binarywang.wxpay.v3.WechatPayUploadHttpPost;
+
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class WxPayCredentials implements Credentials {

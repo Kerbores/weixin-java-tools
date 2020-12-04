@@ -1,7 +1,5 @@
 package com.github.binarywang.wxpay.v3.auth;
 
-import me.chanjar.weixin.common.error.WxRuntimeException;
-
 import java.math.BigInteger;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -14,6 +12,8 @@ import java.util.Base64;
 import java.util.HashMap;
 import java.util.List;
 import java.util.NoSuchElementException;
+
+import me.chanjar.weixin.common.error.WxRuntimeException;
 
 public class CertificatesVerifier implements Verifier {
   private final HashMap<BigInteger, X509Certificate> certificates = new HashMap<>();

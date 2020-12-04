@@ -1,13 +1,13 @@
 package com.github.binarywang.wxpay.v3.auth;
 
-import me.chanjar.weixin.common.error.WxRuntimeException;
-
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.Signature;
 import java.security.SignatureException;
 import java.util.Base64;
+
+import me.chanjar.weixin.common.error.WxRuntimeException;
 
 public class PrivateKeySigner implements Signer {
   private String certificateSerialNumber;

@@ -1,22 +1,36 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
-import cn.binarywang.wx.miniapp.api.WxMaService;
-import cn.binarywang.wx.miniapp.bean.cloud.*;
-import cn.binarywang.wx.miniapp.test.ApiTestModule;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import com.google.common.collect.ImmutableSortedMap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Ordering;
 import com.google.gson.JsonArray;
 import com.google.inject.Inject;
+
+import cn.binarywang.wx.miniapp.api.WxMaService;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudBatchDeleteFileResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudBatchDownloadFileResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudCloudDatabaseMigrateQueryInfoResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudDatabaseCollectionGetResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudDatabaseCreateIndexRequest;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudDatabaseQueryResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudDatabaseUpdateResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudGetQcloudTokenResult;
+import cn.binarywang.wx.miniapp.bean.cloud.WxCloudUploadFileResult;
+import cn.binarywang.wx.miniapp.test.ApiTestModule;
 import me.chanjar.weixin.common.error.WxErrorException;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
-
-import java.math.BigDecimal;
-import java.util.*;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * 测试类.

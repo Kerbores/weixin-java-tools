@@ -1,16 +1,17 @@
 package cn.binarywang.wx.miniapp.bean.express;
 
-import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
+import java.io.Serializable;
+import java.util.List;
+
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
+
+import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import me.chanjar.weixin.common.util.json.GsonParser;
-
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * <pre>

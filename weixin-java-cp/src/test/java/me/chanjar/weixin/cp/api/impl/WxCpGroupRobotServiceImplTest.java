@@ -1,6 +1,15 @@
 package me.chanjar.weixin.cp.api.impl;
 
+import java.io.InputStream;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
 import com.google.inject.Inject;
+
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.fs.FileUtils;
@@ -8,13 +17,6 @@ import me.chanjar.weixin.cp.api.ApiTestModule;
 import me.chanjar.weixin.cp.api.WxCpGroupRobotService;
 import me.chanjar.weixin.cp.api.WxCpService;
 import me.chanjar.weixin.cp.bean.article.NewArticle;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
-
-import java.io.InputStream;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * 微信群机器人消息发送api 单元测试

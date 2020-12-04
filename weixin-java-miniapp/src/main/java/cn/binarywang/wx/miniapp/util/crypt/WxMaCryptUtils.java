@@ -6,17 +6,19 @@ import java.security.AlgorithmParameters;
 import java.security.Key;
 import java.security.Security;
 import java.util.Arrays;
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import com.google.common.base.CharMatcher;
-import com.google.common.io.BaseEncoding;
-import me.chanjar.weixin.common.error.WxRuntimeException;
 import org.apache.commons.codec.binary.Base64;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
+import com.google.common.base.CharMatcher;
+import com.google.common.io.BaseEncoding;
+
 import cn.binarywang.wx.miniapp.config.WxMaConfig;
+import me.chanjar.weixin.common.error.WxRuntimeException;
 import me.chanjar.weixin.common.util.crypto.PKCS7Encoder;
 
 /**

@@ -1,5 +1,11 @@
 package com.github.binarywang.wxpay.bean.notify;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.w3c.dom.Document;
+
 import com.github.binarywang.wxpay.bean.result.BaseWxPayResult;
 import com.github.binarywang.wxpay.constant.WxPayConstants;
 import com.github.binarywang.wxpay.converter.WxPayOrderNotifyResultConverter;
@@ -8,16 +14,12 @@ import com.github.binarywang.wxpay.service.WxPayService;
 import com.github.binarywang.wxpay.util.SignUtils;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
 import me.chanjar.weixin.common.util.xml.XStreamInitializer;
-import org.w3c.dom.Document;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 /**
  * 支付结果通知.

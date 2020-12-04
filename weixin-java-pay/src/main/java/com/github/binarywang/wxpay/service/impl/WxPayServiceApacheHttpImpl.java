@@ -1,9 +1,12 @@
 package com.github.binarywang.wxpay.service.impl;
 
-import com.github.binarywang.wxpay.bean.WxPayApiData;
-import com.github.binarywang.wxpay.exception.WxPayException;
-import com.google.gson.JsonObject;
-import me.chanjar.weixin.common.util.json.GsonParser;
+import java.io.InputStream;
+import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
+import javax.net.ssl.SSLContext;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;
@@ -25,11 +28,11 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import javax.net.ssl.SSLContext;
-import java.io.InputStream;
-import java.net.URI;
-import java.nio.charset.StandardCharsets;
-import java.util.Base64;
+import com.github.binarywang.wxpay.bean.WxPayApiData;
+import com.github.binarywang.wxpay.exception.WxPayException;
+import com.google.gson.JsonObject;
+
+import me.chanjar.weixin.common.util.json.GsonParser;
 
 /**
  * <pre>

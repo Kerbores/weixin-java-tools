@@ -1,6 +1,7 @@
 package cn.binarywang.wx.miniapp.config.impl;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 

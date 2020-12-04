@@ -1,10 +1,11 @@
 package me.chanjar.weixin.cp.bean.oa;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.List;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
 
 /**
  * 审批节点详情

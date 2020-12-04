@@ -1,9 +1,9 @@
 package cn.binarywang.wx.miniapp.bean;
 
+import java.io.Serializable;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * <pre>

@@ -1,8 +1,8 @@
 package com.binarywang.spring.starter.wxjava.mp.properties;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 
 /**
  * redis 配置属性.

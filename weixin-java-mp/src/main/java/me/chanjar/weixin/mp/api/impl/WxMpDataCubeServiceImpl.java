@@ -1,19 +1,42 @@
 package me.chanjar.weixin.mp.api.impl;
 
-import com.google.gson.JsonObject;
-import lombok.RequiredArgsConstructor;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.mp.api.WxMpDataCubeService;
-import me.chanjar.weixin.mp.api.WxMpService;
-import me.chanjar.weixin.mp.bean.datacube.*;
-import me.chanjar.weixin.mp.enums.WxMpApiUrl;
-import org.apache.commons.lang3.time.FastDateFormat;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_ARTICLE_SUMMARY;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_ARTICLE_TOTAL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_INTERFACE_SUMMARY;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_INTERFACE_SUMMARY_HOUR;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_UPSTREAM_MSG;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_UPSTREAM_MSG_DIST;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_UPSTREAM_MSG_DIST_MONTH;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_UPSTREAM_MSG_DIST_WEEK;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_UPSTREAM_MSG_HOUR;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_UPSTREAM_MSG_MONTH;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_UPSTREAM_MSG_WEEK;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_USER_CUMULATE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_USER_READ;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_USER_READ_HOUR;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_USER_SHARE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_USER_SHARE_HOUR;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.GET_USER_SUMMARY;
 
 import java.text.Format;
 import java.util.Date;
 import java.util.List;
 
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.DataCube.*;
+import org.apache.commons.lang3.time.FastDateFormat;
+
+import com.google.gson.JsonObject;
+
+import lombok.RequiredArgsConstructor;
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.mp.api.WxMpDataCubeService;
+import me.chanjar.weixin.mp.api.WxMpService;
+import me.chanjar.weixin.mp.bean.datacube.WxDataCubeArticleResult;
+import me.chanjar.weixin.mp.bean.datacube.WxDataCubeArticleTotal;
+import me.chanjar.weixin.mp.bean.datacube.WxDataCubeInterfaceResult;
+import me.chanjar.weixin.mp.bean.datacube.WxDataCubeMsgResult;
+import me.chanjar.weixin.mp.bean.datacube.WxDataCubeUserCumulate;
+import me.chanjar.weixin.mp.bean.datacube.WxDataCubeUserSummary;
+import me.chanjar.weixin.mp.enums.WxMpApiUrl;
 
 /**
  * Created by Binary Wang on 2016/8/23.

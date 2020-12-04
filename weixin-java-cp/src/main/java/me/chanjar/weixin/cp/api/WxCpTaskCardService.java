@@ -1,8 +1,8 @@
 package me.chanjar.weixin.cp.api;
 
-import me.chanjar.weixin.common.error.WxErrorException;
-
 import java.util.List;
+
+import me.chanjar.weixin.common.error.WxErrorException;
 
 /**
  * <pre>

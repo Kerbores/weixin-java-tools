@@ -1,11 +1,12 @@
 package me.chanjar.weixin.cp.bean.oa.applydata;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-import lombok.experimental.Accessors;
-
 import java.io.Serializable;
 import java.util.List;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  * @author element

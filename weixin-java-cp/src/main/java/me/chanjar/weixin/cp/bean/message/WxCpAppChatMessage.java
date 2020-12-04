@@ -1,7 +1,11 @@
 package me.chanjar.weixin.cp.bean.message;
 
+import java.io.Serializable;
+import java.util.List;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,9 +13,6 @@ import lombok.NoArgsConstructor;
 import me.chanjar.weixin.cp.bean.article.MpnewsArticle;
 import me.chanjar.weixin.cp.bean.article.NewArticle;
 import me.chanjar.weixin.cp.constant.WxCpConsts.AppChatMsgType;
-
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * <pre>

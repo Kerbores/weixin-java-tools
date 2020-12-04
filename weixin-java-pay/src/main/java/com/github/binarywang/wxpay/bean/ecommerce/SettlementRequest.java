@@ -1,11 +1,12 @@
 package com.github.binarywang.wxpay.bean.ecommerce;
 
+import java.io.Serializable;
+
 import com.github.binarywang.wxpay.v3.SpecEncrypt;
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * <pre>

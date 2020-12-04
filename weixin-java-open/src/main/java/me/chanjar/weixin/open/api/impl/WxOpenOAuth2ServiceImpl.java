@@ -1,5 +1,15 @@
 package me.chanjar.weixin.open.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.OAuth2.CONNECT_OAUTH2_AUTHORIZE_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.OAuth2.OAUTH2_ACCESS_TOKEN_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.OAuth2.OAUTH2_REFRESH_TOKEN_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.OAuth2.OAUTH2_USERINFO_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.OAuth2.OAUTH2_VALIDATE_TOKEN_URL;
+
+import java.io.IOException;
+
+import org.apache.commons.lang3.StringUtils;
+
 import lombok.AllArgsConstructor;
 import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
 import me.chanjar.weixin.common.bean.oauth2.WxOAuth2AccessToken;
@@ -9,11 +19,6 @@ import me.chanjar.weixin.common.error.WxRuntimeException;
 import me.chanjar.weixin.common.service.WxOAuth2Service;
 import me.chanjar.weixin.common.util.http.SimpleGetRequestExecutor;
 import me.chanjar.weixin.common.util.http.URIUtil;
-import org.apache.commons.lang3.StringUtils;
-
-import java.io.IOException;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.OAuth2.*;
 
 /**
  * oauth2接口实现.

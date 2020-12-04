@@ -1,9 +1,10 @@
 package me.chanjar.weixin.mp.bean.marketing;
 
-import com.google.common.collect.Lists;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.testng.annotations.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import com.google.common.collect.Lists;
 
 /**
  * 老板加点注释吧.

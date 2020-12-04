@@ -1,10 +1,11 @@
 package me.chanjar.weixin.open.bean.result;
 
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
-import java.util.List;
 
 /**
  * 获取小程序已经设置的类目结果类.

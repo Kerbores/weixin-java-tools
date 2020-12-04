@@ -1,10 +1,12 @@
 package com.github.binarywang.wxpay.bean.result;
 
-import com.thoughtworks.xstream.XStream;
-import me.chanjar.weixin.common.util.xml.XStreamInitializer;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import com.thoughtworks.xstream.XStream;
+
+import me.chanjar.weixin.common.util.xml.XStreamInitializer;
 
 /**
  * The type Wx pay send redpack result test.

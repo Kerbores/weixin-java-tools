@@ -1,8 +1,8 @@
 package com.github.binarywang.wxpay.bean.request;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-
 import java.util.Map;
+
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**
  * <pre>
@@ -14,17 +14,21 @@ import java.util.Map;
  */
 @XStreamAlias("xml")
 public class WxPayDefaultRequest extends BaseWxPayRequest {
-  @Override
-  protected void checkConstraints() {
-    //do nothing
-  }
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
 
-  @Override
-  protected boolean ignoreAppid() {
-    return true;
-  }
+    @Override
+    protected void checkConstraints() {
+        // do nothing
+    }
 
-  @Override
-  protected void storeMap(Map<String, String> map) {
-  }
+    @Override
+    protected boolean ignoreAppid() {
+        return true;
+    }
+
+    @Override
+    protected void storeMap(Map<String, String> map) {}
 }

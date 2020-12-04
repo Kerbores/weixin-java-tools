@@ -1,10 +1,10 @@
 package cn.binarywang.wx.miniapp.bean.express.request;
 
+import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * 包裹商品详情对象

@@ -1,9 +1,10 @@
 package me.chanjar.weixin.common.util.json;
 
-import com.google.gson.JsonObject;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.testng.annotations.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import com.google.gson.JsonObject;
 
 /**
  * GsonHelper 的单元测试.

@@ -1,11 +1,18 @@
 package me.chanjar.weixin.cp.api;
 
-import lombok.NonNull;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.cp.bean.oa.*;
-
 import java.util.Date;
 import java.util.List;
+
+import lombok.NonNull;
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.cp.bean.oa.WxCpApprovalDetailResult;
+import me.chanjar.weixin.cp.bean.oa.WxCpApprovalInfo;
+import me.chanjar.weixin.cp.bean.oa.WxCpApprovalInfoQueryFilter;
+import me.chanjar.weixin.cp.bean.oa.WxCpCheckinData;
+import me.chanjar.weixin.cp.bean.oa.WxCpCheckinOption;
+import me.chanjar.weixin.cp.bean.oa.WxCpDialRecord;
+import me.chanjar.weixin.cp.bean.oa.WxCpOaApplyEventRequest;
+import me.chanjar.weixin.cp.bean.oa.WxCpTemplateResult;
 
 /**
  * 企业微信OA相关接口.

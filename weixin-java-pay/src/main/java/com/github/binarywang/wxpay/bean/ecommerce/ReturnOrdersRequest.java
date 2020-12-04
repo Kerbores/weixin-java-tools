@@ -1,9 +1,14 @@
 package com.github.binarywang.wxpay.bean.ecommerce;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.*;
-
 import java.io.Serializable;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 请求分账回退

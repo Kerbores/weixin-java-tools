@@ -1,10 +1,10 @@
 package cn.binarywang.wx.miniapp.bean.cloud;
 
-import lombok.Data;
-import lombok.experimental.Accessors;
-
 import java.io.Serializable;
 import java.util.List;
+
+import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  * 云开发新增索引的请求对象.

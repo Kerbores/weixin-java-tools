@@ -1,9 +1,10 @@
 package cn.binarywang.wx.miniapp.bean.live;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-
 import java.io.Serializable;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
 
 /**
  * 创建直播间接口返回.

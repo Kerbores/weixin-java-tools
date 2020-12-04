@@ -1,11 +1,12 @@
 package me.chanjar.weixin.open.bean.result;
 
+import java.io.Serializable;
+
+import org.apache.commons.lang3.StringUtils;
+
 import lombok.Data;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
 import me.chanjar.weixin.open.util.json.WxOpenGsonBuilder;
-import org.apache.commons.lang3.StringUtils;
-
-import java.io.Serializable;
 
 /**
  * 基础的微信开放平台请求结果.

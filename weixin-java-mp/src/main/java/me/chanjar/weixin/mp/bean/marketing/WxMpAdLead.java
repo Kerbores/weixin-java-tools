@@ -1,10 +1,11 @@
 package me.chanjar.weixin.mp.bean.marketing;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.List;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
 
 /**
  * @author <a href="https://github.com/007gzs">007</a>

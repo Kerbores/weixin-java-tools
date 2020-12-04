@@ -1,10 +1,11 @@
 package me.chanjar.weixin.mp.bean.result;
 
-import me.chanjar.weixin.mp.bean.marketing.WxMpAdLeadResult;
-import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
+
+import org.testng.annotations.Test;
+
+import me.chanjar.weixin.mp.bean.marketing.WxMpAdLeadResult;
 
 /**
  * @author <a href="https://github.com/007gzs">007</a>

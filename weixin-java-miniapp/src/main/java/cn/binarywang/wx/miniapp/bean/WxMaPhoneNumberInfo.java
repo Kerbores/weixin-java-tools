@@ -1,9 +1,9 @@
 package cn.binarywang.wx.miniapp.bean;
 
+import java.io.Serializable;
+
 import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
 import lombok.Data;
-
-import java.io.Serializable;
 
 /**
  * 微信用户绑定的手机号相关信息

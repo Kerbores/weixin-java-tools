@@ -1,6 +1,7 @@
 package com.github.binarywang.wxpay.bean.ecommerce;
 
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

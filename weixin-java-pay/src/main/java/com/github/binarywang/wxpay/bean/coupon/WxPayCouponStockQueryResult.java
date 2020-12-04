@@ -1,12 +1,14 @@
 package com.github.binarywang.wxpay.bean.coupon;
 
+import org.w3c.dom.Document;
+
 import com.github.binarywang.wxpay.bean.result.BaseWxPayResult;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.w3c.dom.Document;
 
 /**
  * <pre>

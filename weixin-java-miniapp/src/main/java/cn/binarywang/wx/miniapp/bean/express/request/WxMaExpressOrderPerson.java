@@ -1,12 +1,13 @@
 package cn.binarywang.wx.miniapp.bean.express.request;
 
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * 发件人/收件人信息对象

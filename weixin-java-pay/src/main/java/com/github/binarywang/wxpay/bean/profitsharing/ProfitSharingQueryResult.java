@@ -1,17 +1,19 @@
 package com.github.binarywang.wxpay.bean.profitsharing;
 
+import java.util.List;
+
+import org.w3c.dom.Document;
+
 import com.github.binarywang.wxpay.bean.result.BaseWxPayResult;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.w3c.dom.Document;
-
-import java.util.List;
 
 /**
  * @author Wang GuangXin 2019/10/22 15:51

@@ -1,14 +1,15 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
+import java.util.Map;
+
+import com.google.common.collect.ImmutableMap;
+
 import cn.binarywang.wx.miniapp.api.WxMaPluginService;
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.bean.WxMaPluginListResult;
 import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
-import com.google.common.collect.ImmutableMap;
 import lombok.AllArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
-
-import java.util.Map;
 
 @AllArgsConstructor
 public class WxMaPluginServiceImpl implements WxMaPluginService {

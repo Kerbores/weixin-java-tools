@@ -1,6 +1,6 @@
 package me.chanjar.weixin.common.util.fs;
 
-import org.apache.commons.io.IOUtils;
+import static org.apache.commons.io.FileUtils.openOutputStream;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.util.Base64;
 
-import static org.apache.commons.io.FileUtils.openOutputStream;
+import org.apache.commons.io.IOUtils;
 
 public class FileUtils {
 

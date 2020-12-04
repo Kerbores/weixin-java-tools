@@ -1,11 +1,16 @@
 package com.github.binarywang.wxpay.bean.request;
 
+import java.util.Map;
+
 import com.github.binarywang.wxpay.exception.WxPayException;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import lombok.*;
-import lombok.experimental.Accessors;
 
-import java.util.Map;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 /**
  * 查询汇率请求.

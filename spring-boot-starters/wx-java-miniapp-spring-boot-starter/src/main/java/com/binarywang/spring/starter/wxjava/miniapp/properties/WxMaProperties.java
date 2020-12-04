@@ -1,9 +1,11 @@
 package com.binarywang.spring.starter.wxjava.miniapp.properties;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
 import com.binarywang.spring.starter.wxjava.miniapp.enums.HttpClientType;
 import com.binarywang.spring.starter.wxjava.miniapp.enums.StorageType;
+
 import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * 属性配置类.

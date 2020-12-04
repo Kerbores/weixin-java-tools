@@ -5,13 +5,14 @@ import java.security.PrivateKey;
 import java.security.cert.X509Certificate;
 import java.util.List;
 
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.execchain.ClientExecChain;
+
 import com.github.binarywang.wxpay.v3.auth.CertificatesVerifier;
 import com.github.binarywang.wxpay.v3.auth.PrivateKeySigner;
 import com.github.binarywang.wxpay.v3.auth.WxPayCredentials;
 import com.github.binarywang.wxpay.v3.auth.WxPayValidator;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.impl.execchain.ClientExecChain;
 
 public class WxPayV3HttpClientBuilder extends HttpClientBuilder {
   private Credentials credentials;

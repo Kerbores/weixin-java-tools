@@ -1,8 +1,8 @@
 package me.chanjar.weixin.cp.bean.external.msg;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 
 /**
  * 消息文本消息.

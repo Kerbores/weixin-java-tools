@@ -1,6 +1,5 @@
 package cn.binarywang.wx.miniapp.config.impl;
 
-import lombok.SneakyThrows;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
@@ -8,6 +7,8 @@ import org.redisson.config.TransportMode;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import lombok.SneakyThrows;
 
 /**
  * @author yqx

@@ -1,10 +1,11 @@
 package me.chanjar.weixin.common.bean.imgproc;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
-
-import java.io.Serializable;
 
 /**
  * 图片高清化返回结果

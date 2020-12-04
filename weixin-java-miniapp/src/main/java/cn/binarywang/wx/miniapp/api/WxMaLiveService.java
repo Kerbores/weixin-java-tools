@@ -1,9 +1,13 @@
 package cn.binarywang.wx.miniapp.api;
 
-import cn.binarywang.wx.miniapp.bean.live.*;
-import me.chanjar.weixin.common.error.WxErrorException;
-
 import java.util.List;
+
+import cn.binarywang.wx.miniapp.bean.live.WxMaAssistantResult;
+import cn.binarywang.wx.miniapp.bean.live.WxMaCreateRoomResult;
+import cn.binarywang.wx.miniapp.bean.live.WxMaLiveAssistantInfo;
+import cn.binarywang.wx.miniapp.bean.live.WxMaLiveResult;
+import cn.binarywang.wx.miniapp.bean.live.WxMaLiveRoomInfo;
+import me.chanjar.weixin.common.error.WxErrorException;
 
 /**
  * <pre>

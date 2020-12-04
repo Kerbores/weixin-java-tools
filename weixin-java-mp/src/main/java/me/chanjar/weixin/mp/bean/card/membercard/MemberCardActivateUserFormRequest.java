@@ -1,11 +1,13 @@
 package me.chanjar.weixin.mp.bean.card.membercard;
 
-import com.google.gson.JsonObject;
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
+import java.io.Serializable;
+
 import org.apache.commons.lang3.StringUtils;
 
-import java.io.Serializable;
+import com.google.gson.JsonObject;
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
 
 /**
  * 会员卡激活，用户字段提交请求
@@ -15,58 +17,63 @@ import java.io.Serializable;
  */
 @Data
 public class MemberCardActivateUserFormRequest implements Serializable {
-  @SerializedName("card_id")
-  private String cardId;
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
 
-  @SerializedName("service_statement")
-  private JsonObject serviceStatement;
+    @SerializedName("card_id")
+    private String cardId;
 
-  @SerializedName("bind_old_card")
-  private JsonObject bindOldCard;
+    @SerializedName("service_statement")
+    private JsonObject serviceStatement;
 
-  /**
-   * 必填项
-   */
-  @SerializedName("required_form")
-  private MemberCardUserForm requiredForm;
+    @SerializedName("bind_old_card")
+    private JsonObject bindOldCard;
 
-  /**
-   * 可选项
-   */
-  @SerializedName("optional_form")
-  private MemberCardUserForm optionalForm;
+    /**
+     * 必填项
+     */
+    @SerializedName("required_form")
+    private MemberCardUserForm requiredForm;
 
-  /**
-   * 绑定老会员卡信息
-   *
-   * @param name
-   * @param url
-   */
-  public void setBindOldCard(String name, String url) {
-    if (StringUtils.isAnyEmpty(name, url)) {
-      return;
+    /**
+     * 可选项
+     */
+    @SerializedName("optional_form")
+    private MemberCardUserForm optionalForm;
+
+    /**
+     * 绑定老会员卡信息
+     *
+     * @param name
+     * @param url
+     */
+    public void setBindOldCard(String name, String url) {
+        if (StringUtils.isAnyEmpty(name, url)) {
+            return;
+        }
+        if (bindOldCard == null) {
+            bindOldCard = new JsonObject();
+        }
+        bindOldCard.addProperty("name", name);
+        bindOldCard.addProperty("url", url);
     }
-    if (bindOldCard == null) {
-      bindOldCard = new JsonObject();
-    }
-    bindOldCard.addProperty("name", name);
-    bindOldCard.addProperty("url", url);
-  }
 
-  /**
-   * 设置服务声明，用于放置商户会员卡守则
-   *
-   * @param name
-   * @param url
-   */
-  public void setServiceStatement(String name, String url) {
-    if (StringUtils.isAnyEmpty(name, url)) {
-      return;
+    /**
+     * 设置服务声明，用于放置商户会员卡守则
+     *
+     * @param name
+     * @param url
+     */
+    public void setServiceStatement(String name, String url) {
+        if (StringUtils.isAnyEmpty(name, url)) {
+            return;
+        }
+        if (serviceStatement == null) {
+            serviceStatement = new JsonObject();
+        }
+        serviceStatement.addProperty("name", name);
+        serviceStatement.addProperty("url", url);
     }
-    if (serviceStatement == null) {
-      serviceStatement = new JsonObject();
-    }
-    serviceStatement.addProperty("name", name);
-    serviceStatement.addProperty("url", url);
-  }
 }

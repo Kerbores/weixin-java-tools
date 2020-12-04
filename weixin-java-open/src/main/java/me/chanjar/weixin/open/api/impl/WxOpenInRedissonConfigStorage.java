@@ -1,12 +1,13 @@
 package me.chanjar.weixin.open.api.impl;
 
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
+
+import org.redisson.api.RedissonClient;
+
 import lombok.NonNull;
 import me.chanjar.weixin.common.redis.RedissonWxRedisOps;
 import me.chanjar.weixin.common.redis.WxRedisOps;
-import org.redisson.api.RedissonClient;
-
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
 
 /**
  * @author yangyidian

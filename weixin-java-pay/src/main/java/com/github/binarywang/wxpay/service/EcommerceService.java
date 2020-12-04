@@ -1,12 +1,46 @@
 package com.github.binarywang.wxpay.service;
 
-import com.github.binarywang.wxpay.bean.ecommerce.*;
+import java.io.InputStream;
+
+import com.github.binarywang.wxpay.bean.ecommerce.ApplymentsRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.ApplymentsResult;
+import com.github.binarywang.wxpay.bean.ecommerce.ApplymentsStatusResult;
+import com.github.binarywang.wxpay.bean.ecommerce.CombineTransactionsNotifyResult;
+import com.github.binarywang.wxpay.bean.ecommerce.CombineTransactionsRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.CombineTransactionsResult;
+import com.github.binarywang.wxpay.bean.ecommerce.FinishOrderRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.FundBalanceResult;
+import com.github.binarywang.wxpay.bean.ecommerce.FundBillRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.FundBillResult;
+import com.github.binarywang.wxpay.bean.ecommerce.PartnerTransactionsNotifyResult;
+import com.github.binarywang.wxpay.bean.ecommerce.PartnerTransactionsQueryRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.PartnerTransactionsRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.PartnerTransactionsResult;
+import com.github.binarywang.wxpay.bean.ecommerce.ProfitSharingQueryRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.ProfitSharingRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.ProfitSharingResult;
+import com.github.binarywang.wxpay.bean.ecommerce.RefundNotifyResult;
+import com.github.binarywang.wxpay.bean.ecommerce.RefundQueryResult;
+import com.github.binarywang.wxpay.bean.ecommerce.RefundsRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.RefundsResult;
+import com.github.binarywang.wxpay.bean.ecommerce.ReturnOrdersRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.ReturnOrdersResult;
+import com.github.binarywang.wxpay.bean.ecommerce.SettlementRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.SettlementResult;
+import com.github.binarywang.wxpay.bean.ecommerce.SignatureHeader;
+import com.github.binarywang.wxpay.bean.ecommerce.SpWithdrawRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.SpWithdrawResult;
+import com.github.binarywang.wxpay.bean.ecommerce.SpWithdrawStatusResult;
+import com.github.binarywang.wxpay.bean.ecommerce.SubWithdrawRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.SubWithdrawResult;
+import com.github.binarywang.wxpay.bean.ecommerce.SubWithdrawStatusResult;
+import com.github.binarywang.wxpay.bean.ecommerce.TradeBillRequest;
+import com.github.binarywang.wxpay.bean.ecommerce.TradeBillResult;
+import com.github.binarywang.wxpay.bean.ecommerce.TransactionsResult;
 import com.github.binarywang.wxpay.bean.ecommerce.enums.FundBillTypeEnum;
 import com.github.binarywang.wxpay.bean.ecommerce.enums.SpAccountTypeEnum;
 import com.github.binarywang.wxpay.bean.ecommerce.enums.TradeTypeEnum;
 import com.github.binarywang.wxpay.exception.WxPayException;
-
-import java.io.InputStream;
 
 /**
  * <pre>

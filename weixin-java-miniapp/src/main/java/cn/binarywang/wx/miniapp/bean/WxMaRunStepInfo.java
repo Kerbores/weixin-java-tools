@@ -3,9 +3,10 @@ package cn.binarywang.wx.miniapp.bean;
 import java.io.Serializable;
 import java.util.List;
 
-import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+
+import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
 import lombok.Data;
 import me.chanjar.weixin.common.util.json.GsonParser;
 

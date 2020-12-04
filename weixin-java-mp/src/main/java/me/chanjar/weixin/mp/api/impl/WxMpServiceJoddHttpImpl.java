@@ -1,5 +1,10 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Other.GET_ACCESS_TOKEN_URL;
+
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
+
 import jodd.http.HttpConnectionProvider;
 import jodd.http.HttpRequest;
 import jodd.http.ProxyInfo;
@@ -8,11 +13,6 @@ import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.error.WxRuntimeException;
 import me.chanjar.weixin.common.util.http.HttpType;
 import me.chanjar.weixin.mp.config.WxMpConfigStorage;
-
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Other.GET_ACCESS_TOKEN_URL;
 
 /**
  * jodd-http方式实现.

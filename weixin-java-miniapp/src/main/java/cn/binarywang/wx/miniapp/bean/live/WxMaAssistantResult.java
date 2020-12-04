@@ -1,10 +1,10 @@
 package cn.binarywang.wx.miniapp.bean.live;
 
-import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.List;
+
+import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
+import lombok.Data;
 
 /**
  * 直播间小助手用户信息

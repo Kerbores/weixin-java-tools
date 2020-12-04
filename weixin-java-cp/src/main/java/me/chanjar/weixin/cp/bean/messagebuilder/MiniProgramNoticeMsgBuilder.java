@@ -1,9 +1,9 @@
 package me.chanjar.weixin.cp.bean.messagebuilder;
 
+import java.util.Map;
+
 import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.cp.bean.message.WxCpMessage;
-
-import java.util.Map;
 
 /**
  * <pre>

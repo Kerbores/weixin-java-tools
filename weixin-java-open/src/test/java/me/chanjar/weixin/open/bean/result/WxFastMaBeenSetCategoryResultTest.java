@@ -1,10 +1,11 @@
 package me.chanjar.weixin.open.bean.result;
 
-import me.chanjar.weixin.open.util.json.WxOpenGsonBuilder;
-import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
+
+import org.testng.annotations.Test;
+
+import me.chanjar.weixin.open.util.json.WxOpenGsonBuilder;
 
 
 public class WxFastMaBeenSetCategoryResultTest {

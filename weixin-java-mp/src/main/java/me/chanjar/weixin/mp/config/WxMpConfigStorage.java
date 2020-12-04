@@ -1,12 +1,12 @@
 package me.chanjar.weixin.mp.config;
 
+import java.io.File;
+import java.util.concurrent.locks.Lock;
+
 import me.chanjar.weixin.common.bean.WxAccessToken;
 import me.chanjar.weixin.common.enums.TicketType;
 import me.chanjar.weixin.common.util.http.apache.ApacheHttpClientBuilder;
 import me.chanjar.weixin.mp.bean.WxMpHostConfig;
-
-import java.io.File;
-import java.util.concurrent.locks.Lock;
 
 /**
  * 微信客户端配置存储.

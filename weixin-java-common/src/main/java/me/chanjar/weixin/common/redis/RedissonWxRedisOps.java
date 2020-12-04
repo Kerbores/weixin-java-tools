@@ -1,10 +1,11 @@
 package me.chanjar.weixin.common.redis;
 
-import lombok.RequiredArgsConstructor;
-import org.redisson.api.RedissonClient;
-
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
+
+import org.redisson.api.RedissonClient;
+
+import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class RedissonWxRedisOps implements WxRedisOps {

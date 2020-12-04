@@ -1,15 +1,10 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
-import cn.binarywang.wx.miniapp.api.WxMaService;
-import cn.binarywang.wx.miniapp.test.ApiTestModule;
-import cn.binarywang.wx.miniapp.test.TestConstants;
-import me.chanjar.weixin.common.bean.ocr.*;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.common.util.fs.FileUtils;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
-import javax.inject.Inject;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,10 +12,22 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.UUID;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import javax.inject.Inject;
+
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
+import cn.binarywang.wx.miniapp.api.WxMaService;
+import cn.binarywang.wx.miniapp.test.ApiTestModule;
+import cn.binarywang.wx.miniapp.test.TestConstants;
+import me.chanjar.weixin.common.bean.ocr.WxOcrBankCardResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrBizLicenseResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrCommResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrDrivingLicenseResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrDrivingResult;
+import me.chanjar.weixin.common.bean.ocr.WxOcrIdCardResult;
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.common.util.fs.FileUtils;
 
 /**
  * @author <a href="https://github.com/binarywang">Binary Wang</a>

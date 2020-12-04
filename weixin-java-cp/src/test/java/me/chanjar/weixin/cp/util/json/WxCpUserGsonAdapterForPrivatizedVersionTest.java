@@ -1,9 +1,10 @@
 package me.chanjar.weixin.cp.util.json;
 
-import me.chanjar.weixin.cp.bean.WxCpUser;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.testng.annotations.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import me.chanjar.weixin.cp.bean.WxCpUser;
 
 /**
  * <pre>

@@ -1,14 +1,15 @@
 package cn.binarywang.wx.miniapp.bean.express.request;
 
 
-import cn.binarywang.wx.miniapp.constant.WxMaConstants;
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
+
+import cn.binarywang.wx.miniapp.constant.WxMaConstants;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * 保价信息对象

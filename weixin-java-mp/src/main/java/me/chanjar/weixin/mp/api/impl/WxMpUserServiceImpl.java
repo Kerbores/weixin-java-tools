@@ -1,6 +1,17 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.User.USER_CHANGE_OPENID_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.User.USER_GET_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.User.USER_INFO_BATCH_GET_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.User.USER_INFO_UPDATE_REMARK_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.User.USER_INFO_URL;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.google.gson.JsonObject;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.mp.api.WxMpService;
@@ -10,12 +21,6 @@ import me.chanjar.weixin.mp.bean.result.WxMpChangeOpenid;
 import me.chanjar.weixin.mp.bean.result.WxMpUser;
 import me.chanjar.weixin.mp.bean.result.WxMpUserList;
 import me.chanjar.weixin.mp.util.json.WxMpGsonBuilder;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.User.*;
 
 /**
  * Created by Binary Wang on 2016/7/21.

@@ -1,23 +1,5 @@
 package com.github.binarywang.wxpay.v3.auth;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.binarywang.wxpay.v3.Credentials;
-import com.github.binarywang.wxpay.v3.Validator;
-import com.github.binarywang.wxpay.v3.WxPayV3HttpClientBuilder;
-import com.github.binarywang.wxpay.v3.util.AesUtils;
-import com.github.binarywang.wxpay.v3.util.PemUtils;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import me.chanjar.weixin.common.error.WxRuntimeException;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.util.EntityUtils;
-import org.joda.time.Instant;
-import org.joda.time.Minutes;
-
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -29,6 +11,26 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
+
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.util.EntityUtils;
+import org.joda.time.Instant;
+import org.joda.time.Minutes;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.binarywang.wxpay.v3.Credentials;
+import com.github.binarywang.wxpay.v3.Validator;
+import com.github.binarywang.wxpay.v3.WxPayV3HttpClientBuilder;
+import com.github.binarywang.wxpay.v3.util.AesUtils;
+import com.github.binarywang.wxpay.v3.util.PemUtils;
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import me.chanjar.weixin.common.error.WxRuntimeException;
 
 /**
  * 在原有CertificatesVerifier基础上，增加自动更新证书功能

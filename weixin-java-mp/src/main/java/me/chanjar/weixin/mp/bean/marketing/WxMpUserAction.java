@@ -1,14 +1,15 @@
 package me.chanjar.weixin.mp.bean.marketing;
 
+import java.io.Serializable;
+import java.util.List;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * @author <a href="https://github.com/007gzs">007</a>

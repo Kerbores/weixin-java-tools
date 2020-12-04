@@ -1,6 +1,10 @@
 package com.github.binarywang.wxpay.service;
 
-import com.github.binarywang.wxpay.bean.applyment.*;
+import com.github.binarywang.wxpay.bean.applyment.ApplymentStateQueryResult;
+import com.github.binarywang.wxpay.bean.applyment.ModifySettlementRequest;
+import com.github.binarywang.wxpay.bean.applyment.SettlementInfoResult;
+import com.github.binarywang.wxpay.bean.applyment.WxPayApplyment4SubCreateRequest;
+import com.github.binarywang.wxpay.bean.applyment.WxPayApplymentCreateResult;
 import com.github.binarywang.wxpay.exception.WxPayException;
 
 /**

@@ -1,15 +1,16 @@
 package cn.binarywang.wx.miniapp.config.impl;
 
-import com.github.jedis.lock.JedisLock;
-import me.chanjar.weixin.common.error.WxRuntimeException;
-import redis.clients.jedis.Jedis;
-
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
+
+import com.github.jedis.lock.JedisLock;
+
+import me.chanjar.weixin.common.error.WxRuntimeException;
+import redis.clients.jedis.Jedis;
 
 /**
  * @author <a href="https://github.com/winter4666">winter</a>

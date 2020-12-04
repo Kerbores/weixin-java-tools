@@ -1,12 +1,13 @@
 package me.chanjar.weixin.common.error;
 
+import java.io.Serializable;
+
+import org.apache.commons.lang3.StringUtils;
+
 import lombok.Builder;
 import lombok.Data;
 import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
-import org.apache.commons.lang3.StringUtils;
-
-import java.io.Serializable;
 
 /**
  * 微信错误码.

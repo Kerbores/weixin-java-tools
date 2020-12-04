@@ -1,5 +1,12 @@
 package me.chanjar.weixin.cp.demo;
 
+import java.io.IOException;
+import java.io.InputStream;
+
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
+
 import me.chanjar.weixin.cp.api.WxCpService;
 import me.chanjar.weixin.cp.api.impl.WxCpServiceImpl;
 import me.chanjar.weixin.cp.bean.message.WxCpXmlOutMessage;
@@ -8,12 +15,6 @@ import me.chanjar.weixin.cp.config.WxCpConfigStorage;
 import me.chanjar.weixin.cp.constant.WxCpConsts;
 import me.chanjar.weixin.cp.message.WxCpMessageHandler;
 import me.chanjar.weixin.cp.message.WxCpMessageRouter;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 public class WxCpDemoServer {
 

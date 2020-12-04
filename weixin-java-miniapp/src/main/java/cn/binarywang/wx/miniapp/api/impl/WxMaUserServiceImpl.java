@@ -1,5 +1,12 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
+import java.util.Map;
+
+import org.apache.commons.codec.digest.DigestUtils;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.api.WxMaUserService;
 import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
@@ -7,14 +14,9 @@ import cn.binarywang.wx.miniapp.bean.WxMaPhoneNumberInfo;
 import cn.binarywang.wx.miniapp.bean.WxMaUserInfo;
 import cn.binarywang.wx.miniapp.config.WxMaConfig;
 import cn.binarywang.wx.miniapp.util.crypt.WxMaCryptUtils;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import lombok.AllArgsConstructor;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.SignUtils;
-import org.apache.commons.codec.digest.DigestUtils;
-
-import java.util.Map;
 
 /**
  * @author <a href="https://github.com/binarywang">Binary Wang</a>

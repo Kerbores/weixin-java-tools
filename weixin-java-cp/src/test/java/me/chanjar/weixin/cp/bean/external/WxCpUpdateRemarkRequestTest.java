@@ -1,9 +1,10 @@
 package me.chanjar.weixin.cp.bean.external;
 
-import me.chanjar.weixin.common.util.json.GsonParser;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.testng.annotations.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import me.chanjar.weixin.common.util.json.GsonParser;
 
 /**
  * 单元测试.

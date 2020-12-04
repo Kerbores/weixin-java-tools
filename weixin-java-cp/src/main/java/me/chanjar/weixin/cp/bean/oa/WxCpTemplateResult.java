@@ -1,12 +1,13 @@
 package me.chanjar.weixin.cp.bean.oa;
 
+import java.io.Serializable;
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.cp.bean.oa.templatedata.TemplateContent;
 import me.chanjar.weixin.cp.bean.oa.templatedata.TemplateTitle;
-
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * 审批模板详情

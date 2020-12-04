@@ -1,12 +1,14 @@
 package com.github.binarywang.wxpay.bean.result;
 
+import java.io.Serializable;
+
+import org.w3c.dom.Document;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.w3c.dom.Document;
-
-import java.io.Serializable;
 
 /**
  * <pre>

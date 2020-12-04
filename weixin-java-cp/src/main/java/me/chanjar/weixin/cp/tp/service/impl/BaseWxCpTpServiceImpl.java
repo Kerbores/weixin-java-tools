@@ -1,8 +1,27 @@
 package me.chanjar.weixin.cp.tp.service.impl;
 
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tp.GET_AUTH_CORP_JSAPI_TICKET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tp.GET_AUTH_INFO;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tp.GET_CORP_TOKEN;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tp.GET_PERMANENT_CODE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tp.GET_PREAUTH_CODE;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tp.GET_SUITE_JSAPI_TICKET;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tp.GET_USERDETAIL3RD;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tp.GET_USERINFO3RD;
+import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tp.JSCODE_TO_SESSION;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.commons.lang3.StringUtils;
+
 import com.google.common.base.Joiner;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.bean.WxAccessToken;
@@ -20,18 +39,15 @@ import me.chanjar.weixin.common.util.http.RequestHttp;
 import me.chanjar.weixin.common.util.http.SimpleGetRequestExecutor;
 import me.chanjar.weixin.common.util.http.SimplePostRequestExecutor;
 import me.chanjar.weixin.common.util.json.GsonParser;
-import me.chanjar.weixin.cp.bean.*;
+import me.chanjar.weixin.cp.bean.WxCpMaJsCode2SessionResult;
+import me.chanjar.weixin.cp.bean.WxCpTpAuthInfo;
+import me.chanjar.weixin.cp.bean.WxCpTpCorp;
+import me.chanjar.weixin.cp.bean.WxCpTpPermanentCodeInfo;
+import me.chanjar.weixin.cp.bean.WxCpTpPreauthCode;
+import me.chanjar.weixin.cp.bean.WxCpTpUserDetail;
+import me.chanjar.weixin.cp.bean.WxCpTpUserInfo;
 import me.chanjar.weixin.cp.config.WxCpTpConfigStorage;
 import me.chanjar.weixin.cp.tp.service.WxCpTpService;
-import org.apache.commons.lang3.StringUtils;
-
-import java.io.File;
-import java.io.IOException;
-import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.Map;
-
-import static me.chanjar.weixin.cp.constant.WxCpApiPathConsts.Tp.*;
 
 /**
  * .

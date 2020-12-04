@@ -1,11 +1,13 @@
 package me.chanjar.weixin.common.api;
 
+import static me.chanjar.weixin.common.error.WxMpErrorMsgEnum.CODE_40001;
+import static me.chanjar.weixin.common.error.WxMpErrorMsgEnum.CODE_40014;
+import static me.chanjar.weixin.common.error.WxMpErrorMsgEnum.CODE_42001;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static me.chanjar.weixin.common.error.WxMpErrorMsgEnum.*;
 
 /**
  * 微信开发所使用到的常量类.

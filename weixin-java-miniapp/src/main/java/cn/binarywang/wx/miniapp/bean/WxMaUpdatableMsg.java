@@ -1,11 +1,12 @@
 package cn.binarywang.wx.miniapp.bean;
 
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-import lombok.experimental.Accessors;
-
 import java.io.Serializable;
 import java.util.List;
+
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  * 动态消息.

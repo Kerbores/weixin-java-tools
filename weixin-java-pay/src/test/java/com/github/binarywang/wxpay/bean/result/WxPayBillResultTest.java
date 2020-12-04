@@ -1,10 +1,11 @@
 package com.github.binarywang.wxpay.bean.result;
 
-import com.github.binarywang.wxpay.constant.WxPayConstants;
-import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNull;
+
+import org.testng.annotations.Test;
+
+import com.github.binarywang.wxpay.constant.WxPayConstants;
 
 /**
  * @author m8cool

@@ -1,13 +1,29 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Device.DEVICE_AUTHORIZE_DEVICE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Device.DEVICE_BIND;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Device.DEVICE_COMPEL_BIND;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Device.DEVICE_COMPEL_UNBIND;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Device.DEVICE_GETQRCODE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Device.DEVICE_GET_BIND_DEVICE;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Device.DEVICE_GET_OPENID;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Device.DEVICE_TRANSMSG;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Device.DEVICE_UNBIND;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.mp.api.WxMpDeviceService;
 import me.chanjar.weixin.mp.api.WxMpService;
-import me.chanjar.weixin.mp.bean.device.*;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.Device.*;
+import me.chanjar.weixin.mp.bean.device.TransMsgResp;
+import me.chanjar.weixin.mp.bean.device.WxDeviceAuthorize;
+import me.chanjar.weixin.mp.bean.device.WxDeviceAuthorizeResult;
+import me.chanjar.weixin.mp.bean.device.WxDeviceBind;
+import me.chanjar.weixin.mp.bean.device.WxDeviceBindDeviceResult;
+import me.chanjar.weixin.mp.bean.device.WxDeviceBindResult;
+import me.chanjar.weixin.mp.bean.device.WxDeviceMsg;
+import me.chanjar.weixin.mp.bean.device.WxDeviceOpenIdResult;
+import me.chanjar.weixin.mp.bean.device.WxDeviceQrCodeResult;
 
 /**
  * Created by keungtung on 10/12/2016.

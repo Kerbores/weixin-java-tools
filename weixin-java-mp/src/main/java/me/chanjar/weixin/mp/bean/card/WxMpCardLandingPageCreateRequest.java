@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.mp.util.json.WxMpGsonBuilder;
 

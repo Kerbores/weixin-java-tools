@@ -1,11 +1,14 @@
 package me.chanjar.weixin.mp.enums;
 
+import static me.chanjar.weixin.mp.bean.WxMpHostConfig.API_DEFAULT_HOST_URL;
+import static me.chanjar.weixin.mp.bean.WxMpHostConfig.MP_DEFAULT_HOST_URL;
+import static me.chanjar.weixin.mp.bean.WxMpHostConfig.OPEN_DEFAULT_HOST_URL;
+import static me.chanjar.weixin.mp.bean.WxMpHostConfig.buildUrl;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import me.chanjar.weixin.mp.bean.WxMpHostConfig;
 import me.chanjar.weixin.mp.config.WxMpConfigStorage;
-
-import static me.chanjar.weixin.mp.bean.WxMpHostConfig.*;
 
 /**
  * <pre>

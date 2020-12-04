@@ -3,6 +3,7 @@ package me.chanjar.weixin.common.bean.menu;
 import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 import me.chanjar.weixin.common.util.json.WxGsonBuilder;
 

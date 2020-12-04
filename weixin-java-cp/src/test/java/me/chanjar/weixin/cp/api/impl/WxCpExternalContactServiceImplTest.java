@@ -1,22 +1,28 @@
 package me.chanjar.weixin.cp.api.impl;
 
-import com.google.common.collect.Lists;
-import com.google.inject.Inject;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.cp.api.ApiTestModule;
-import me.chanjar.weixin.cp.api.WxCpService;
-import me.chanjar.weixin.cp.bean.WxCpBaseResp;
-import me.chanjar.weixin.cp.bean.external.*;
-import me.chanjar.weixin.cp.bean.external.contact.WxCpExternalContactInfo;
-import org.apache.commons.lang3.time.DateFormatUtils;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
+import static org.testng.Assert.assertNotNull;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static org.testng.Assert.assertNotNull;
+import org.apache.commons.lang3.time.DateFormatUtils;
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
+import com.google.common.collect.Lists;
+import com.google.inject.Inject;
+
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.cp.api.ApiTestModule;
+import me.chanjar.weixin.cp.api.WxCpService;
+import me.chanjar.weixin.cp.bean.WxCpBaseResp;
+import me.chanjar.weixin.cp.bean.external.WxCpContactWayInfo;
+import me.chanjar.weixin.cp.bean.external.WxCpUpdateRemarkRequest;
+import me.chanjar.weixin.cp.bean.external.WxCpUserExternalTagGroupInfo;
+import me.chanjar.weixin.cp.bean.external.WxCpUserExternalTagGroupList;
+import me.chanjar.weixin.cp.bean.external.WxCpWelcomeMsg;
+import me.chanjar.weixin.cp.bean.external.contact.WxCpExternalContactInfo;
 
 @Guice(modules = ApiTestModule.class)
 public class WxCpExternalContactServiceImplTest {

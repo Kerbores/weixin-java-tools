@@ -1,13 +1,18 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
+import java.io.IOException;
+import java.util.Objects;
+
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.config.WxMaConfig;
 import me.chanjar.weixin.common.util.http.HttpType;
 import me.chanjar.weixin.common.util.http.okhttp.OkHttpProxyInfo;
-import okhttp3.*;
-
-import java.io.IOException;
-import java.util.Objects;
+import okhttp3.Authenticator;
+import okhttp3.Credentials;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.Route;
 
 /**
  * okhttp实现.

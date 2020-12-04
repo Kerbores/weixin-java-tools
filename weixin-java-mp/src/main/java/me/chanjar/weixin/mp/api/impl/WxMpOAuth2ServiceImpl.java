@@ -1,5 +1,15 @@
 package me.chanjar.weixin.mp.api.impl;
 
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.OAuth2.CONNECT_OAUTH2_AUTHORIZE_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.OAuth2.OAUTH2_ACCESS_TOKEN_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.OAuth2.OAUTH2_REFRESH_TOKEN_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.OAuth2.OAUTH2_USERINFO_URL;
+import static me.chanjar.weixin.mp.enums.WxMpApiUrl.OAuth2.OAUTH2_VALIDATE_TOKEN_URL;
+
+import java.io.IOException;
+
+import org.apache.commons.lang3.StringUtils;
+
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
 import me.chanjar.weixin.common.bean.oauth2.WxOAuth2AccessToken;
@@ -7,17 +17,12 @@ import me.chanjar.weixin.common.enums.WxType;
 import me.chanjar.weixin.common.error.WxError;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.error.WxRuntimeException;
+import me.chanjar.weixin.common.service.WxOAuth2Service;
 import me.chanjar.weixin.common.util.http.RequestExecutor;
 import me.chanjar.weixin.common.util.http.SimpleGetRequestExecutor;
 import me.chanjar.weixin.common.util.http.URIUtil;
 import me.chanjar.weixin.mp.api.WxMpService;
-import me.chanjar.weixin.common.service.WxOAuth2Service;
 import me.chanjar.weixin.mp.config.WxMpConfigStorage;
-import org.apache.commons.lang3.StringUtils;
-
-import java.io.IOException;
-
-import static me.chanjar.weixin.mp.enums.WxMpApiUrl.OAuth2.*;
 
 /**
  * oauth2 相关接口实现类.

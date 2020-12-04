@@ -1,22 +1,24 @@
 package cn.binarywang.wx.miniapp.api.impl;
 
-import cn.binarywang.wx.miniapp.api.WxMaService;
-import cn.binarywang.wx.miniapp.bean.live.WxMaCreateRoomResult;
-import cn.binarywang.wx.miniapp.bean.live.WxMaLiveResult;
-import cn.binarywang.wx.miniapp.bean.live.WxMaLiveRoomInfo;
-import cn.binarywang.wx.miniapp.test.ApiTestModule;
-import com.google.inject.Inject;
-import me.chanjar.weixin.common.bean.result.WxMediaUploadResult;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.testng.Assert.assertNotNull;
 
 import java.io.File;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.testng.Assert.assertNotNull;
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+
+import com.google.inject.Inject;
+
+import cn.binarywang.wx.miniapp.api.WxMaService;
+import cn.binarywang.wx.miniapp.bean.live.WxMaCreateRoomResult;
+import cn.binarywang.wx.miniapp.bean.live.WxMaLiveResult;
+import cn.binarywang.wx.miniapp.bean.live.WxMaLiveRoomInfo;
+import cn.binarywang.wx.miniapp.test.ApiTestModule;
+import me.chanjar.weixin.common.bean.result.WxMediaUploadResult;
 
 /**
  * 测试直播相关的接口

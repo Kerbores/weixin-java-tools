@@ -1,6 +1,15 @@
 package com.github.binarywang.wxpay.service;
 
-import com.github.binarywang.wxpay.bean.profitsharing.*;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingFinishRequest;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingQueryRequest;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingQueryResult;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingReceiverRequest;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingReceiverResult;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingRequest;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingResult;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingReturnQueryRequest;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingReturnRequest;
+import com.github.binarywang.wxpay.bean.profitsharing.ProfitSharingReturnResult;
 import com.github.binarywang.wxpay.exception.WxPayException;
 
 /**

@@ -1,21 +1,28 @@
 package me.chanjar.weixin.cp.api.impl;
 
-import com.google.gson.Gson;
-import com.google.inject.Inject;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.cp.api.ApiTestModule;
-import me.chanjar.weixin.cp.api.WxCpService;
-import me.chanjar.weixin.cp.bean.oa.*;
-import org.apache.commons.lang3.time.DateFormatUtils;
-import org.testng.annotations.Guice;
-import org.testng.annotations.Test;
-import org.testng.collections.Lists;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.apache.commons.lang3.time.DateFormatUtils;
+import org.testng.annotations.Guice;
+import org.testng.annotations.Test;
+import org.testng.collections.Lists;
+
+import com.google.gson.Gson;
+import com.google.inject.Inject;
+
+import me.chanjar.weixin.common.error.WxErrorException;
+import me.chanjar.weixin.cp.api.ApiTestModule;
+import me.chanjar.weixin.cp.api.WxCpService;
+import me.chanjar.weixin.cp.bean.oa.WxCpApprovalDetailResult;
+import me.chanjar.weixin.cp.bean.oa.WxCpApprovalInfo;
+import me.chanjar.weixin.cp.bean.oa.WxCpCheckinData;
+import me.chanjar.weixin.cp.bean.oa.WxCpCheckinOption;
+import me.chanjar.weixin.cp.bean.oa.WxCpOaApplyEventRequest;
+import me.chanjar.weixin.cp.bean.oa.WxCpTemplateResult;
 
 /**
  * 企业微信 OA数据接口 测试用例

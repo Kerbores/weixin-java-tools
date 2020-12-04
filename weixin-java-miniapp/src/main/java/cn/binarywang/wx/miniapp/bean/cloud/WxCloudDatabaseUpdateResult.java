@@ -1,8 +1,8 @@
 package cn.binarywang.wx.miniapp.bean.cloud;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 
 /**
  * 云开发数据库更新记录接口请求结果.

@@ -1,8 +1,8 @@
 package me.chanjar.weixin.cp.bean.oa.applydata;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 
 /**
  * @author element

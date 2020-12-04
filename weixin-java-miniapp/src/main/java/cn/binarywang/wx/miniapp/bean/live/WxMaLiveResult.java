@@ -1,11 +1,12 @@
 package cn.binarywang.wx.miniapp.bean.live;
 
-import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
-import com.google.gson.annotations.SerializedName;
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.List;
+
+import com.google.gson.annotations.SerializedName;
+
+import cn.binarywang.wx.miniapp.json.WxMaGsonBuilder;
+import lombok.Data;
 
 /**
  * <pre>

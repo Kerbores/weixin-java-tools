@@ -1,12 +1,13 @@
 package me.chanjar.weixin.common.redis;
 
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
+
+import org.springframework.data.redis.core.StringRedisTemplate;
+
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import me.chanjar.weixin.common.util.locks.RedisTemplateSimpleDistributedLock;
-import org.springframework.data.redis.core.StringRedisTemplate;
-
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
 
 @RequiredArgsConstructor
 public class RedisTemplateWxRedisOps implements WxRedisOps {

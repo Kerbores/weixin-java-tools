@@ -1,17 +1,24 @@
 package com.github.binarywang.wxpay.service.impl;
 
-import com.github.binarywang.wxpay.bean.entpay.*;
-import com.github.binarywang.wxpay.constant.WxPayConstants.CheckNameOption;
-import com.github.binarywang.wxpay.exception.WxPayException;
-import com.github.binarywang.wxpay.service.WxPayService;
-import com.github.binarywang.wxpay.testbase.ApiTestModule;
-import com.google.inject.Inject;
+import java.util.concurrent.TimeUnit;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Guice;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
+import com.github.binarywang.wxpay.bean.entpay.EntPayBankRequest;
+import com.github.binarywang.wxpay.bean.entpay.EntPayBankResult;
+import com.github.binarywang.wxpay.bean.entpay.EntPayRedpackQueryRequest;
+import com.github.binarywang.wxpay.bean.entpay.EntPayRedpackQueryResult;
+import com.github.binarywang.wxpay.bean.entpay.EntPayRedpackRequest;
+import com.github.binarywang.wxpay.bean.entpay.EntPayRedpackResult;
+import com.github.binarywang.wxpay.bean.entpay.EntPayRequest;
+import com.github.binarywang.wxpay.constant.WxPayConstants.CheckNameOption;
+import com.github.binarywang.wxpay.exception.WxPayException;
+import com.github.binarywang.wxpay.service.WxPayService;
+import com.github.binarywang.wxpay.testbase.ApiTestModule;
+import com.google.inject.Inject;
 
 /**
  * <pre>
